@@ -1,5 +1,5 @@
 import useMediaQuery from "../hooks/useMediaQuery";
-import SociaMediaIcons from "../components/SociaMediaIcons";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
