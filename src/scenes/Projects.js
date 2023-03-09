@@ -15,9 +15,14 @@ const projectVaraint = {
 }
 
 const Project = ({title}) => {
+  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90`
   const projectTitle = title.split(" ").join("-").toLowerCase();
   return (
-    <motion.div></motion.div>
+    <motion.div variants={projectVariant} className="relative">
+      <div className={overlayStyles}>
+
+      </div>
+    </motion.div>
   )
 }
 
@@ -62,10 +67,11 @@ const Projects = () => {
         <div
           className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h[400px] text-2xl font-playfair font-semibold"
         >
-          BEAUTFIUL U
-          <Project title="project 1"></Project>
-
+          BEAUTFIUL USER INTERFACES
+        </div>
+          <Project title="Project 1"></Project>
       </motion.div>
+
     </div>
     </section>
   )
