@@ -9,19 +9,24 @@ const container = {
   }
 }
 
-const projectVaraint = {
+const projectVariant = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1}
 }
 
 const Project = ({title}) => {
-  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90`
+  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex 
+  flex-col justify-center items-center text-center p-16 text-deep-blue`
   const projectTitle = title.split(" ").join("-").toLowerCase();
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-
+        <p className="text-2xl font-playfair">{title}</p>
+        <p className="mt-7">
+          Random text also goes here
+        </p>
       </div>
+      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
   )
 }
@@ -70,6 +75,21 @@ const Projects = () => {
           BEAUTFIUL USER INTERFACES
         </div>
           <Project title="Project 1"></Project>
+          <Project title="Project 2"></Project>
+
+        {/*Row 2 */}
+          <Project title="Project 3"></Project>
+          <Project title="Project 4"></Project>
+          <Project title="Project 5"></Project>
+        {/*Row 3 */}
+          <Project title="Project 6"></Project>
+          <Project title="Project 7"></Project>
+        <div
+          className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h[400px] text-2xl font-playfair font-semibold"
+        >
+          Smooth USER EXPERIENCE
+        </div>
+
       </motion.div>
 
     </div>
