@@ -85,6 +85,47 @@ const Contact = () => {
                 </p>
               )}
 
+              <input
+                className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                type="text"
+                placeholder="EMAIL"
+                {...register("email",{
+                  required: true,
+                  patternL: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                })}/>
+              {errors.email && (
+                <p className="text-red mt-1">
+                  {errors.name.type === 'required' && 'This field is required.'}
+                  {errors.name.type === 'pattern' && 'Invalid email format.'}
+                </p>
+              )}
+              
+              <textarea
+                className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                type="text"
+                placeholder="MESSAGE"
+                rows="4"
+                cols="50"
+                {...register("message",{
+                  required: true,
+                  maxLength:2000
+                })}/>
+              {errors.message && (
+                <p className="text-red mt-1">
+                  {errors.name.type === 'required' && 'This field is required.'}
+                  {errors.name.type === 'maxLength' && 'Max Length of 2000 exceeded.'}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
+                hover:text-white transition duration 500"
+              >
+                Send
+              </button>
+
+
             </form>
             
           </motion.div>
