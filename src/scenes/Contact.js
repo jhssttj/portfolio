@@ -1,4 +1,4 @@
-import LineGradient from '../componets/LineGradient';
+import LineGradient from '../components/LineGradient';
 import {useForm} from 'react-hook-form';
 import {motion} from 'framer-motion';
 
@@ -66,7 +66,7 @@ const Contact = () => {
             <form
               target="_blank"
               onSubmit={onSubmit}
-              action=""
+              action = {`https://formsubmit.co/${process.env.REACT_APP_EMAIL}`}
               method="POST"            
             >
               <input
@@ -122,7 +122,7 @@ const Contact = () => {
                 className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
                 hover:text-white transition duration 500"
               >
-                Send
+                SEND
               </button>
 
 
