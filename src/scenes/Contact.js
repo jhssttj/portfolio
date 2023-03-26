@@ -66,7 +66,7 @@ const Contact = () => {
             <form
               target="_blank"
               onSubmit={onSubmit}
-              action = {`https://formsubmit.co/${process.env.REACT_APP_EMAIL}`}
+              action = {`https://formsubmit.co/470b7198e34f535e1ee66acd2f28e9f2`}
               method="POST"            
             >
               <input
