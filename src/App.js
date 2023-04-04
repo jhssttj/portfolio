@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
-import DotGroup from "./scenes/DotGroup";
-import Landing from "./scenes/Landing";
+import { useState, useEffect } from 'react';
 import useMediaQuery from './hooks/useMediaQuery';
-import Navbar from './scenes/Navbar';
 import LineGradient from './components/LineGradient';
+import DotGroup from './scenes/DotGroup';
+import Landing from './scenes/Landing';
+import Navbar from './scenes/Navbar';
 import MySkills from './scenes/MySkills';
 import Projects from './scenes/Projects';
 import Testimonials from './scenes/Testimonials';
 import Contact from './scenes/Contact';
-import Footer from './scenes/Footer'
+import Footer from './scenes/Footer';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediunmScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediunmScreens = useMediaQuery('min-width: 1060px)');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +27,6 @@ function App() {
   return (
     <div className="app bg-deep-blue">
       <Navbar
-        isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
