@@ -38,7 +38,6 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         href= '#contact'
         onClick={() => setSelectedPage("contact")}
     />
-
     </div>
   )
 }

@@ -13,7 +13,7 @@ import Footer from './scenes/Footer';
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediunmScreens = useMediaQuery('min-width: 1060px)');
+  const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +29,10 @@ function App() {
       <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
+        isTopOfPage={isTopOfPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
-        {isAboveMediunmScreens && (
+        {isAboveMediumScreens && (
           <DotGroup 
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
