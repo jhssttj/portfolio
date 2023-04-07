@@ -71,12 +71,16 @@ const MySkills = () => {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-platfair font-semibold text-5xl">01</p>
-              <p className="font-platfair font-semibold text-3xl mt-3">Experience</p>
+              <p className="font-platfair font-semibold text-2xl mt-3">Computer Languages</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5">
-            Random text goes here
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
           </p>
 
         </motion.div>
@@ -95,13 +99,17 @@ const MySkills = () => {
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-platfair font-semibold text-5xl">02</p>
-              <p className="font-platfair font-semibold text-3xl mt-3">Innovative</p>
+              <p className="font-platfair font-semibold text-5xl">01</p>
+              <p className="font-platfair font-semibold text-2xl mt-3">Framework, Libraries, Environments</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5">
-            Random text goes here
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
           </p>
 
         </motion.div>
