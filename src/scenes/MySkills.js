@@ -10,7 +10,7 @@ const MySkills = () => {
       {/*Header and Image Section */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
-          className="md:w-1/3"
+          className="md:w-1/2"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -25,7 +25,10 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            My sklls goes here description blah blah
+            I have many other skills and experiences related to:
+            <li>Project Management</li>
+            <li>Quality Control and Assurance</li>
+            <li>Engineering Softwares (AutoCAD, VisSim, CostX)</li>
           </p>
         </motion.div>
 
@@ -99,17 +102,22 @@ const MySkills = () => {
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-platfair font-semibold text-5xl">01</p>
+              <p className="font-platfair font-semibold text-5xl">02</p>
               <p className="font-platfair font-semibold text-2xl mt-3">Framework, Libraries, Environments</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5">
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Ruby</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>NodeJS</li>
+            <li>ReactJS</li>
+            <li>Ajax</li>
+            <li>EJS</li>
+            <li>Exprses</li>
+            <li>jQuery</li>
+            <li>Bootstrap</li>
+            <li>Tailwind CSS</li>
+            <li>Rails</li>
+            <li>SASS</li>
           </p>
 
         </motion.div>
@@ -129,12 +137,20 @@ const MySkills = () => {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-platfair font-semibold text-5xl">03</p>
-              <p className="font-platfair font-semibold text-3xl mt-3">Imaginative</p>
+              <p className="font-platfair font-semibold text-2xl mt-3">Testing, Systems, Databases</p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5">
-            Random text goes here
+            <li>Storybook</li>
+            <li>Cypress</li>
+            <li>RSpec</li>
+            <li>Jest</li>
+            <li>Mocha & Chai</li>
+            <li>SQL</li>
+            <li>Git</li>
+            <li>Firestore</li>
+            <li>Google Maps Platform</li>
           </p>
 
         </motion.div>
