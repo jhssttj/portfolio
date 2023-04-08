@@ -112,7 +112,7 @@ const MySkills = () => {
             <li>ReactJS</li>
             <li>Ajax</li>
             <li>EJS</li>
-            <li>Exprses</li>
+            <li>Express</li>
             <li>jQuery</li>
             <li>Bootstrap</li>
             <li>Tailwind CSS</li>

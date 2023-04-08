@@ -1,5 +1,6 @@
 import LineGradient from '../components/LineGradient';
 import {motion} from "framer-motion";
+import projectData from '../projectData/projectData';
 
 
 const container = {
@@ -14,22 +15,38 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1}
 }
 
-const Project = ({title}) => {
-  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex 
+const Project = ({title,description,link}) => {
+  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-blue z-30 flex 
   flex-col justify-center items-center text-center p-16 text-deep-blue`
-  const projectTitle = title.split(" ").join("-").toLowerCase();
   return (
-    <motion.div variants={projectVariant} className="relative">
+    <motion.div variants={projectVariant} className="relative m-1">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7">
-          Random text also goes here
+          {description}
         </p>
+        <a 
+        href={link} 
+        className="text-blue bg-white hover:bg-yellow font-playfair font-bold rounded-lg text-xl px-4 py-2.5 mt-2 mr-2 mb-2"
+        rel="noopener noreferrer" target="_blank">
+          See Project
+        </a>
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img className=""src={`../assets/${title}.png`} alt={title} />
     </motion.div>
   )
 }
+
+const projectList = Object.values(projectData)
+const renderProjects = projectList.map((project) => {
+  return (<Project 
+    key={project.title}
+    title={project.title}
+    description={project.description}
+    link={project.link}>
+    </Project>)
+})
+
 
 const Projects = () => {
   return (
@@ -66,17 +83,7 @@ const Projects = () => {
         variants={container}
       >
         {/*Row 1 */}
-          <Project title="Project 1"></Project>
-          <Project title="Project 2"></Project>
-
-        {/*Row 2 */}
-          <Project title="Project 3"></Project>
-          <Project title="Project 4"></Project>
-          <Project title="Project 5"></Project>
-        {/*Row 3 */}
-          <Project title="Project 6"></Project>
-          <Project title="Project 7"></Project>
-
+          {renderProjects}
 
       </motion.div>
 
