@@ -45,17 +45,14 @@ const Projects = () => {
         visible: {opacity: 1, x: 0}
       }}
     >
-      <div>
+      <div className ="mb-6">
         <p className="font-playfair font-semibold text-4xl">
-          My <span className="text-red">PRO</span>JECTS
+          My <span className="text-red">PROJECTS</span>
         </p>
         <div className="flex justify-center mt-5">
           <LineGradient width="w-1/3" />
         </div>
       </div>
-      <p className="mt-10 mb-10">
-        My projects goes here
-      </p>
     </motion.div>
 
     {/*Projects */}
@@ -69,11 +66,6 @@ const Projects = () => {
         variants={container}
       >
         {/*Row 1 */}
-        <div
-          className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h[400px] text-2xl font-playfair font-semibold"
-        >
-          BEAUTFIUL USER INTERFACES
-        </div>
           <Project title="Project 1"></Project>
           <Project title="Project 2"></Project>
 
@@ -84,11 +76,7 @@ const Projects = () => {
         {/*Row 3 */}
           <Project title="Project 6"></Project>
           <Project title="Project 7"></Project>
-        <div
-          className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h[400px] text-2xl font-playfair font-semibold"
-        >
-          Smooth USER EXPERIENCE
-        </div>
+
 
       </motion.div>
 
