@@ -21,13 +21,13 @@ const Project = ({title,description,link,git}) => {
   return (
     <motion.div variants={projectVariant} className="relative m-1">
       <div className={overlayStyles}>
-        <p className="md:text-2xl sm:text-xl font-playfair">{title}</p>
-        <p className="mt-7 md:text-base sm:text-xs">
+        <p className="text-2xl font-playfair">{title}</p>
+        <p className="mt-4">
           {description}
         </p>
         <a 
         href={link} 
-        className="text-blue bg-white hover:bg-yellow font-playfair font-bold rounded-lg md:text-base px-4 py-2.5 mt-2 mr-2 mb-2 sm:text-xs"
+        className="text-blue bg-white hover:bg-yellow font-playfair font-bold rounded-lg text-base px-4 py-2.5 mt-2 mr-2 mb-2"
         rel="noopener noreferrer" target="_blank">
           See Project Demo
         </a>
@@ -84,7 +84,7 @@ const Projects = () => {
     {/*Projects */}
     <div className="flex justify-center">
       <motion.div
-        className="sm:grid sm:grid-cols-3"
+        className="sm:grid md:grid-cols-3 sm:grid-cols-2"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.5}}
