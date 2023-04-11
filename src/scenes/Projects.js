@@ -15,22 +15,30 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1}
 }
 
-const Project = ({title,description,link}) => {
+const Project = ({title,description,link,git}) => {
   const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-blue z-30 flex 
   flex-col justify-center items-center text-center p-16 text-deep-blue`
   return (
     <motion.div variants={projectVariant} className="relative m-1">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
+        <p className="md:text-2xl sm:text-xl font-playfair">{title}</p>
+        <p className="mt-7 md:text-base sm:text-xs">
           {description}
         </p>
         <a 
         href={link} 
-        className="text-blue bg-white hover:bg-yellow font-playfair font-bold rounded-lg text-xl px-4 py-2.5 mt-2 mr-2 mb-2"
+        className="text-blue bg-white hover:bg-yellow font-playfair font-bold rounded-lg md:text-base px-4 py-2.5 mt-2 mr-2 mb-2 sm:text-xs"
         rel="noopener noreferrer" target="_blank">
-          See Project
+          See Project Demo
         </a>
+        <a
+        className="hover:opacity-50 transition duration-500"
+        href={git}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img alt="projectgitlink" src="../assets/github.png"/>
+      </a>
       </div>
       <img className=""src={`../assets/${title}.png`} alt={title} />
     </motion.div>
@@ -43,7 +51,8 @@ const renderProjects = projectList.map((project) => {
     key={project.title}
     title={project.title}
     description={project.description}
-    link={project.link}>
+    link={project.link}
+    git={project.git}>
     </Project>)
 })
 
