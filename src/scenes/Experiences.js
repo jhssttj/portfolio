@@ -1,15 +1,15 @@
 import LineGradient from "../components/LineGradient";
 import {motion} from "framer-motion";
 
-const Testimonials = () => {
-  const testimonialStyles = `mx-auto relative max-w-[400px] h-[350px] flex flex-col
+const Experiences = () => {
+  const experiencesStyles = `mx-auto relative max-w-[400px] h-[350px] flex flex-col
   justify-end p-16 mt-48 before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2`;
 
   return (
-    <section id="testimonials" className="pt-32 pb-16">
+    <section id="experiences" className="pt-32 pb-16">
       {/*Heading */}
       <motion.div
-        className="md:w-1/3 text-center md:text-left"
+        className="md:w-1/3 text-center md:text-center mx-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.5}}
@@ -20,17 +20,17 @@ const Testimonials = () => {
         }}
       >
         <p className="font-playfair font-semibold text-4xl mb-5 text-red">
-          TESTIMONIALS
+          EXPERINECES
         </p>
-        <LineGradient width="mx-auto w-2/4" />
+        <LineGradient width="mx-auto w-1/2" />
         <p className="mt-10">
-          This is the testimonial page
+          This is the exp page
         </p>
       </motion.div>
-      {/*Testimonial Sections */}
+      {/*Experience Sections */}
       <div className="md:flex md:justify-between gap-8">
         <motion.div
-          className={`bg-blue ${testimonialStyles} before:content-person1`}
+          className={`bg-blue ${experiencesStyles} before:content-person1`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -47,7 +47,7 @@ const Testimonials = () => {
         </motion.div>
 
         <motion.div
-          className={`bg-red ${testimonialStyles} before:content-person2`}
+          className={`bg-red ${experiencesStyles} before:content-person2`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -59,12 +59,12 @@ const Testimonials = () => {
          >
           <p className="font-playfair text-6xl">"</p>
           <p className="text-center text-xl">
-            Random text of testimonial goes here
+            Random text of experiences goes here
           </p>
         </motion.div>
 
         <motion.div
-          className={`bg-yellow ${testimonialStyles} before:content-person3`}
+          className={`bg-yellow ${experiencesStyles} before:content-person3`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -84,4 +84,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials;
+export default Experiences;
