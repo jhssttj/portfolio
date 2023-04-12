@@ -19,18 +19,18 @@ const Experiences = () => {
           visible: {opacity: 1, scale: 1}
         }}
       >
-        <p className="font-playfair font-semibold text-4xl mb-5 text-red">
-          EXPERINECES
+
+        <p className="font-playfair font-semibold text-4xl">
+          My <span className="text-red">EXPERIENCES</span>
         </p>
-        <LineGradient width="mx-auto w-1/2" />
-        <p className="mt-10">
-          This is the exp page
-        </p>
+        <div className="flex justify-center mt-5">
+          <LineGradient width="mx-auto w-1/2" />
+        </div>
       </motion.div>
       {/*Experience Sections */}
-      <div className="md:flex md:justify-between gap-8">
+      <div className="md:flex md:justify-between gap-8 relative">
         <motion.div
-          className={`bg-blue ${experiencesStyles} before:content-person1`}
+          className={`bg-blue ${experiencesStyles} `}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -40,6 +40,7 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
+           <img className="bg-white relative bottom-20" alt="AltusGroup" src="../assets/AltusGroup.png"/>
           <p className="font-playfair text-6xl">"</p>
           <p className="text-center text-xl">
             Random text of testimonial goes here
