@@ -61,7 +61,7 @@ const MySkills = () => {
       <div className="md:flex md:justify-between mt-16 gap-32">
         {/*Experience */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -90,7 +90,7 @@ const MySkills = () => {
 
         {/*INNOVATIVE */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -124,7 +124,7 @@ const MySkills = () => {
 
         {/*IMAGINATIVE */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -141,7 +141,7 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]"/>
           </div>
-          <p className="mt-5">
+          <p className="mt-5 mb-5">
             <li>Storybook</li>
             <li>Cypress</li>
             <li>RSpec</li>

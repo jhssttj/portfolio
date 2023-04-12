@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 
 const Experiences = () => {
   const experiencesStyles = `mx-auto relative w-full max-w-[400px] h-[350px] flex flex-col
-  justify-end`;
+  justify-start mt-7`;
 
   const imageStyles = 'bg-white relative max-w-[100px] max-h-[100px]'
 
@@ -29,6 +29,7 @@ const Experiences = () => {
           <LineGradient width="mx-auto w-1/2" />
         </div>
       </motion.div>
+
       {/*Experience Sections */}
       <div className="md:flex md:justify-between gap-8 relative">
         <motion.div
