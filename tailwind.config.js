@@ -25,9 +25,7 @@ module.exports = {
       },
       content: {
         brush: "url('./assets/brush.png')",
-        person1: "url('./assets/AltusGroup.png')",
-        person2: "url('./assets/person-2.png')",
-        person3: "url('./assets/person-3.png')",
+        work1: "url('./assets/AltusGroup.png')"
       }
     },
     screens: {

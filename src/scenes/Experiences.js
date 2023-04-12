@@ -2,11 +2,13 @@ import LineGradient from "../components/LineGradient";
 import {motion} from "framer-motion";
 
 const Experiences = () => {
-  const experiencesStyles = `mx-auto relative max-w-[400px] h-[350px] flex flex-col
-  justify-end p-16 mt-48 before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2`;
+  const experiencesStyles = `mx-auto relative w-full max-w-[400px] h-[350px] flex flex-col
+  justify-end`;
+
+  const imageStyles = 'bg-white relative max-w-[100px] max-h-[100px]'
 
   return (
-    <section id="experiences" className="pt-32 pb-16">
+    <section id="experiences" className="pt-32">
       {/*Heading */}
       <motion.div
         className="md:w-1/3 text-center md:text-center mx-auto"
@@ -30,7 +32,7 @@ const Experiences = () => {
       {/*Experience Sections */}
       <div className="md:flex md:justify-between gap-8 relative">
         <motion.div
-          className={`bg-blue ${experiencesStyles} `}
+          className={`bg-blue ${experiencesStyles}`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -40,15 +42,17 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-           <img className="bg-white relative bottom-20" alt="AltusGroup" src="../assets/AltusGroup.png"/>
-          <p className="font-playfair text-6xl">"</p>
+          <div className="flex justify-around border-2 w-full">
+           <img className={imageStyles} alt="AltusGroup" src="../assets/AltusGroup.png"/>
+          <p className="font-playfair text-2xl">Cost Consultant</p>
+          </div>
           <p className="text-center text-xl">
             Random text of testimonial goes here
           </p>
         </motion.div>
 
         <motion.div
-          className={`bg-red ${experiencesStyles} before:content-person2`}
+          className={`bg-red ${experiencesStyles}`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -65,7 +69,7 @@ const Experiences = () => {
         </motion.div>
 
         <motion.div
-          className={`bg-yellow ${experiencesStyles} before:content-person3`}
+          className={`bg-yellow ${experiencesStyles}`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
