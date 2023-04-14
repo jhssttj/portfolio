@@ -2,10 +2,11 @@ import LineGradient from "../components/LineGradient";
 import {motion} from "framer-motion";
 
 const Experiences = () => {
-  const experiencesStyles = `mx-auto relative w-full max-w-[400px] h-[350px] flex flex-col
+  const experiencesStyles = `mx-auto relative md:w-1/3 h-auto flex flex-col p-2
   justify-start mt-7`;
 
   const imageStyles = 'bg-white relative mx-4 max-w-[100px] max-h-[100px]'
+  const paraStyles = 'text-left text-xl m-4'
 
   return (
     <section id="experiences" className="pt-32">
@@ -31,7 +32,7 @@ const Experiences = () => {
       </motion.div>
 
       {/*Experience Sections */}
-      <div className="md:flex md:justify-between gap-8 relative">
+      <div className="md:flex md:justify-between gap-8 relative sm:grid md:grid-cols-3 sm:grid-cols-2">
         <motion.div
           className={`bg-blue ${experiencesStyles}`}
           initial="hidden"
@@ -43,13 +44,20 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <div className="flex justify-start items-center w-full mt-3">
-           <img className={imageStyles} alt="AltusGroup" src="../assets/AltusGroup.png"/>
-          <p className="font-playfair text-3xl font-semibold">Cost Consultant</p>
+          <div className="flex md:justify-start items-center w-full mt-3">
+           <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/AltusGroup.png"/>
+          <p className="w-2/3 mr-2 font-playfair text-3xl font-semibold">Cost Consultant</p>
           </div>
-          <p className="text-center text-xl m-4">
-            Random text of testimonial goes here
-          </p>
+          <li className={paraStyles}>
+            Using estimating software to perform take-off of architectural, structural and site related quantities
+            (Calgary BMO Centre Renovation, Winnipeg Airport Facility Renovation, etc.).
+          </li>
+          <li className={paraStyles}>
+            Using given general design and specification to ensure accurate estimate and details.
+          </li>
+          <li className={paraStyles}>
+            Inputting/reconciling construction cost/budget reports for projects ranging from $20,000 to $300,000,000.
+          </li>
         </motion.div>
 
         <motion.div
@@ -63,10 +71,20 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <p className="font-playfair text-6xl">"</p>
-          <p className="text-center text-xl">
-            Random text of experiences goes here
-          </p>
+          <div className="flex justify-start items-center w-full mt-3">
+           <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/ImperialOil.png"/>
+          <p className="font-playfair text-3xl font-semibold">Pipeline Integrity Student</p>
+          </div>
+          <li className={paraStyles}>
+          Given the role of a project manager to plan and execute over 30 Cathodic Protection projects for Canada Fuel Operation – Pipeline
+          Integrity division.
+          </li>
+          <li className={paraStyles}>
+            Create Authorization for Expenditure (AFE) documents to have funding of up to $600,000 for new projects approved.
+          </li>
+          <li className={paraStyles}>
+            Cost validate contractor’s quote to justify spending and identify any potential unrealistic spending to reduce overall cost by 20%.
+          </li>
         </motion.div>
 
         <motion.div
@@ -80,10 +98,21 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <p className="font-playfair text-6xl">"</p>
-          <p className="text-center text-xl">
-            Fames odio in at. At magna ornare dictum lectus
-          </p>
+          <div className="flex justify-start items-center w-full mt-3">
+           <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/MapleReinders.png"/>
+          <p className="font-playfair text-3xl font-semibold">Project Coordinator</p>
+          </div>
+          <li className={paraStyles}>
+          Review shop drawings and submitting to confirm compliance with specification and 
+          general design for Calgary based projects (CBE Springbank K-9 School, Calgary Compost Facility, etc.).
+          </li>
+          <li className={paraStyles}>
+          Assist Project Manager and Superintendent in tracking issues, changes in condition, 
+          request for information and change orders to mitigate risk of schedule delay.
+          </li>
+          <li className={paraStyles}>
+          Perform QA/QC tasks such as completing handover forms and Non-Conforming Reports.
+          </li>
         </motion.div>
       </div>
     </section>
