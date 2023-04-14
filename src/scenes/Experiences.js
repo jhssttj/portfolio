@@ -2,11 +2,13 @@ import LineGradient from "../components/LineGradient";
 import {motion} from "framer-motion";
 
 const Experiences = () => {
-  const experiencesStyles = `mx-auto relative md:w-1/3 h-auto flex flex-col p-2
+  const experiencesStyles = `mx-auto md:w-1/3 max-w-[400px] h-auto flex flex-col p-2
   justify-start mt-7`;
 
-  const imageStyles = 'bg-white relative mx-4 max-w-[100px] max-h-[100px]'
-  const paraStyles = 'text-left text-xl m-4'
+  const titleContainer = "flex md:justify-start items-center w-full mt-3" 
+  const imageStyles = 'bg-white mx-4 w-1/3'
+  const roleStyles = "mr-2 font-playfair text-xl xs:text-3xl font-semibold w-2/3 text-center"
+  const paraStyles = 'font-playfair text-left text-m sm:text-xl m-4'
 
   return (
     <section id="experiences" className="pt-32">
@@ -32,7 +34,7 @@ const Experiences = () => {
       </motion.div>
 
       {/*Experience Sections */}
-      <div className="md:flex md:justify-between gap-8 relative sm:grid md:grid-cols-3 sm:grid-cols-2">
+      <div className="md:flex md:justify-between gap-8 sm:grid md:grid-cols-3 sm:grid-cols-2">
         <motion.div
           className={`bg-blue ${experiencesStyles}`}
           initial="hidden"
@@ -44,9 +46,9 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <div className="flex md:justify-start items-center w-full mt-3">
+          <div className={titleContainer}>
            <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/AltusGroup.png"/>
-          <p className="w-2/3 mr-2 font-playfair text-3xl font-semibold">Cost Consultant</p>
+          <p className={roleStyles}>Cost Consultant</p>
           </div>
           <li className={paraStyles}>
             Using estimating software to perform take-off of architectural, structural and site related quantities
@@ -71,9 +73,9 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <div className="flex justify-start items-center w-full mt-3">
+          <div className={titleContainer}>
            <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/ImperialOil.png"/>
-          <p className="font-playfair text-3xl font-semibold">Pipeline Integrity Student</p>
+          <p className={roleStyles}>Co-op Student</p>
           </div>
           <li className={paraStyles}>
           Given the role of a project manager to plan and execute over 30 Cathodic Protection projects for Canada Fuel Operation – Pipeline
@@ -98,9 +100,9 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <div className="flex justify-start items-center w-full mt-3">
+          <div className={titleContainer}>
            <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/MapleReinders.png"/>
-          <p className="font-playfair text-3xl font-semibold">Project Coordinator</p>
+          <p className={roleStyles}>Project Coordinator</p>
           </div>
           <li className={paraStyles}>
           Review shop drawings and submitting to confirm compliance with specification and 
