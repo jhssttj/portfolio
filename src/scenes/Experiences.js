@@ -5,7 +5,7 @@ const Experiences = () => {
   const experiencesStyles = `mx-auto relative w-full max-w-[400px] h-[350px] flex flex-col
   justify-start mt-7`;
 
-  const imageStyles = 'bg-white relative max-w-[100px] max-h-[100px]'
+  const imageStyles = 'bg-white relative mx-4 max-w-[100px] max-h-[100px]'
 
   return (
     <section id="experiences" className="pt-32">
@@ -43,11 +43,11 @@ const Experiences = () => {
             visible: {opacity: 1, scale: 1}
           }}
          >
-          <div className="flex justify-around border-2 w-full">
+          <div className="flex justify-start items-center w-full mt-3">
            <img className={imageStyles} alt="AltusGroup" src="../assets/AltusGroup.png"/>
-          <p className="font-playfair text-2xl">Cost Consultant</p>
+          <p className="font-playfair text-3xl font-semibold">Cost Consultant</p>
           </div>
-          <p className="text-center text-xl">
+          <p className="text-center text-xl m-4">
             Random text of testimonial goes here
           </p>
         </motion.div>
