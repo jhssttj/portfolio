@@ -11,7 +11,7 @@ const Experiences = () => {
   const paraStyles = 'font-playfair text-left text-m sm:text-xl m-4'
 
   return (
-    <section id="experiences" className="pt-32">
+    <section id="experiences" className="pt-32 pb-32">
       {/*Heading */}
       <motion.div
         className="md:w-1/3 text-center md:text-center mx-auto"
@@ -34,7 +34,7 @@ const Experiences = () => {
       </motion.div>
 
       {/*Experience Sections */}
-      <div className="md:flex md:justify-between gap-8 sm:grid md:grid-cols-3 sm:grid-cols-2">
+      <div className="md:flex md:justify-between gap-2 sm:grid md:grid-cols-3 sm:grid-cols-2">
         <motion.div
           className={`bg-blue ${experiencesStyles}`}
           initial="hidden"

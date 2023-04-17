@@ -50,7 +50,7 @@ function App() {
           <Projects />
       </div>
       <LineGradient/>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
           <Experiences />
       </div>
       <LineGradient/>
