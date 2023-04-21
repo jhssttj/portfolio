@@ -1,18 +1,20 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import {Link} from 'react-scroll'
 
-const Link = ({ page, selectedPage, setSelectedPage}) => {
+const LinkTest = ({ page, selectedPage, setSelectedPage}) => {
   const lowerCasePage = page.toLowerCase();
   return (
-    <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""} 
-        hover:text-yellow transition duration-500`}
+    <Link
+      // className={`hover:text-yellow transition duration-500`}
+        activeClass="active"
         href={`#${lowerCasePage}`}
-        onClick={() => setSelectedPage(lowerCasePage)}
+        // onClick={() => setSelectedPage(lowerCasePage)}
+        smooth spy to= {`${lowerCasePage}`}
     >
       {page}
-    </AnchorLink>
+    </Link>
   )
 }
 
@@ -28,27 +30,27 @@ const Navbar = ({ selectedPage, setSelectedPage}) => {
         {isAboveSmallScreens 
         ? 
           (<div className="flex justify-between font-opensans text-sm font-semibold w-1/2">
-            <Link
+            <LinkTest
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-             <Link
+             <LinkTest
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-             <Link
+             <LinkTest
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-             <Link
+             <LinkTest
               page="Experiences"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-             <Link
+             <LinkTest
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
@@ -74,27 +76,27 @@ const Navbar = ({ selectedPage, setSelectedPage}) => {
             </div>
             {/*menu items*/}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-              <Link
+              <LinkTest
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkTest
                 page="Skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkTest
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkTest
                 page="Experiences"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkTest
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
