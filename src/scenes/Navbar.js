@@ -1,5 +1,4 @@
 import { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Link} from 'react-scroll'
 
@@ -7,10 +6,8 @@ const LinkTest = ({ page, selectedPage, setSelectedPage}) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <Link
-      // className={`hover:text-yellow transition duration-500`}
         activeClass="active"
         href={`#${lowerCasePage}`}
-        // onClick={() => setSelectedPage(lowerCasePage)}
         smooth spy to= {`${lowerCasePage}`}
     >
       {page}
@@ -32,28 +29,18 @@ const Navbar = ({ selectedPage, setSelectedPage}) => {
           (<div className="flex justify-between font-opensans text-sm font-semibold w-1/2">
             <LinkTest
               page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
             />
              <LinkTest
               page="Skills"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
             />
              <LinkTest
               page="Projects"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
             />
              <LinkTest
               page="Experiences"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
             />
              <LinkTest
               page="Contact"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
             />
           </div>)
         : 
@@ -77,29 +64,19 @@ const Navbar = ({ selectedPage, setSelectedPage}) => {
             {/*menu items*/}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
               <LinkTest
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
+                page="Home"                
               />
               <LinkTest
-                page="Skills"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
+                page="Skills"                
               />
               <LinkTest
-                page="Projects"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
+                page="Projects"                
               />
               <LinkTest
-                page="Experiences"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
+                page="Experiences"                
               />
               <LinkTest
-                page="Contact"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
+                page="Contact"                
               />
             </div>
           </div>
