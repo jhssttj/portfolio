@@ -1,4 +1,4 @@
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import {Link} from 'react-scroll'
 
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
 
@@ -8,33 +8,38 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
 
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7">
-      <AnchorLink
-        className={`${selectedPage === 'home' ? `${selectedStyles}` : "bg-dark-grey"} 
-          w-3 h-3 rounded-full`}
+      <Link
+        className="bg-dark-grey w-3 h-3 rounded-full"
+        activeClass="dotActive"
+        smooth spy to ='home'
         href= '#home'
         onClick={() => setSelectedPage("home")}
     />
-      <AnchorLink
-        className={`${selectedPage === 'skills' ? `${selectedStyles}` : "bg-dark-grey"} 
-          w-3 h-3 rounded-full`}
+      <Link
+        className="bg-dark-grey w-3 h-3 rounded-full"
+        activeClass="dotActive"
+        smooth spy to ='skills'
         href= '#skills'
         onClick={() => setSelectedPage("skills")}
     />
-      <AnchorLink
-        className={`${selectedPage === 'projects' ? `${selectedStyles}` : "bg-dark-grey"} 
-          w-3 h-3 rounded-full`}
+      <Link
+        className="bg-dark-grey w-3 h-3 rounded-full"
+        activeClass="dotActive"
+        smooth spy to ='projects'
         href= '#projects'
         onClick={() => setSelectedPage("projects")}
     />
-      <AnchorLink
-        className={`${selectedPage === 'experiences' ? `${selectedStyles}` : "bg-dark-grey"} 
-          w-3 h-3 rounded-full`}
+      <Link
+        className="bg-dark-grey w-3 h-3 rounded-full"
+        activeClass="dotActive"
+        smooth spy to ='experiences'
         href= '#experiences'
         onClick={() => setSelectedPage("experiences")}
     />
-      <AnchorLink
-        className={`${selectedPage === 'contact' ? `${selectedStyles}` : "bg-dark-grey"} 
-          w-3 h-3 rounded-full`}
+      <Link
+        className="bg-dark-grey w-3 h-3 rounded-full"
+        activeClass="dotActive"
+        smooth spy to ='contact'
         href= '#contact'
         onClick={() => setSelectedPage("contact")}
     />

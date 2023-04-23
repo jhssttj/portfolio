@@ -2,7 +2,7 @@ import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Link} from 'react-scroll'
 
-const LinkTest = ({ page, selectedPage, setSelectedPage}) => {
+const LinkRender = ({ page, selectedPage, setSelectedPage}) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <Link
@@ -27,19 +27,19 @@ const Navbar = ({ selectedPage, setSelectedPage}) => {
         {isAboveSmallScreens 
         ? 
           (<div className="flex justify-between font-opensans text-sm font-semibold w-1/2">
-            <LinkTest
+            <LinkRender
               page="Home"
             />
-             <LinkTest
+             <LinkRender
               page="Skills"
             />
-             <LinkTest
+             <LinkRender
               page="Projects"
             />
-             <LinkTest
+             <LinkRender
               page="Experiences"
             />
-             <LinkTest
+             <LinkRender
               page="Contact"
             />
           </div>)
@@ -63,19 +63,19 @@ const Navbar = ({ selectedPage, setSelectedPage}) => {
             </div>
             {/*menu items*/}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-              <LinkTest
+              <LinkRender
                 page="Home"                
               />
-              <LinkTest
+              <LinkRender
                 page="Skills"                
               />
-              <LinkTest
+              <LinkRender
                 page="Projects"                
               />
-              <LinkTest
+              <LinkRender
                 page="Experiences"                
               />
-              <LinkTest
+              <LinkRender
                 page="Contact"                
               />
             </div>
