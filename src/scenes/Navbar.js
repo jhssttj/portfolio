@@ -2,7 +2,7 @@ import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Link} from 'react-scroll'
 
-const LinkRender = ({ page, selectedPage, setSelectedPage}) => {
+const LinkRender = ({ page }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <Link
@@ -15,11 +15,10 @@ const LinkRender = ({ page, selectedPage, setSelectedPage}) => {
   )
 }
 
-const Navbar = ({ selectedPage, setSelectedPage}) => {
+const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
-
   return (
     <nav className={`bg-red z-40 w-full fixed top-0 py-4`}>
       <div className={`${navBarIconClass} flex items-center mx-auto w-full`}>
