@@ -9,8 +9,8 @@ body,
 #root,
 .app {
   height: 100%;
-  background-color: #010026;
-  @apply text-white;
+  background-color: white;
+  @apply text-black;
 }
 .active {
   color:#FDCC49;
