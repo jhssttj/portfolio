@@ -46,11 +46,15 @@ const Landing = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
-            <p className="text-6xl font-poppins z-10 text-center md:text-start">
-              Kevin {""}
+            <p className="text-6xl font-poppins font-semibold z-10 text-center md:text-start">
+              {/* Kevin {""} */}
               <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-              xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]">
-                Lee
+              xs:before:content-brush before:absolute before:md:-right-[175px] before:-top-[100px] before:z-[-1] before:xs:-right-[140px]">
+                 Kevin
+                 <br></br>
+                 <span>
+                  Lee
+                 </span>
               </span>
             </p>
 
