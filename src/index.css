@@ -1,6 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,12 +17,12 @@ body,
   @apply text-black;
 }
 .active {
-  color:#FDCC49;
+  color:#65FADE;
 }
 
 .dotActive{
   position:relative;
-  background-color:yellow;
+  background-color:#65FADE;
 }
 .dotActive::before {
   content: "";
@@ -29,7 +31,7 @@ body,
   height: 1.5rem;
   border-radius:9999px;
   border-width:2px;
-  border-color: yellow;
+  border-color: #65FADE;
   left: -50%;
   top: -50%;
 

@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         red: "#DC4492",
-        blue: "#2CBCE9",
+        blue: "#65FADE",
         yellow: "#FDCC49",
         grey: "#EDEDED",
         "deep-blue" : "#01026",
@@ -22,7 +22,9 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"]
+        poppins: ["Poppins", "sans-serif"],
+        noto: ["Noto Sans", 'sans-serif'],
+        rubik: ["Rubik", "sans-serif"]
       },
       content: {
         brush: "url('./assets/brush.png')",

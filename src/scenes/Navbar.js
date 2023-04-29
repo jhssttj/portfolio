@@ -20,26 +20,26 @@ const Navbar = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
   return (
-    <nav className={`bg-red z-40 w-full fixed top-0 py-4`}>
+    <nav className={`bg-black z-40 w-full fixed top-0 py-4`}>
       <div className={`${navBarIconClass} flex items-center mx-auto w-full`}>
         {/*Desktop Nav*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-poppins text-sm font-semibold w-1/2">
+          (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-1/2">
             <LinkRender
-              page="Home"
+              page="HOME"
             />
              <LinkRender
-              page="Skills"
+              page="SKILLS"
             />
              <LinkRender
-              page="Projects"
+              page="PROJECTS"
             />
              <LinkRender
-              page="Experiences"
+              page="EXPERIENCES"
             />
              <LinkRender
-              page="Contact"
+              page="CONTACT"
             />
           </div>)
         : 
