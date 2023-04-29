@@ -2,11 +2,12 @@ import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Link} from 'react-scroll'
 
-const LinkRender = ({ page }) => {
+const LinkRender = ({ isAboveSmallScreens,page }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <Link
-        activeClass="active"
+        // activeClass="active"
+        activeClass={isAboveSmallScreens? "active":"activeMenu"}
         href={`#${lowerCasePage}`}
         smooth spy to= {`${lowerCasePage}`}
     >
@@ -27,24 +28,29 @@ const Navbar = () => {
         ? 
           (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-1/2">
             <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
               page="HOME"
             />
              <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
               page="SKILLS"
             />
              <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
               page="PROJECTS"
             />
              <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
               page="EXPERIENCES"
             />
              <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
               page="CONTACT"
             />
           </div>)
         : 
           (<button
-            className="rounded-full bg-red p-2 mr-[5%]"
+            className="rounded-full bg-blue p-2 mr-[5%]"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img alt="menu-icon" src="../assets/menu-icon.svg" />
@@ -52,7 +58,7 @@ const Navbar = () => {
         }
         {/* Menu Popup */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed right-0 top-0 h-full bg-blue w-[300px]">
+          <div className="fixed right-0 top-0 h-full bg-blue w-[300px] h-[400px]">
             {/*close icon */}
             <div className="flex justify-end p-6">
               <button
@@ -61,20 +67,25 @@ const Navbar = () => {
               </button>
             </div>
             {/*menu items*/}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+            <div className="flex flex-col gap-8 ml-[33%] text-2xl text-black font-bold">
               <LinkRender
+                isAboveSmallScreens={isAboveSmallScreens}
                 page="Home"                
               />
               <LinkRender
+                isAboveSmallScreens={isAboveSmallScreens}
                 page="Skills"                
               />
               <LinkRender
+                isAboveSmallScreens={isAboveSmallScreens}
                 page="Projects"                
               />
               <LinkRender
+                isAboveSmallScreens={isAboveSmallScreens}
                 page="Experiences"                
               />
               <LinkRender
+                isAboveSmallScreens={isAboveSmallScreens}
                 page="Contact"                
               />
             </div>

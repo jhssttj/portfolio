@@ -19,6 +19,9 @@ body,
 .active {
   color:#65FADE;
 }
+.activeMenu {
+  color:white;
+}
 
 .dotActive{
   position:relative;
