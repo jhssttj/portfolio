@@ -25,7 +25,7 @@ const Navbar = () => {
         {/*Desktop Nav*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-opensans text-sm font-semibold w-1/2">
+          (<div className="flex justify-between font-poppins text-sm font-semibold w-1/2">
             <LinkRender
               page="Home"
             />

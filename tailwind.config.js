@@ -21,7 +21,8 @@ module.exports = {
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"]
+        opensans: ["Open Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"]
       },
       content: {
         brush: "url('./assets/brush.png')",
