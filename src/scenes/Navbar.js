@@ -4,11 +4,15 @@ import {Link} from 'react-scroll'
 
 const LinkRender = ({ isAboveSmallScreens,page }) => {
   const lowerCasePage = page.toLowerCase();
+  const activeClass = (isAboveSmallScreens? "active":"activeMenu");
+  const activeClassName = (isAboveSmallScreens 
+      ? "hover:text-blue hover:border-b-2 hover:border-blue active:bg-blue active:text-black flex justify-center items-center w-full h-full text-center "
+      :"hover:text-purple hover:border-b-2 hover:border-purple active:text-white active:border-white border-b-2 border-black")
   return (
     <Link
         // activeClass="active"
-        activeClass={isAboveSmallScreens? "active":"activeMenu"}
-        className="flex justify-center items-center w-full h-full text-center hover:text-blue hover:border-b-2 hover:border-blue"
+        activeClass = {activeClass}
+        className={`${activeClassName}`}
         href={`#${lowerCasePage}`}
         smooth spy to= {`${lowerCasePage}`}
     >
@@ -27,7 +31,7 @@ const Navbar = () => {
         {/*Desktop Nav*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-1/2 h-full">
+          (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-3/4 h-full">
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="HOME"
@@ -51,7 +55,7 @@ const Navbar = () => {
           </div>)
         : 
           (<button
-            className="rounded-full bg-blue p-2 mr-[5%]"
+            className="rounded-full bg-blue p-2 mr-[5%] active:bg-white"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img alt="menu-icon" src="../assets/menu-icon.svg" />

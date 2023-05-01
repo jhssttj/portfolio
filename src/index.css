@@ -22,7 +22,8 @@ body,
 }
 
 .activeMenu {
-  color:#65FADE;
+  color:#A30B9E;
+  border-bottom: solid 2px #A30B9E;
 }
 
 .dotActive{
