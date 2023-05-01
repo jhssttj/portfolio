@@ -29,13 +29,15 @@ module.exports = {
       content: {
         brush: "url('./assets/brush.png')",
         work1: "url('./assets/AltusGroup.png')"
-      }
+      },
+      boxShadow: {
+        "sd": '5px 5px black'
+      },
     },
     screens: {
       xs: '480px',
       sm: '768px',
       md: '1060px'
-
     }
   },
   plugins: [],

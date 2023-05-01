@@ -86,10 +86,11 @@ const Landing = () => {
            }}
           > 
             <AnchorLink
-              className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+              className="bg-blue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-purple 
+              transition duration-500 font-poppins shadow-sd active:text-white active:shadow-2xl"
               href="#contact"
             >
-              Let's talk
+              Let's Chat
             </AnchorLink>
           </motion.div>
 
