@@ -1,31 +1,33 @@
 
 
 const SocialMediaIcons = () => {
+
+  const iconClassName = "hover:opacity-50 transition duration-500"
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
       <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.linkedin.com/jhssttj"
+        className={iconClassName}
+        href="https://github.com/jhssttj"
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="linkedin-link" src="../assets/linkedin.png"/>
+        <img alt="githublink" src="../assets/icons/github.png"/>
       </a>
       <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.facebook.com"
+        className={iconClassName}
+        href="https://www.linkedin.com/in/jhssttj/"
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="facebooklink" src="../assets/facebook.png"/>
+        <img alt="linkedinlink" src="../assets/icons/linkedin.png"/>
       </a>
       <a
-        className="hover:opacity-50 transition duration-500"
+        className={iconClassName}
         href="https://www.instagram.com/kevjhlee"
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="instagram-link" src="../assets/instagram.png"/>
+        <img alt="instagram-link" src="../assets/icons/instagram.png"/>
       </a>
     </div>
   )

@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="app bg-deep-blue">
       <Navbar/>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         {isAboveMediumScreens && (
           <DotGroup />
         )}
