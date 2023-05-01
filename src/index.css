@@ -18,9 +18,11 @@ body,
 }
 .active {
   color:#65FADE;
+  border-bottom: solid 2px #65FADE;
 }
+
 .activeMenu {
-  color:white;
+  color:#65FADE;
 }
 
 .dotActive{

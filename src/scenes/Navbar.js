@@ -8,6 +8,7 @@ const LinkRender = ({ isAboveSmallScreens,page }) => {
     <Link
         // activeClass="active"
         activeClass={isAboveSmallScreens? "active":"activeMenu"}
+        className="flex justify-center items-center w-full h-full text-center hover:text-blue hover:border-b-2 hover:border-blue"
         href={`#${lowerCasePage}`}
         smooth spy to= {`${lowerCasePage}`}
     >
@@ -21,12 +22,12 @@ const Navbar = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
   return (
-    <nav className={`bg-black z-40 w-full fixed top-0 py-4`}>
-      <div className={`${navBarIconClass} flex items-center mx-auto w-full`}>
+    <nav className={`bg-black z-40 w-full h-[50px] fixed top-0`}>
+      <div className={`${navBarIconClass} flex items-center mx-auto w-full h-full`}>
         {/*Desktop Nav*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-1/2">
+          (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-1/2 h-full">
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="HOME"
