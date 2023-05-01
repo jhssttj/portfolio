@@ -10,7 +10,6 @@ const LinkRender = ({ isAboveSmallScreens,page }) => {
       :"hover:text-purple hover:border-b-2 hover:border-purple active:text-white active:border-white border-b-2 border-black")
   return (
     <Link
-        // activeClass="active"
         activeClass = {activeClass}
         className={`${activeClassName}`}
         href={`#${lowerCasePage}`}

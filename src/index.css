@@ -28,6 +28,7 @@ body,
   position:relative;
   background-color:#65FADE;
 }
+
 .dotActive::before {
   content: "";
   position: absolute;
