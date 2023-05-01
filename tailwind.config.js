@@ -25,7 +25,6 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         noto: ["Noto Sans", 'sans-serif'],
-        rubik: ["Rubik", "sans-serif"]
       },
       content: {
         brush: "url('./assets/brush.png')",

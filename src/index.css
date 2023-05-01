@@ -1,8 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,10 +12,11 @@ body,
   height: 100%;
   background-color: white;
   @apply text-black;
+  font-family: 'Noto Sans', sans-serif;
 }
 .active {
   color:#65FADE;
-  border-bottom: solid 2px #65FADE;
+  border-bottom: solid 4px #65FADE;
 }
 
 .activeMenu {

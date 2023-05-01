@@ -6,7 +6,7 @@ const LinkRender = ({ isAboveSmallScreens,page }) => {
   const lowerCasePage = page.toLowerCase();
   const activeClass = (isAboveSmallScreens? "active":"activeMenu");
   const activeClassName = (isAboveSmallScreens 
-      ? "hover:text-blue hover:border-b-2 hover:border-blue active:bg-blue active:text-black flex justify-center items-center w-full h-full text-center "
+      ? "hover:text-blue hover:border-b-4 hover:border-blue active:bg-blue active:text-black flex justify-center items-center w-full h-full text-center "
       :"hover:text-purple hover:border-b-2 hover:border-purple active:text-white active:border-white border-b-2 border-black")
   return (
     <Link
