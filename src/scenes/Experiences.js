@@ -1,19 +1,19 @@
 import {motion} from "framer-motion";
 
 const Experiences = () => {
-  const experiencesStyles = `mx-auto md:w-1/3 max-w-[400px] h-auto flex flex-col p-2
+  const experiencesStyles = `mx-auto md:w-full max-w-[450px] h-auto flex flex-col p-2
   justify-start mt-7 shadow-sd`;
 
   const titleContainer = "flex md:justify-start items-center w-full mt-3" 
-  const imageStyles = 'bg-white mx-4 w-1/3'
-  const roleStyles = "mr-2 font-poppins text-xl xs:text-3xl font-semibold w-2/3 text-center shadow-sd border-2 border-black"
-  const paraStyles = 'text-left text-m sm:text-xl m-4'
+  const imageStyles = 'bg-white mx-4 w-1/3 border-2 border-black shadow-sd'
+  const roleStyles = "mr-2 font-poppins text-xl xs:text-2xl font-semibold w-2/3 text-center "
+  const paraStyles = 'text-left text-m sm:text-lg m-4'
 
   return (
     <section id="experiences" className="pt-10 pb-24">
       {/*Heading */}
       <motion.div
-        className="md:w-2/4 mx-auto text-center flex justify-center mt-16 mb-16"
+        className="md:w-2/4 mx-auto text-center flex justify-center mt-16 mb-14"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.5}}
@@ -36,7 +36,7 @@ const Experiences = () => {
       </motion.div>
 
       {/*Experience Sections */}
-      <div className="md:flex md:justify-between gap-2 sm:grid md:grid-cols-3 sm:grid-cols-2">
+      <div className="md:flex md:justify-between gap-4 sm:grid md:grid-cols-3 sm:grid-cols-2">
         <motion.div
           className={`bg-green ${experiencesStyles}`}
           initial="hidden"
