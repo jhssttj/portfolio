@@ -8,7 +8,7 @@ const MySkills = () => {
   return(
     <section id="skills" className="pt-10 pb-24">
       {/*Header and Image Section */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="flex md:justify-between md:gap-16 mt-32 md:flex-row flex-col justify-center items-center">
         <motion.div
           className="md:w-1/2"
           initial="hidden"
@@ -20,18 +20,17 @@ const MySkills = () => {
             visible: {opacity: 1, x: 0}
           }}
         >
-          <p className="font-poppins font-semibold text-4xl mb-5">
-            <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-              xs:before:content-brush2 before:absolute before:md:-right-[50px] before:-top-[20px] before:z-[-1] before:xs:-right-[140px]">
-                 My
-                 <br></br>
-                 <span>
+          <p className="font-poppins font-semibold text-4xl mb-5 flex justify-center md:justify-start">
+            <span className="relative z-20 before:content-brush2 before:absolute before:-top-[50px] before:z-[-1] 
+              before:-right-[80px]">
+                MY
+                <br></br>
+                <span>
                   SKILLS
-                 </span>
+                </span>
               </span>
           </p>
-          <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
+          <p className="mt-10 mb-7 flex flex-col justify-center md:flex-none">
             I have many other skills and experiences related to:
             <li>Project Management</li>
             <li>Quality Control and Assurance</li>
