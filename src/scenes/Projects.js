@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <section id="projects" className="pt-48 pb-48">
       <motion.div
-      className="md:w-2/4 mx-auto text-center"
+      className="md:w-2/4 mx-auto text-center flex justify-center"
       initial="hidden"
       whileInView="visible"
       viewport={{once:true, amount:0.5}}
@@ -70,33 +70,34 @@ const Projects = () => {
         hidden: {opacity: 0, x: -50},
         visible: {opacity: 1, x: 0}
       }}
-    >
-      <div className ="mb-6">
-        <p className="font-playfair font-semibold text-4xl">
-          My <span className="text-red">PROJECTS</span>
-        </p>
-        <div className="flex justify-center mt-5">
-          <LineGradient width="w-1/3" />
-        </div>
-      </div>
-    </motion.div>
-
-    {/*Projects */}
-    <div className="flex justify-center">
-      <motion.div
-        className="sm:grid md:grid-cols-3 sm:grid-cols-2"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{once:true, amount:0.5}}
-        transition={{duration:0.5}}
-        variants={container}
       >
-        {/*Row 1 */}
-          {renderProjects}
-
+          <p className="font-poppins font-semibold text-4xl mb-5 flex justify-center md:justify-start">
+              <span className="relative z-20 before:content-brush2 before:absolute before:-top-[50px] before:z-[-1] 
+                before:-right-[80px]">
+                  MY
+                  <br></br>
+                  <span>
+                    PROJECTS
+                  </span>
+                </span>
+            </p>
       </motion.div>
 
-    </div>
+      {/*Projects */}
+      <div className="flex justify-center">
+        <motion.div
+          className="sm:grid md:grid-cols-3 sm:grid-cols-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once:true, amount:0.5}}
+          transition={{duration:0.5}}
+          variants={container}
+        >
+          {/*Row 1 */}
+            {renderProjects}
+
+        </motion.div>
+      </div>
     </section>
   )
 }
