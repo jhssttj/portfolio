@@ -1,20 +1,19 @@
-import LineGradient from "../components/LineGradient";
 import {motion} from "framer-motion";
 
 const Experiences = () => {
   const experiencesStyles = `mx-auto md:w-1/3 max-w-[400px] h-auto flex flex-col p-2
-  justify-start mt-7`;
+  justify-start mt-7 shadow-sd`;
 
   const titleContainer = "flex md:justify-start items-center w-full mt-3" 
   const imageStyles = 'bg-white mx-4 w-1/3'
-  const roleStyles = "mr-2 font-playfair text-xl xs:text-3xl font-semibold w-2/3 text-center"
-  const paraStyles = 'font-playfair text-left text-m sm:text-xl m-4'
+  const roleStyles = "mr-2 font-poppins text-xl xs:text-3xl font-semibold w-2/3 text-center shadow-sd border-2 border-black"
+  const paraStyles = 'text-left text-m sm:text-xl m-4'
 
   return (
-    <section id="experiences" className="pt-32 pb-32">
+    <section id="experiences" className="pt-10 pb-24">
       {/*Heading */}
       <motion.div
-        className="md:w-1/3 text-center md:text-center mx-auto"
+        className="md:w-2/4 mx-auto text-center flex justify-center mt-16 mb-16"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.5}}
@@ -24,19 +23,22 @@ const Experiences = () => {
           visible: {opacity: 1, scale: 1}
         }}
       >
-
-        <p className="font-playfair font-semibold text-4xl">
-          My <span className="text-red">EXPERIENCES</span>
+        <p className="font-poppins font-semibold text-4xl flex justify-center md:justify-start">
+          <span className="relative z-20 before:content-brush4 before:absolute before:-top-[25px] before:z-[-1] 
+            before:-right-[40px]">
+              MY
+              <br></br>
+              <span>
+                EXPERIENCES
+              </span>
+            </span>
         </p>
-        <div className="flex justify-center mt-5">
-          <LineGradient width="mx-auto w-1/2" />
-        </div>
       </motion.div>
 
       {/*Experience Sections */}
       <div className="md:flex md:justify-between gap-2 sm:grid md:grid-cols-3 sm:grid-cols-2">
         <motion.div
-          className={`bg-blue ${experiencesStyles}`}
+          className={`bg-green ${experiencesStyles}`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -63,7 +65,7 @@ const Experiences = () => {
         </motion.div>
 
         <motion.div
-          className={`bg-red ${experiencesStyles}`}
+          className={`bg-blue ${experiencesStyles}`}
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}

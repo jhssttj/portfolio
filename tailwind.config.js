@@ -9,6 +9,7 @@ module.exports = {
         blue: "#65FADE",
         yellow: "#EFD81D",
         purple: "#A30B9E",
+        green:"#72BF6A",
         grey: "#EDEDED",
         "deep-blue" : "#01026",
         "dark-grey" : "#757575",
@@ -30,6 +31,7 @@ module.exports = {
         brush: "url('./assets/brush/brush.png')",
         brush2: "url('./assets/brush/brush2.jpg')",
         brush3: "url('./assets/brush/brush3.png')",
+        brush4: "url('./assets/brush/brush4.png')",
       },
       boxShadow: {
         "sd": '5px 5px black'
