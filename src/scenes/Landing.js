@@ -34,7 +34,7 @@ const Landing = () => {
         </div>
 
         {/*Main Section */}
-        <div className="z-30 basis-2/5 mt-12 md:mt-32">
+        <div className="z-30 basis-2/5 mt-16 md:mt-32">
           {/*Headings */}
           <motion.div
             initial="hidden"
@@ -57,7 +57,7 @@ const Landing = () => {
               </span>
             </p>
 
-            <p className="mt-10 mb-7 text-sm text-center md:text-start">
+            <p className="font-poppins mt-10 mb-7 text-sm text-center md:text-start">
             Thank you for visiting my website! I am a former civil engineering graduate from University of Calgary who have taken interest in web development.
             <br/>
             <br/>
@@ -85,8 +85,8 @@ const Landing = () => {
            }}
           > 
             <AnchorLink
-              className="bg-blue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-purple 
-              transition duration-500 font-poppins shadow-sd active:text-white active:shadow-2xl"
+              className="bg-blue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue 
+              transition duration-500 font-poppins shadow-sd active:text-white hover:shadow-2xl"
               href="#contact"
             >
               Let's Chat
