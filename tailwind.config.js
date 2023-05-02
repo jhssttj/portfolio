@@ -27,14 +27,15 @@ module.exports = {
         noto: ["Noto Sans", 'sans-serif'],
       },
       content: {
-        brush: "url('./assets/brush.png')",
-        brush2: "url('./assets/brush2.jpg')",
+        brush: "url('./assets/brush/brush.png')",
+        brush2: "url('./assets/brush/brush2.jpg')",
       },
       boxShadow: {
         "sd": '5px 5px black'
       },
     },
     screens: {
+      xxs: '360px',
       xs: '480px',
       sm: '768px',
       md: '1060px'

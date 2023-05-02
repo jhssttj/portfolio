@@ -43,7 +43,7 @@ const MySkills = () => {
           ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 
-            before:w-full before:h-full before:border-2 before: border-blue before:z-[-1]"
+            before:w-full before:h-full before:border-2 before:border-purple before:z-[-1]"
           >
             <img
               alt="skills"
@@ -65,7 +65,7 @@ const MySkills = () => {
 
       {/*Skills */}
       <div className="md:flex md:justify-between mt-16 gap-32">
-        {/*Experience */}
+        {/*Computer Lanaguage */}
         <motion.div
           className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
@@ -77,12 +77,11 @@ const MySkills = () => {
             visible: {opacity: 1, y: 0}
           }}
         >
-          <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-platfair font-semibold text-5xl">01</p>
-              <p className="font-platfair font-semibold text-2xl mt-3">Computer Languages</p>
+          <div className="relative h-40 xxs:h-36 bg-purple shadow-sd">
+            <div className="z-10 font-poppins">
+              <p className="font-platfair font-semibold text-5xl ml-1">01</p>
+              <p className="font-platfair font-semibold text-2xl mt-3 ml-1">Computer Languages</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5">
             <li>JavaScript</li>
@@ -94,7 +93,7 @@ const MySkills = () => {
 
         </motion.div>
 
-        {/*INNOVATIVE */}
+        {/*Framework, Libraries, Environments */}
         <motion.div
           className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
@@ -106,12 +105,11 @@ const MySkills = () => {
             visible: {opacity: 1, y: 0}
           }}
         >
-          <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-platfair font-semibold text-5xl">02</p>
-              <p className="font-platfair font-semibold text-2xl mt-3">Framework, Libraries, Environments</p>
+          <div className="relative h-40 xxs:h-36 bg-blue shadow-sd">
+            <div className="z-10 font-poppins">
+              <p className="font-platfair font-semibold text-5xl ml-1">02</p>
+              <p className="font-platfair font-semibold text-2xl mt-3 ml-1">Framework, Libraries, Environments</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5">
             <li>NodeJS</li>
@@ -128,7 +126,7 @@ const MySkills = () => {
 
         </motion.div>
 
-        {/*IMAGINATIVE */}
+        {/*Testing, Systems, Datebases */}
         <motion.div
           className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
@@ -140,12 +138,11 @@ const MySkills = () => {
             visible: {opacity: 1, y: 0}
           }}
         >
-          <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-platfair font-semibold text-5xl">03</p>
-              <p className="font-platfair font-semibold text-2xl mt-3">Testing, Systems, Databases</p>
+          <div className="relative h-40 xxs:h-36 bg-yellow shadow-sd">
+            <div className="z-10 font-poppins">
+              <p className="font-platfair font-semibold text-5xl ml-1">03</p>
+              <p className="font-platfair font-semibold text-2xl mt-3 ml-1">Testing, Systems, Databases</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]"/>
           </div>
           <p className="mt-5 mb-5">
             <li>Storybook</li>
