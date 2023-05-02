@@ -1,4 +1,3 @@
-import LineGradient from '../components/LineGradient';
 import {motion} from "framer-motion";
 import projectData from '../projectData/projectData';
 
@@ -16,31 +15,32 @@ const projectVariant = {
 }
 
 const Project = ({title,description,link,git}) => {
-  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-blue z-30 flex 
-  flex-col justify-center items-center text-center p-16 text-deep-blue`
+  const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-yellow z-30 flex 
+  flex-col justify-center items-center text-center p-8`
   return (
-    <motion.div variants={projectVariant} className="relative m-1">
+    <motion.div variants={projectVariant} className="relative m-2 border-black border-2 shadow-sd">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-4">
+        <p className="font-poppins font-semibold text-sm xxs:text-2xl">{title}</p>
+        <p className="mt-2 text-xs xxs:text-base">
           {description}
         </p>
         <a 
         href={link} 
-        className="text-blue bg-white hover:bg-yellow font-playfair font-bold rounded-lg text-base px-4 py-2.5 mt-2 mr-2 mb-2"
+        className="font-poppins text-black bg-blue hover:bg-purple font-semibold 
+        text-xs xxs:text-base px-4 py-2.5 mt-2 mr- mb-2 shadow-sd active:text-white"
         rel="noopener noreferrer" target="_blank">
-          See Project Demo
+          Project Demo
         </a>
         <a
         className="hover:opacity-50 transition duration-500"
         href={git}
         target="_blank"
         rel="noreferrer"
-      >
-        <img alt="projectgitlink" src="../assets/github.png"/>
-      </a>
+        >
+        <img alt="projectgitlink" src="../assets/icons/github.png"/>
+        </a>
       </div>
-      <img className=""src={`../assets/${title}.png`} alt={title} />
+      <img className=""src={`../assets/projects/${title}.png`} alt={title} />
     </motion.div>
   )
 }
