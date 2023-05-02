@@ -20,7 +20,7 @@ const MySkills = () => {
             visible: {opacity: 1, x: 0}
           }}
         >
-          <p className="font-poppins font-semibold text-4xl mb-5 flex justify-center md:justify-start text-center md:text-start">
+          <p className="font-poppins font-semibold text-4xl mb-7 flex justify-center md:justify-start text-center md:text-start">
             <span className="relative z-20 before:content-brush2 before:absolute before:-top-[50px] before:z-[-1] 
               before:-right-[70px]">
                 MY

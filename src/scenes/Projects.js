@@ -59,9 +59,9 @@ const renderProjects = projectList.map((project) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-10 pb-24">
       <motion.div
-      className="md:w-2/4 mx-auto text-center flex justify-center"
+      className="md:w-2/4 mx-auto text-center flex justify-center mt-16 mb-16"
       initial="hidden"
       whileInView="visible"
       viewport={{once:true, amount:0.5}}
@@ -71,9 +71,9 @@ const Projects = () => {
         visible: {opacity: 1, x: 0}
       }}
       >
-          <p className="font-poppins font-semibold text-4xl mb-5 flex justify-center md:justify-start">
-              <span className="relative z-20 before:content-brush2 before:absolute before:-top-[50px] before:z-[-1] 
-                before:-right-[80px]">
+          <p className="font-poppins font-semibold text-4xl flex justify-center md:justify-start">
+              <span className="relative z-20 before:content-brush3 before:absolute before:-top-[25px] before:z-[-1] 
+                before:-right-[40px]">
                   MY
                   <br></br>
                   <span>
