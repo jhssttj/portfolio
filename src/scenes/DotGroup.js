@@ -2,7 +2,7 @@ import {Link} from 'react-scroll'
 
 const DotGroup = () => {
 
-  const dotClassName = "bg-dark-grey w-3 h-3 rounded-full hover:bg-blue"
+  const dotClassName = "bg-dark-grey w-3 h-3 rounded-full hover:bg-black"
 
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7">

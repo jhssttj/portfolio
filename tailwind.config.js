@@ -28,7 +28,7 @@ module.exports = {
       },
       content: {
         brush: "url('./assets/brush.png')",
-        work1: "url('./assets/AltusGroup.png')"
+        brush2: "url('./assets/brush2.png')",
       },
       boxShadow: {
         "sd": '5px 5px black'

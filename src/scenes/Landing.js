@@ -47,9 +47,8 @@ const Landing = () => {
             }}
           >
             <p className="text-6xl font-poppins font-semibold z-10 text-center md:text-start">
-              {/* Kevin {""} */}
-              <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-              xs:before:content-brush before:absolute before:md:-right-[175px] before:-top-[100px] before:z-[-1] before:xs:-right-[140px]">
+              <span className="relative z-20 before:content-brush before:absolute before:-top-[100px] before:z-[-1] 
+              before:md:-right-[175px] before:sm:-right-[140px] before:-right-[130px]">
                  Kevin
                  <br></br>
                  <span>

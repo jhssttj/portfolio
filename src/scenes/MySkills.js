@@ -20,8 +20,15 @@ const MySkills = () => {
             visible: {opacity: 1, x: 0}
           }}
         >
-          <p className="font-playfair font-semibold text-4xl mb-5">
-            My <span className="text-red">SKILLS</span>
+          <p className="font-poppins font-semibold text-4xl mb-5">
+            <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20
+              xs:before:content-brush2 before:absolute before:md:-right-[50px] before:-top-[20px] before:z-[-1] before:xs:-right-[140px]">
+                 My
+                 <br></br>
+                 <span>
+                  SKILLS
+                 </span>
+              </span>
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
