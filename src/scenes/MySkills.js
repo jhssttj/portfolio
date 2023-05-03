@@ -76,7 +76,7 @@ const MySkills = () => {
             visible: {opacity: 1, y: 0}
           }}
         >
-          <div className="relative h-40 md:h-40 xxs:h-36 bg-purple shadow-sd">
+          <div className="relative h-40 md:h-40 xxs:h-36 bg-purple shadow-sd rounded-lg border-2 border-black">
             <div className="z-10 font-poppins">
               <p className="font-semibold text-5xl ml-1">01</p>
               <p className="font-semibold text-2xl mt-3 ml-1">Computer Languages</p>
@@ -104,7 +104,7 @@ const MySkills = () => {
             visible: {opacity: 1, y: 0}
           }}
         >
-          <div className="relative h-40 md:h-40 xxs:h-36 bg-blue shadow-sd">
+          <div className="relative h-40 md:h-40 xxs:h-36 bg-blue shadow-sd rounded-lg border-2 border-black">
             <div className="z-10 font-poppins">
               <p className="font-semibold text-5xl ml-1">02</p>
               <p className="font-semibold text-2xl mt-3 ml-1">Framework, Libraries, Environments</p>
@@ -137,7 +137,7 @@ const MySkills = () => {
             visible: {opacity: 1, y: 0}
           }}
         >
-          <div className="relative h-40 md:h-40 xxs:h-36 bg-yellow shadow-sd">
+          <div className="relative h-40 md:h-40 xxs:h-36 bg-yellow shadow-sd rounded-lg border-2 border-black">
             <div className="z-10 font-poppins">
               <p className="font-semibold text-5xl ml-1">03</p>
               <p className="font-semibold text-2xl mt-3 ml-1">Testing, Systems, Databases</p>

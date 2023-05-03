@@ -86,7 +86,7 @@ const Landing = () => {
           > 
             <AnchorLink
               className="bg-blue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue 
-              transition duration-500 font-poppins shadow-sd active:text-white hover:bg-yellow"
+              transition duration-500 font-poppins shadow-sd active:text-white hover:bg-yellow rounded-lg border-2 border-black"
               href="#contact"
             >
               Let's Chat

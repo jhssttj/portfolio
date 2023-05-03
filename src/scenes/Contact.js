@@ -17,29 +17,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-48">
-      {/* Headings */}
-      <motion.div
-          className="flex justify-end w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once:true, amount:0.5}}
-          transition={{duration:0.5}}
-          variants={{
-            hidden: {opacity: 0, x:-50},
-            visible: {opacity: 1, x:0}
-          }}
-         >
-          <div>
-            <p className="font-playfair font-semibold text-4xl">"
-              <span className='text-yellow'>Contact Me</span> To get Started
-            </p>
-            <div className="flex md:justify-end my-5">
-            <LineGradient width="w-1/2"/>
-            </div>
-          </div>
-        </motion.div>
-
+    <section id="contact" className="pt-24 pb-32">
         {/*Form and Image  */}
         <div className="md:flex md:justify-between gap-16 mt-5">
           <motion.div
@@ -64,6 +42,12 @@ const Contact = () => {
              hidden: {opacity: 0, x:50},
              visible: {opacity: 1, y:0}
            }}>
+            <p className="font-poppins font-semibold text-4xl md:justify-start mb-4">
+              <span className="relative z-20 before:content-bush before:absolute before:-top-[25px] before:z-[-1] 
+                before:-right-[40px]">
+                  CONTACT ME
+              </span>
+            </p>
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -71,7 +55,7 @@ const Contact = () => {
               method="POST"            
               >
               <input
-                className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+                className="font-poppins w-full bg-blue font-semibold placeholder-opaque-black p-3 shadow-sd rounded-lg border-2 border-black"
                 type="text"
                 placeholder="NAME"
                 {...register("name",{
@@ -87,7 +71,7 @@ const Contact = () => {
               )}
 
               <input
-                className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                className="font-poppins w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-6 shadow-sd rounded-lg border-2 border-black"
                 type="text"
                 placeholder="EMAIL"
                 {...register("email",{
@@ -102,7 +86,7 @@ const Contact = () => {
               )}
               
               <textarea
-                className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                className="font-poppins w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-6 shadow-sd rounded-lg border-2 border-black"
                 type="text"
                 placeholder="MESSAGE"
                 rows="4"
@@ -120,8 +104,8 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
-                hover:text-white transition duration 500"
+                className="font-poppins p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-black
+                 active:text-white transition duration 500 shadow-sd rounded-lg border-2 border-black"
               >
                 SEND
               </button>

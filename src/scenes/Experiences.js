@@ -2,7 +2,7 @@ import {motion} from "framer-motion";
 
 const Experiences = () => {
   const experiencesStyles = `mx-auto md:w-full max-w-[450px] h-auto flex flex-col p-2
-  justify-start mt-7 shadow-sd`;
+  justify-start mt-7 shadow-sd rounded-lg border-2 border-black`;
 
   const titleContainer = "flex md:justify-start items-center w-full mt-3" 
   const imageStyles = 'bg-white mx-4 w-1/3 border-2 border-black shadow-sd'

@@ -16,9 +16,9 @@ const projectVariant = {
 
 const Project = ({title,description,link,git}) => {
   const overlayStyles =`absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-yellow z-30 flex 
-  flex-col justify-center items-center text-center p-8`
+  flex-col justify-center items-center text-center p-8 rounded-lg`
   return (
-    <motion.div variants={projectVariant} className="relative m-2 border-black border-2 shadow-sd">
+    <motion.div variants={projectVariant} className="relative m-2 border-black border-2 shadow-sd rounded-lg">
       <div className={overlayStyles}>
         <p className="font-poppins font-semibold text-sm xxs:text-2xl">{title}</p>
         <p className="mt-2 text-xs xxs:text-base">
@@ -40,7 +40,9 @@ const Project = ({title,description,link,git}) => {
         <img alt="projectgitlink" src="../assets/icons/github.png"/>
         </a>
       </div>
-      <img className=""src={`../assets/projects/${title}.png`} alt={title} />
+      <div className="flex justify-center items-center">
+      <img className="p-1 "src={`../assets/projects/${title}.png`} alt={title} />
+      </div>
     </motion.div>
   )
 }
