@@ -69,7 +69,7 @@ const Contact = () => {
               onSubmit={onSubmit}
               action = {`https://formsubmit.co/470b7198e34f535e1ee66acd2f28e9f2`}
               method="POST"            
-            >
+              >
               <input
                 className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
                 type="text"
@@ -92,12 +92,12 @@ const Contact = () => {
                 placeholder="EMAIL"
                 {...register("email",{
                   required: true,
-                  patternL: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
                 })}/>
               {errors.email && (
                 <p className="text-red mt-1">
-                  {errors.name.type === 'required' && 'This field is required.'}
-                  {errors.name.type === 'pattern' && 'Invalid email format.'}
+                  {errors.email.type === 'required' && 'This field is required.'}
+                  {errors.email.type === 'pattern' && 'Invalid email format.'}
                 </p>
               )}
               
@@ -113,8 +113,8 @@ const Contact = () => {
                 })}/>
               {errors.message && (
                 <p className="text-red mt-1">
-                  {errors.name.type === 'required' && 'This field is required.'}
-                  {errors.name.type === 'maxLength' && 'Max Length of 2000 exceeded.'}
+                  {errors.message.type === 'required' && 'This field is required.'}
+                  {errors.message.type === 'maxLength' && 'Max Length of 2000 exceeded.'}
                 </p>
               )}
 
