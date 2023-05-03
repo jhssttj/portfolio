@@ -42,9 +42,9 @@ const Contact = () => {
              hidden: {opacity: 0, x:50},
              visible: {opacity: 1, y:0}
            }}>
-            <p className="font-poppins font-semibold text-4xl md:justify-start mb-4">
-              <span className="relative z-20 before:content-bush before:absolute before:-top-[25px] before:z-[-1] 
-                before:-right-[40px]">
+            <p className="font-poppins font-semibold text-4xl md:justify-start mb-8">
+              <span className="relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
+                before:-right-[60px]">
                   CONTACT ME
               </span>
             </p>
