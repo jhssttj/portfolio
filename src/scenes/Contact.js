@@ -1,4 +1,3 @@
-import LineGradient from '../components/LineGradient';
 import {useForm} from 'react-hook-form';
 import {motion} from 'framer-motion';
 
@@ -42,9 +41,10 @@ const Contact = () => {
              hidden: {opacity: 0, x:50},
              visible: {opacity: 1, y:0}
            }}>
+            <div></div>
             <p className="font-poppins font-semibold text-4xl md:justify-start mb-8">
-              <span className="relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
-                before:-right-[60px]">
+              <span className="z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
+                before:-left-[50px]">
                   CONTACT ME
               </span>
             </p>
@@ -61,11 +61,10 @@ const Contact = () => {
                 {...register("name",{
                   required: true,
                   maxLength: 100
-                })}
-              />
+                })}/>
               {errors.name && (
-                <p className="text-red mt-1">
-                  {errors.name.type === 'required' && 'This field is required.'}
+                <p className="font-poppins text-red mt-2">
+                  {errors.name.type === 'required' && 'Cannot submit blank name.'}
                   {errors.name.type === 'maxLength' && 'Max Length of 100 exceeded.'}
                 </p>
               )}
@@ -79,9 +78,9 @@ const Contact = () => {
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
                 })}/>
               {errors.email && (
-                <p className="text-red mt-1">
-                  {errors.email.type === 'required' && 'This field is required.'}
-                  {errors.email.type === 'pattern' && 'Invalid email format.'}
+                <p className="font-poppins text-red mt-2">
+                  {errors.email.type === 'required' && 'Cannot submit blank email.'}
+                  {errors.email.type === 'pattern' && 'Improper email format.'}
                 </p>
               )}
               
@@ -96,8 +95,8 @@ const Contact = () => {
                   maxLength:2000
                 })}/>
               {errors.message && (
-                <p className="text-red mt-1">
-                  {errors.message.type === 'required' && 'This field is required.'}
+                <p className="font-poppins text-red mt-2">
+                  {errors.message.type === 'required' && 'Cannot submit blank message.'}
                   {errors.message.type === 'maxLength' && 'Max Length of 2000 exceeded.'}
                 </p>
               )}
@@ -109,12 +108,8 @@ const Contact = () => {
               >
                 SEND
               </button>
-
-
             </form>
-            
           </motion.div>
-
         </div>
     </section>
   )

@@ -1,5 +1,5 @@
 import useMediaQuery from './hooks/useMediaQuery';
-import LineGradient from './components/LineGradient';
+import LineBreak from './components/LineBreak';
 import DotGroup from './scenes/DotGroup';
 import Landing from './scenes/Landing';
 import Navbar from './scenes/Navbar';
@@ -21,20 +21,20 @@ function App() {
         )}
         <Landing/>
       </div>
-      <LineGradient/>
+      <LineBreak/>
       <div className="w-5/6 mx-auto">
           <MySkills />
       </div>
       <br></br>
-      <LineGradient/>
+      <LineBreak/>
       <div className="w-5/6 mx-auto">
           <Projects />
       </div>
-      <LineGradient/>
+      <LineBreak/>
       <div className="w-5/6 mx-auto">
           <Experiences />
       </div>
-      <LineGradient/>
+      <LineBreak/>
       <div className="w-5/6 mx-auto md:h-full">
           <Contact />
       </div>
