@@ -7,7 +7,7 @@ const Landing = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
   return (
-    <section id="home" className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10">
+    <section id="home" className="md:flex md:justify-between md:items-center gap-16 md:h-full py-14">
 
       {/*Image Section */}
         <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">

@@ -1,17 +1,15 @@
-import SocialMediaIcons from "../components/SocialMediaIcons";
+import SocialMediaIconsW from "../components/SocialMediaIconsW";
 
 const Footer = () => {
   return (
-    <footer className="h-64 bg-red pt-10">
-      <div className="w-5/6 mx-auto">
-        <SocialMediaIcons/>
-        <div className="md:flex justify-center md:justify-between text-center">
-          <p className="font-playfair font-semibold text-2xl text-yellow">Kevin Lee</p>
-          <p className="font-playfair text-md text-yellow">@2023 LEE. All rights reserved</p>
+    <footer className="sm:h-28 h-auto bg-black flex">
+      <div className="w-5/6 mx-auto flex sm:justify-between justify-center items-center flex-col xs:flex-row gap-2">
+        <SocialMediaIconsW/>
+        <div className="md:flex justify-center flex-col mb-2">
+          <p className="font-poppins font-semibold text-2xl text-blue">Kevin Lee</p>
+          <p className="font-poppins text-md text-blue">@2023 KEVIN LEE. All rights reserved</p>
         </div>
-
       </div>
-
     </footer>
   )
 }

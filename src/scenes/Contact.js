@@ -16,9 +16,9 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="pt-24 pb-32">
+    <section id="contact" className="pt-24 pb-24">
         {/*Form and Image  */}
-        <div className="md:flex md:justify-between gap-16 mt-5">
+        <div className="md:flex md:justify-between gap-16 mt-8">
           <motion.div
           className="basis-1/2 flex justify-center"
              initial="hidden"
@@ -32,7 +32,7 @@ const Contact = () => {
             <img src="../assets/contact-image.jpeg" alt="contact"/>
           </motion.div>
           <motion.div
-           className="basis-1/2 mt-10 md:mt-0"
+           className="basis-1/2 mt-10 md:mt-0 border-2 border-black items-center content-center justify-center flex flex-col"
            initial="hidden"
            whileInView="visible"
            viewport={{once:true, amount:0.5}}
@@ -41,13 +41,12 @@ const Contact = () => {
              hidden: {opacity: 0, x:50},
              visible: {opacity: 1, y:0}
            }}>
-            <div></div>
-            <p className="font-poppins font-semibold text-4xl md:justify-start mb-8">
-              <span className="z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
-                before:-left-[50px]">
-                  CONTACT ME
-              </span>
-            </p>
+              <p className="font-poppins font-semibold text-4xl md:justify-start justify-center flex mb-8">
+                <span className=" relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
+                  md:before:-left-[50px] before:-left-[50px]">
+                    CONTACT ME
+                </span>
+              </p>
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -55,7 +54,7 @@ const Contact = () => {
               method="POST"            
               >
               <input
-                className="font-poppins w-full bg-blue font-semibold placeholder-opaque-black p-3 shadow-sd rounded-lg border-2 border-black"
+                className="font-poppins w-full bg-blue font-semibold placeholder-opaque-black p-3 shadow-sd rounded-lg border-2 border-black "
                 type="text"
                 placeholder="NAME"
                 {...register("name",{

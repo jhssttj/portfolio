@@ -35,7 +35,7 @@ function App() {
           <Experiences />
       </div>
       <LineBreak/>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-[90%]">
           <Contact />
       </div>
       <Footer/>
