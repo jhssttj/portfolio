@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <section id="contact" className="pt-24 pb-24">
         {/*Form and Image  */}
-        <div className="md:flex md:justify-between gap-16 mt-8">
+        <div className="flex flex-col content-center md:flex-row md:justify-between gap-16 mt-8">
           <motion.div
           className="basis-1/2 flex justify-center"
              initial="hidden"
@@ -26,28 +26,29 @@ const Contact = () => {
              viewport={{once:true, amount:0.5}}
              transition={{duration:0.5}}
              variants={{
-               hidden: {opacity: 0, x:50},
+               hidden: {opacity: 0, x:0},
                visible: {opacity: 1, y:0}
              }}>
             <img src="../assets/contact-image.jpeg" alt="contact"/>
           </motion.div>
           <motion.div
-           className="basis-1/2 mt-10 md:mt-0 border-2 border-black items-center content-center justify-center flex flex-col"
+           className="basis-1/2 mt-10 md:mt-0 flex flex-col content-center"
            initial="hidden"
            whileInView="visible"
            viewport={{once:true, amount:0.5}}
            transition={{delay: 0.2, duration:0.5}}
            variants={{
-             hidden: {opacity: 0, x:50},
+             hidden: {opacity: 0, x:0},
              visible: {opacity: 1, y:0}
            }}>
               <p className="font-poppins font-semibold text-4xl md:justify-start justify-center flex mb-8">
-                <span className=" relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
-                  md:before:-left-[50px] before:-left-[50px]">
+                <span className="relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
+                  before:-left-[50px]">
                     CONTACT ME
                 </span>
               </p>
             <form
+              className=""
               target="_blank"
               onSubmit={onSubmit}
               action = {`https://formsubmit.co/470b7198e34f535e1ee66acd2f28e9f2`}
