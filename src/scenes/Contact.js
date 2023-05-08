@@ -41,12 +41,12 @@ const Contact = () => {
              hidden: {opacity: 0, x:0},
              visible: {opacity: 1, y:0}
            }}>
-              <p className="font-poppins font-semibold text-4xl md:justify-start justify-center flex mb-8">
-                <span className="relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
-                  before:-left-[50px]">
-                    CONTACT ME
-                </span>
-              </p>
+             <p className="font-poppins font-semibold text-4xl justify-center flex mb-8">
+               <span className="relative z-20 before:content-brush5 before:absolute before:-top-[160px] before:z-[-1] 
+                 before:-left-[50px]">
+                   CONTACT ME
+               </span>
+             </p>
             <form
               className=""
               target="_blank"
