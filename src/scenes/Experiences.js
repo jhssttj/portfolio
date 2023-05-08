@@ -49,7 +49,7 @@ const Experiences = () => {
           }}
          >
           <div className={titleContainer}>
-           <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/AltusGroup.png"/>
+           <img className={imageStyles} alt="AltusGroup" src="../assets/experiences/AltusGroup.png"/>
           <p className={roleStyles}>Cost Consultant</p>
           </div>
           <li className={paraStyles}>
@@ -76,7 +76,7 @@ const Experiences = () => {
           }}
          >
           <div className={titleContainer}>
-           <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/ImperialOil.png"/>
+           <img className={imageStyles} alt="AltusGroup" src="../assets/experiences/ImperialOil.png"/>
           <p className={roleStyles}>Co-op Student</p>
           </div>
           <li className={paraStyles}>
@@ -103,7 +103,7 @@ const Experiences = () => {
           }}
          >
           <div className={titleContainer}>
-           <img className={imageStyles} alt="AltusGroup" src="../assets/Experiences/MapleReinders.png"/>
+           <img className={imageStyles} alt="AltusGroup" src="../assets/experiences/MapleReinders.png"/>
           <p className={roleStyles}>Project Coordinator</p>
           </div>
           <li className={paraStyles}>
