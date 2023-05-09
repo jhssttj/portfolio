@@ -5,23 +5,23 @@ import {useState} from 'react';
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const skillsClass = "flex justify-center items-center content-center border-2 border-black sm:grid md:grid-rows-2 sm:grid-cols-2 mt-2"
+  const skillsClass = "flex justify-center items-start mt-2 grid-cols-2 grid mt-8"
   const [skillHover, setSkill] = useState("");
 
   const renderSkills = (skillSet, color) => {
     const skills = Object.values(skillData[skillSet]);
     const render = skills.map((skill) => {
       return (
-        <div key={skill.name} className="flex flex-col justify-center gap-2 items-center border-2 border-red"
+        <div key={skill.name} className="flex flex-col justify-center gap-2 items-center"
           onMouseEnter={()=> {setSkill(skill.name)}}
           onMouseLeave={()=> {setSkill("")}}
         >
-          <img key={skill.name} className="h-[48px] w-[48px]"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
+          <img key={skill.name} className="h-[64px] w-[64px]"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
           {(skillHover===skill.name)
-            ?(<p className={`p-1 text-center flex-poppins font-semibold text-xs ${"bg-"+ color} shadow-sm rounded-lg border-2 border-black`}>
+            ?(<p className={`p-1 text-center flex-poppins font-semibold text-md ${"bg-"+ color} shadow-sm rounded-lg border-2 border-black`}>
                 {skill.name}
               </p>)
-            :(<p className="p-4"></p>)}
+            :(<p className="p-6"></p>)}
         </div>
       )
       })
