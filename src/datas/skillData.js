@@ -99,7 +99,7 @@ const skillData = {
       image: "Git"
     },
     s3i: {
-      name: "Firebase Database",
+      name: "Firebase",
       image: "Firebase"
     },
     s3j: {

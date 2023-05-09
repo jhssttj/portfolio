@@ -24,7 +24,8 @@ module.exports = {
         brush5: "url('./assets/brush/brush5.png')",
       },
       boxShadow: {
-        "sd": '5px 5px black'
+        "sd": '5px 5px black',
+        "sm":  '2px 2px black'
       },
     },
     screens: {
