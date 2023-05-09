@@ -5,23 +5,24 @@ import {useState} from 'react';
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const skillsClass = "flex justify-center items-start mt-2 grid-cols-2 grid mt-8"
+  const skillsClass = "flex justify-center items-start mt-2 grid mt-8 md:grid-cols-3 sm:grid-cols-5"
   const [skillHover, setSkill] = useState("");
 
   const renderSkills = (skillSet, color) => {
     const skills = Object.values(skillData[skillSet]);
     const render = skills.map((skill) => {
       return (
-        <div key={skill.name} className="flex flex-col justify-center gap-2 items-center"
+        <div key={skill.name} className="relative flex flex-col justify-start gap-2 items-center m-2 rounded-lg"
           onMouseEnter={()=> {setSkill(skill.name)}}
           onMouseLeave={()=> {setSkill("")}}
         >
-          <img key={skill.name} className="h-[64px] w-[64px]"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
-          {(skillHover===skill.name)
-            ?(<p className={`p-1 text-center flex-poppins font-semibold text-md ${"bg-"+ color} shadow-sm rounded-lg border-2 border-black`}>
+            <div className={`absolute h-full w-full ${"bg-"+color} z-20 opacity-0 hover:opacity-100 transition duration-500 
+              flex justify-center rounded-lg shadow-sd border-2 border-black`}>
+              <p className="font-poppins font-semibold text-md text-center m-auto">
                 {skill.name}
-              </p>)
-            :(<p className="p-6"></p>)}
+              </p>
+            </div>
+            <img key={skill.name} className="h-[96px] w-[96px] mt-2"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
         </div>
       )
       })
@@ -93,7 +94,7 @@ const MySkills = () => {
           className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{once:true, amount:0.5}}
+          viewport={{once:true, amount:0.25}}
           transition={{duration:0.5}}
           variants={{
             hidden: {opacity: 0, y: 50},
@@ -117,7 +118,7 @@ const MySkills = () => {
           className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{once:true, amount:0.5}}
+          viewport={{once:true, amount:0.25}}
           transition={{delay:0.3, duration:0.5}}
           variants={{
             hidden: {opacity: 0, y: 50},
@@ -141,7 +142,7 @@ const MySkills = () => {
           className="md:w-1/3 mt-10 mb-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{once:true, amount:0.5}}
+          viewport={{once:true, amount:0.25}}
           transition={{delay:0.6, duration:0.5}}
           variants={{
             hidden: {opacity: 0, y: 50},
