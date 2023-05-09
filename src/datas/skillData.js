@@ -29,7 +29,7 @@ const skillData = {
     },
     s2b: {
       name: "ReactJS",
-      image: "ReaactJS"
+      image: "ReactJS"
     },
     s2c: {
       name: "Ajax",
@@ -49,7 +49,7 @@ const skillData = {
     },
     s2g: {
       name: "Bootstrap",
-      image: "Boostrap"
+      image: "Bootstrap"
     },
     s2h: {
       name: "Tailwind",
@@ -104,7 +104,7 @@ const skillData = {
     },
     s3j: {
       name: "Google Maps Platform",
-      image: "GoogleMapsPlayform"
+      image: "GoogleMapsPlatform"
     },
   },
 }

@@ -1,8 +1,25 @@
 import useMediaQuery from '../hooks/useMediaQuery';
+import skillData from '../datas/skillData';
 import {motion} from "framer-motion";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  const renderSkills = (skillSet) => {
+    const skills = Object.values(skillData[skillSet]);
+    const render = skills.map((skill) => {
+      return (
+        <div className="flex">
+          <img className="p-1"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
+          {skill.name}
+        </div>
+      )
+        
+      })
+
+    return render;
+  }
+
 
   return(
     <section id="skills" className="pt-10 pb-24">
@@ -82,13 +99,9 @@ const MySkills = () => {
               <p className="font-semibold text-2xl mt-3 ml-1">Computer Languages</p>
             </div>
           </div>
-          <p className="mt-5 text-lg">
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Ruby</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </p>
+          <div className="mt-5 text-lg">
+            {renderSkills("s1")}
+          </div>
 
         </motion.div>
 
@@ -110,18 +123,9 @@ const MySkills = () => {
               <p className="font-semibold text-2xl mt-3 ml-1">Framework, Libraries, Environments</p>
             </div>
           </div>
-          <p className="mt-5 text-lg">
-            <li>NodeJS</li>
-            <li>ReactJS</li>
-            <li>Ajax</li>
-            <li>EJS</li>
-            <li>Express</li>
-            <li>jQuery</li>
-            <li>Bootstrap</li>
-            <li>Tailwind CSS</li>
-            <li>Rails</li>
-            <li>SASS</li>
-          </p>
+          <div className="mt-5 text-lg">
+            {renderSkills("s2")}
+          </div>
 
         </motion.div>
 
@@ -143,17 +147,9 @@ const MySkills = () => {
               <p className="font-semibold text-2xl mt-3 ml-1">Testing, Systems, Databases</p>
             </div>
           </div>
-          <p className="mt-5 mb-5 text-lg">
-            <li>Storybook</li>
-            <li>Cypress</li>
-            <li>RSpec</li>
-            <li>Jest</li>
-            <li>Mocha & Chai</li>
-            <li>SQL</li>
-            <li>Git</li>
-            <li>Firestore</li>
-            <li>Google Maps Platform</li>
-          </p>
+          <div className="mt-5 text-lg">
+            {renderSkills("s3")}
+          </div>
 
         </motion.div>
 
