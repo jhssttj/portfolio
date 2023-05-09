@@ -1,28 +1,23 @@
 import useMediaQuery from '../hooks/useMediaQuery';
 import skillData from '../datas/skillData';
 import {motion} from "framer-motion";
-import {useState} from 'react';
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const skillsClass = "flex justify-center items-start mt-2 grid mt-8 md:grid-cols-3 sm:grid-cols-5"
-  const [skillHover, setSkill] = useState("");
+  const skillsClass = "flex justify-center items-start mt-2 grid mt-8 md:grid-cols-2 sm:grid-cols-5 xxs:grid-cols-3 grid-cols-2"
 
   const renderSkills = (skillSet, color) => {
     const skills = Object.values(skillData[skillSet]);
     const render = skills.map((skill) => {
       return (
-        <div key={skill.name} className="relative flex flex-col justify-start gap-2 items-center m-2 rounded-lg"
-          onMouseEnter={()=> {setSkill(skill.name)}}
-          onMouseLeave={()=> {setSkill("")}}
-        >
-            <div className={`absolute h-full w-full ${"bg-"+color} z-20 opacity-0 hover:opacity-100 transition duration-500 
+        <div key={skill.name} className="relative flex flex-col justify-start gap-2 items-center m-2 rounded-lg">
+            <div className={`absolute max-h-[100px] max-w-[100px] h-full w-full ${"bg-"+color} z-20 opacity-0 hover:opacity-100 transition duration-500 
               flex justify-center rounded-lg shadow-sd border-2 border-black`}>
-              <p className="font-poppins font-semibold text-md text-center m-auto">
+              <p className="font-poppins font-semibold text-sm xs:text-base text-center m-auto">
                 {skill.name}
               </p>
             </div>
-            <img key={skill.name} className="h-[96px] w-[96px] mt-2"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
+            <img key={skill.name} className="max-h-[96px] max-w-[96px] h-full w-full mt-2"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
         </div>
       )
       })
