@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import projectData from '../projectData/projectData';
+import projectData from '../datas/projectData';
 
 
 const container = {
