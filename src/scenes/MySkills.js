@@ -1,17 +1,25 @@
 import useMediaQuery from '../hooks/useMediaQuery';
 import skillData from '../datas/skillData';
 import {motion} from "framer-motion";
+import {useState} from 'react';
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const skillsClass = "flex justify-center items-center content-center border-2 border-black sm:grid md:grid-cols-3 sm:grid-cols-2"
+  const [skillHover, setSkill] = useState("");
 
   const renderSkills = (skillSet) => {
     const skills = Object.values(skillData[skillSet]);
     const render = skills.map((skill) => {
       return (
-        <div className="flex">
-          <img className="p-1"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
-          {skill.name}
+        <div key={skill.name} className="flex justify-center"
+          onMouseEnter={()=> {setSkill(skill.name)}}
+          onMouseLeave={()=> {setSkill("")}}
+        >
+          <img key={skill.name} className="p-1"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
+          {(skillHover===skill.name)
+            ?(<p className="flex-poppins font-semibold text-xl">{skill.name}</p>)
+            :(null)}
         </div>
       )
         
@@ -75,7 +83,6 @@ const MySkills = () => {
           src="assets/skills-image.png"
           />
           )}
-
         </div>
       </div>
 
@@ -99,7 +106,7 @@ const MySkills = () => {
               <p className="font-semibold text-2xl mt-3 ml-1">Computer Languages</p>
             </div>
           </div>
-          <div className="mt-5 text-lg">
+          <div className={skillsClass}>
             {renderSkills("s1")}
           </div>
 
@@ -111,7 +118,7 @@ const MySkills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
-          transition={{delay:0.2, duration:0.5}}
+          transition={{delay:0.3, duration:0.5}}
           variants={{
             hidden: {opacity: 0, y: 50},
             visible: {opacity: 1, y: 0}
@@ -123,7 +130,7 @@ const MySkills = () => {
               <p className="font-semibold text-2xl mt-3 ml-1">Framework, Libraries, Environments</p>
             </div>
           </div>
-          <div className="mt-5 text-lg">
+          <div className={skillsClass}>
             {renderSkills("s2")}
           </div>
 
@@ -135,7 +142,7 @@ const MySkills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
-          transition={{delay:0.4, duration:0.5}}
+          transition={{delay:0.6, duration:0.5}}
           variants={{
             hidden: {opacity: 0, y: 50},
             visible: {opacity: 1, y: 0}
@@ -147,7 +154,7 @@ const MySkills = () => {
               <p className="font-semibold text-2xl mt-3 ml-1">Testing, Systems, Databases</p>
             </div>
           </div>
-          <div className="mt-5 text-lg">
+          <div className={skillsClass}>
             {renderSkills("s3")}
           </div>
 
