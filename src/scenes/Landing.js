@@ -49,7 +49,7 @@ const Landing = () => {
               </span>
             </p>
 
-            <p className="font-poppins mt-10 mb-7 text-sm text-center md:text-start">
+            <p className="font-poppins mt-10 mb-7 text-lg text-center md:text-start">
             Thank you for visiting my website! I am a former civil engineering graduate from University of Calgary who have taken interest in web development.
             <br/>
             <br/>
