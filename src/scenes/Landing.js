@@ -8,7 +8,6 @@ const Landing = () => {
 
   return (
     <section id="home" className="md:flex md:justify-between md:items-center gap-16 md:h-full py-14">
-
       {/*Image Section */}
         <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
           {isAboveMediumScreens
@@ -19,16 +18,16 @@ const Landing = () => {
           >
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-1000 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src="assets/profile-image.png"
+              className="hover:filter hover:saturate-200 transition duration-1000 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full"
+              src="assets/profile-image.jpg"
             />
           </div>
           )
           : (
           <img
           alt="profile"
-          className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-          src="assets/profile-image.png"
+          className="hover:filter hover:saturate-200 transition duration-1000 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full"
+          src="assets/profile-image.jpg"
           />
           )}
         </div>
