@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="app bg-deep-blue">
       <Navbar/>
-      <div className="w-full mx-auto bg-test1 bg-cover">
+      <div className="w-full mx-auto bg-cover1">
         <div className="w-5/6 mx-auto">
           {isAboveMediumScreens && (
             <DotGroup />
@@ -23,7 +23,6 @@ function App() {
           <Landing/>
         </div>
       </div>
-      <LineBreak/>
       <div className="w-5/6 mx-auto">
           <MySkills />
       </div>

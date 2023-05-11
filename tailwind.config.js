@@ -24,8 +24,8 @@ module.exports = {
         brush5: "url('./assets/brush/brush5.png')",
       },
       backgroundImage: {
-        test1: "url('./assets/test/beach.jpg')",
-        test2: "url('./assets/test/beach.jpg')",
+        cover1: "url('./assets/test/cover1.jpg')",
+        test2: "url('./assets/test/test3.jpg')",
       },
       boxShadow: {
         "sd": '5px 5px black',
