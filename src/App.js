@@ -1,4 +1,3 @@
-import useMediaQuery from './hooks/useMediaQuery';
 import Landing from './scenes/Landing';
 import Navbar from './scenes/Navbar';
 import MySkills from './scenes/MySkills';
@@ -9,7 +8,6 @@ import Footer from './scenes/Footer';
 import {useState} from 'react';
 
 function App() {
-  const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
   const [selectedPage, setPage] = useState("home");
 
   return (

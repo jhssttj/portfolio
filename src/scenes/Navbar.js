@@ -6,7 +6,7 @@ const LinkRender = ({ isAboveSmallScreens,page,setPage,selectedPage }) => {
   const className = "flex justify-center items-center w-full h-full text-center active:bg-blue active:text-black hover:cursor-pointer"
   let classNameActive = "";
   let classNameHover = "hover:text-purple active:bg-purple active:text-white";
-  if (selectedPage===page) {
+  if (selectedPage===page && isAboveSmallScreens) {
     if (isAboveSmallScreens) {
       classNameActive = "text-blue border-b-4 border-blue"
     } else {
@@ -21,7 +21,6 @@ const LinkRender = ({ isAboveSmallScreens,page,setPage,selectedPage }) => {
         className={`${className} ${classNameActive} ${classNameHover}`}
         onClick={()=>{
           setPage(page)
-          console.log(selectedPage)
         }}
     >
       {upperCasePage}
