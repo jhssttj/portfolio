@@ -16,13 +16,21 @@ function App() {
         selectedPage={selectedPage}
         setPage={setPage}
       />
-      <div className="w-full mx-auto bg-cover1">
+      <div className="w-full mx-auto">
         <div className="w-5/6 mx-auto">
-          {selectedPage==="home"&&<Landing/>}
-          {selectedPage==="skills"&&<MySkills/>}
-          {selectedPage==="projects"&&<Projects/>}
-          {selectedPage==="experiences"&&<Experiences/>}
-          {selectedPage==="contact"&&<Contact/>}
+          <Landing/>
+        </div>
+        <div className="w-5/6 mx-auto">
+          <MySkills/>
+        </div>
+        <div className="w-5/6 mx-auto">
+          <Projects/>
+        </div>
+        <div className="w-5/6 mx-auto">
+          <Experiences/>
+        </div>
+        <div className="w-5/6 mx-auto">
+          <Contact/>
         </div>
       </div>
       <Footer/>

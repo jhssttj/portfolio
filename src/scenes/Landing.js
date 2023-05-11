@@ -49,7 +49,7 @@ const Landing = () => {
               </span>
             </p>
 
-            <p className="font-poppins mt-10 mb-7 text-lg text-center md:text-start">
+            {/* <p className="font-poppins mt-10 mb-7 text-lg text-center md:text-start">
             Thank you for visiting my website! I am a former civil engineering graduate from University of Calgary who have taken interest in web development.
             <br/>
             <br/>
@@ -60,7 +60,7 @@ const Landing = () => {
             Currently, I am seeking any web/software developing job opportunities as I look to integrate into the tech industry. 
             Please feel free to reach out to me for any potential openings or if you are interested in talking about coding and projects in general. 
             I would love to learn from other passionate developers!
-            </p>
+            </p> */}
 
           </motion.div>
 

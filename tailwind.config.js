@@ -25,6 +25,8 @@ module.exports = {
       },
       backgroundImage: {
         cover1: "url('./assets/cover/cover1.jpg')",
+        cover2: "url('./assets/cover/cover2.jpg')",
+        cover3: "url('./assets/cover/cover3.jpg')",
       },
       boxShadow: {
         "sd": '5px 5px black',
