@@ -12,12 +12,12 @@ import {useState} from 'react';
 
 function App() {
   const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
-  const [page, setPage] = useState("home");
+  const [selectedPage, setPage] = useState("home");
 
   return (
     <div className="app bg-deep-blue">
       <Navbar
-        page={page}
+        selectedPage={selectedPage}
         setPage={setPage}
       />
       <div className="w-full mx-auto bg-cover1">
@@ -25,11 +25,11 @@ function App() {
           {isAboveMediumScreens && (
             <DotGroup />
           )}
-          {page==="home"&&<Landing/>}
-          {page==="skills"&&<MySkills/>}
-          {page==="projects"&&<Projects/>}
-          {page==="experiences"&&<Experiences/>}
-          {page==="contact"&&<Contact/>}
+          {selectedPage==="home"&&<Landing/>}
+          {selectedPage==="skills"&&<MySkills/>}
+          {selectedPage==="projects"&&<Projects/>}
+          {selectedPage==="experiences"&&<Experiences/>}
+          {selectedPage==="contact"&&<Contact/>}
           {/* <Landing/> */}
         </div>
       </div>

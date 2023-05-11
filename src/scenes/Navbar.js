@@ -1,29 +1,29 @@
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
-import {Link} from 'react-scroll'
 
-const LinkRender = ({ isAboveSmallScreens,page, setPage }) => {
-  const lowerCasePage = page.toLowerCase();
+const LinkRender = ({ isAboveSmallScreens,page,setPage,selectedPage }) => {
+  const upperCasePage = page.toUpperCase();
   const activeClass = (isAboveSmallScreens? "active":"activeMenu");
   const activeClassName = (isAboveSmallScreens 
       ? "hover:text-blue hover:border-b-4 hover:border-blue active:bg-blue active:text-black flex justify-center items-center w-full h-full text-center "
       :"hover:text-purple hover:border-b-2 hover:border-purple active:text-white active:border-white border-b-2 border-black")
+
+  const className = "flex justify-center items-center w-full h-full text-center hover:text-blue hover:border-b-4 hover:border-blue active:bg-blue active:text-black"
+  const classNameHover= selectedPage===page?"text-blue border-b-4 border-blue":""
   return (
-    <Link
-        activeClass = {activeClass}
-        className={`${activeClassName}`}
-        href={`#${lowerCasePage}`}
-        smooth spy to= {`${lowerCasePage}`}
+    <li
+        className={`${classNameHover} ${className}`}
         onClick={()=>{
-          setPage(lowerCasePage)
+          setPage(page)
+          console.log(selectedPage)
         }}
     >
-      {page}
-    </Link>
+      {upperCasePage}
+    </li>
   )
 }
 
-const Navbar = ({page, setPage}) => {
+const Navbar = ({selectedPage, setPage}) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
@@ -36,28 +36,33 @@ const Navbar = ({page, setPage}) => {
           (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-3/4 h-full">
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
-              page="HOME"
+              page="home"
               setPage={setPage}
+              selectedPage={selectedPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
-              page="SKILLS"
+              page="skills"
               setPage={setPage}
+              selectedPage={selectedPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
-              page="PROJECTS"
+              page="projects"
               setPage={setPage}
+              selectedPage={selectedPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
-              page="EXPERIENCES"
+              page="experiences"
               setPage={setPage}
+              selectedPage={selectedPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
-              page="CONTACT"
+              page="contact"
               setPage={setPage}
+              selectedPage={selectedPage}
             />
           </div>)
         : 
