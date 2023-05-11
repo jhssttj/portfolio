@@ -3,16 +3,22 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const LinkRender = ({ isAboveSmallScreens,page,setPage,selectedPage }) => {
   const upperCasePage = page.toUpperCase();
-  const activeClass = (isAboveSmallScreens? "active":"activeMenu");
-  const activeClassName = (isAboveSmallScreens 
-      ? "hover:text-blue hover:border-b-4 hover:border-blue active:bg-blue active:text-black flex justify-center items-center w-full h-full text-center "
-      :"hover:text-purple hover:border-b-2 hover:border-purple active:text-white active:border-white border-b-2 border-black")
-
-  const className = "flex justify-center items-center w-full h-full text-center hover:text-blue hover:border-b-4 hover:border-blue active:bg-blue active:text-black"
-  const classNameHover= selectedPage===page?"text-blue border-b-4 border-blue":""
+  const className = "flex justify-center items-center w-full h-full text-center active:bg-blue active:text-black hover:cursor-pointer"
+  let classNameActive = "";
+  let classNameHover = "hover:text-purple active:bg-purple active:text-white";
+  if (selectedPage===page) {
+    if (isAboveSmallScreens) {
+      classNameActive = "text-blue border-b-4 border-blue"
+    } else {
+      classNameActive = "text-purple"
+    }
+  }
+  if (isAboveSmallScreens) {
+    classNameHover ="hover:text-blue hover:border-b-4 hover:border-blue"
+  }
   return (
     <li
-        className={`${classNameHover} ${className}`}
+        className={`${className} ${classNameActive} ${classNameHover}`}
         onClick={()=>{
           setPage(page)
           console.log(selectedPage)
@@ -67,7 +73,7 @@ const Navbar = ({selectedPage, setPage}) => {
           </div>)
         : 
           (<button
-            className="rounded-full bg-blue p-2 mr-[5%] active:bg-white"
+            className="rounded-full bg-blue p-2 mr-[5%] active:bg-purple"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img alt="menu-icon" src="../assets/menu-icon.svg" />
@@ -84,26 +90,36 @@ const Navbar = ({selectedPage, setPage}) => {
               </button>
             </div>
             {/*menu items*/}
-            <div className="flex flex-col gap-8 ml-[33%] text-2xl text-black font-bold">
+            <div className="flex flex-col gap-8 ml-[33%] text-2xl text-black font-bold font-poppins">
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
-                page="Home"                
+                page="home"
+                setPage={setPage}
+                selectedPage={selectedPage}
               />
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
-                page="Skills"                
+                page="skills"
+                setPage={setPage}
+                selectedPage={selectedPage}
               />
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
-                page="Projects"                
+                page="projects"
+                setPage={setPage}
+                selectedPage={selectedPage}
               />
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
-                page="Experiences"                
+                page="experiences"
+                setPage={setPage}
+                selectedPage={selectedPage}
               />
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
-                page="Contact"                
+                page="contact"
+                setPage={setPage}
+                selectedPage={selectedPage}
               />
             </div>
           </div>

@@ -14,30 +14,3 @@ body,
   @apply text-black;
   font-family: 'Noto Sans', sans-serif;
 }
-.active {
-  color:#65FADE;
-  border-bottom: solid 4px #65FADE;
-}
-
-.activeMenu {
-  color:#A30B9E;
-  border-bottom: solid 2px #A30B9E;
-}
-
-.dotActive{
-  position:relative;
-  background-color:black;
-}
-
-.dotActive::before {
-  content: "";
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius:9999px;
-  border-width:2px;
-  border-color: black;
-  left: -50%;
-  top: -50%;
-
-}
