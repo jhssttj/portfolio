@@ -2,7 +2,7 @@ import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Link} from 'react-scroll'
 
-const LinkRender = ({ isAboveSmallScreens,page }) => {
+const LinkRender = ({ isAboveSmallScreens,page, setPage }) => {
   const lowerCasePage = page.toLowerCase();
   const activeClass = (isAboveSmallScreens? "active":"activeMenu");
   const activeClassName = (isAboveSmallScreens 
@@ -14,13 +14,16 @@ const LinkRender = ({ isAboveSmallScreens,page }) => {
         className={`${activeClassName}`}
         href={`#${lowerCasePage}`}
         smooth spy to= {`${lowerCasePage}`}
+        onClick={()=>{
+          setPage(lowerCasePage)
+        }}
     >
       {page}
     </Link>
   )
 }
 
-const Navbar = () => {
+const Navbar = ({page, setPage}) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
@@ -34,22 +37,27 @@ const Navbar = () => {
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="HOME"
+              setPage={setPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="SKILLS"
+              setPage={setPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="PROJECTS"
+              setPage={setPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="EXPERIENCES"
+              setPage={setPage}
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="CONTACT"
+              setPage={setPage}
             />
           </div>)
         : 

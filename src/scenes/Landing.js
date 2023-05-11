@@ -10,7 +10,7 @@ const Landing = () => {
       <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32 relative md:-top-[100px"
+            className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32 relative md:-top-[100px]"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
