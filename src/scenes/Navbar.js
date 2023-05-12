@@ -20,7 +20,7 @@ const LinkRender = ({ isAboveSmallScreens,page}) => {
   )
 }
 
-const Navbar = ({selectedPage, setPage}) => {
+const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
