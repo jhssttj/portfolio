@@ -1,16 +1,18 @@
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BoxArrowDownRight } from 'react-bootstrap-icons';
 
 const Landing = () => {
 
   return (
-    <section id="home" className="h-screen py-14 bg-cover4 bg-cover border-2 border-red flex flex-col justify-center">
+    <section id="home" className="md:h-screen sm:h-auto
+      py-14 bg-cover1 border-2 border-red flex flex-col justify-center
+      ">
 
 
           {/*Headings */}
           <motion.div
-            className="md:ml-64 relative top-[-100px]"
+            className="relative top-[-100px] ml-[10%]"
             initial="hidden"
             whileInView="visible"
             viewport={{once:true, amount:0.33}}
@@ -23,12 +25,12 @@ const Landing = () => {
             <p className="font-poppins text-6xl font-semibold">
               Hello there!
             </p>
-            <p className="font-poppins text-xl mt-4 w-1/2">
-              Thank you for diving into my website. Here, you can learn more about the man behind it all...
+            <p className="font-poppins text-2xl mt-4 w-1/2">
+              Thank you for visting my website. It would mean a lot if you could take the time to get to know me...
             </p>
           </motion.div>
           <motion.div
-            className="md:ml-64 relative top-[-100px] flex justify-start mt-4" 
+            className="relative top-[-100px] flex justify-start mt-4 ml-[10%]" 
             initial="hidden"
             whileInView="visible"
             viewport={{once:true, amount:0.33}}
@@ -39,13 +41,14 @@ const Landing = () => {
             }}
           >
             <AnchorLink
-              className="gap-2 flex hover:text-white hover:fill-white border-2 border-white hover:fill-current"
+              className="gap-2 flex border-2 border-black p-2 mt-4 hover:text-white 
+              hover:border-white hover:fill-white hover:fill-current animate-none hover:animate-bounce"
               href="#contact"
             >
               <p className="font-poppins text-2xl font-semibold">
-              Let's Go
+                About Me
               </p>
-              <ArrowRight className="w-[32px] h-[32px]" />
+              <BoxArrowDownRight className="w-[32px] h-[32px]" />
             
             </AnchorLink>
           </motion.div>
