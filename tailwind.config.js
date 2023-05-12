@@ -41,5 +41,8 @@ module.exports = {
       md: '1060px'
     }
   },
+  variants: {
+    fill: ['hover', 'focus'], // this line does the trick
+  },
   plugins: [],
 }

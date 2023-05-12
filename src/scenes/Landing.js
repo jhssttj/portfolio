@@ -1,6 +1,6 @@
-import SocialMediaIcons from "../components/SocialMediaIcons";
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { ArrowRight } from 'react-bootstrap-icons';
 
 const Landing = () => {
 
@@ -10,7 +10,7 @@ const Landing = () => {
 
           {/*Headings */}
           <motion.div
-            className="w-auto h-1/2 flex flex-col justify-center md:pl-64 m-8 relative top-[-150px] border-2 border-black"
+            className="md:ml-64 relative top-[-100px]"
             initial="hidden"
             whileInView="visible"
             viewport={{once:true, amount:0.33}}
@@ -23,12 +23,12 @@ const Landing = () => {
             <p className="font-poppins text-6xl font-semibold">
               Hello there!
             </p>
-            <p className="font-poppins text-xl mt-8 w-1/2">
+            <p className="font-poppins text-xl mt-4 w-1/2">
               Thank you for diving into my website. Here, you can learn more about the man behind it all...
             </p>
           </motion.div>
           <motion.div
-            className="w-auto h-1/2 md:pl-64 m-8 relative top-[-150px] border-2 border-black"
+            className="md:ml-64 relative top-[-100px] flex justify-start mt-4" 
             initial="hidden"
             whileInView="visible"
             viewport={{once:true, amount:0.33}}
@@ -39,10 +39,14 @@ const Landing = () => {
             }}
           >
             <AnchorLink
-              className="font-poppins text-2xl font-semibold mt-8 border-2 border-black"
+              className="gap-2 flex hover:text-white hover:fill-white border-2 border-white hover:fill-current"
               href="#contact"
             >
-              About Me
+              <p className="font-poppins text-2xl font-semibold">
+              Let's Go
+              </p>
+              <ArrowRight className="w-[32px] h-[32px]" />
+            
             </AnchorLink>
           </motion.div>
 
