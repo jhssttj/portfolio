@@ -2,10 +2,10 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Landing = () => {
+const AboutMe = () => {
 
   return (
-    <section id="home" className="md:flex md:justify-between md:items-center gap-16 md:h-full py-14">
+    <section id="about" className="md:flex md:justify-between md:items-center gap-16 md:h-full py-14">
       {/*Image Section */}
       <motion.div
             initial="hidden"
@@ -103,4 +103,4 @@ const Landing = () => {
   )
 }
 
-export default Landing;
+export default AboutMe;

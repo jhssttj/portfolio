@@ -31,10 +31,14 @@ const Navbar = () => {
         {/*Large Screen NavBar*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-poppins text-base text-white w-3/4 h-full">
+          (<div className="flex justify-between font-poppins text-base text-white md:w-3/4 w-[90%] h-full">
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="home"
+            />
+            <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
+              page="about"
             />
              <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
@@ -75,6 +79,10 @@ const Navbar = () => {
                 isAboveSmallScreens={isAboveSmallScreens}
                 page="home"
               />
+              <LinkRender
+              isAboveSmallScreens={isAboveSmallScreens}
+              page="about"
+            />
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
                 page="skills"

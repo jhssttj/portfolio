@@ -1,5 +1,6 @@
-import Landing from './scenes/Landing';
 import Navbar from './scenes/Navbar';
+import Landing from './scenes/Landing';
+import AboutMe from './scenes/AboutMe';
 import MySkills from './scenes/MySkills';
 import Projects from './scenes/Projects';
 import Experiences from './scenes/Experiences';
@@ -19,6 +20,9 @@ function App() {
       <div className="w-full mx-auto">
         <div className="w-full mx-auto">
           <Landing/>
+        </div>
+        <div className="w-5/6 mx-auto">
+          <AboutMe/>
         </div>
         <div className="w-5/6 mx-auto">
           <MySkills/>
