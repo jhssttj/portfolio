@@ -5,9 +5,9 @@ import { BoxArrowDownRight } from 'react-bootstrap-icons';
 const Landing = () => {
 
   return (
-    <section id="home" className="md:h-screen sm:h-screen xs:h-screen
-      md:bg-cover sm:bg-cover
-      md:bg-cover4 sm:bg-cover4s 
+    <section id="home" className="h-screen
+      md:bg-cover sm:bg-cover xxs:bg-cover
+      md:bg-cover4 sm:bg-cover4s bg-cover4xs 
       flex flex-col py-56 sm:py-14 sm:justify-center items-center sm:items-start
       ">
 

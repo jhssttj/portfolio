@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>)
         : 
           (<button
-            className="rounded-full bg-blue p-2 mr-[5%] active:bg-purple"
+            className="rounded-full bg-blue p-2 mr-[5%] active:bg-purple hover:bg-purple"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img alt="menu-icon" src="../assets/menu-icon.svg" />
