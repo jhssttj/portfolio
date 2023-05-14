@@ -28,6 +28,7 @@ module.exports = {
         cover2: "url('./assets/cover/cover2.jpg')",
         cover3: "url('./assets/cover/cover3.jpg')",
         cover4: "url('./assets/cover/cover4.jpg')",
+        cover4s: "url('./assets/cover/cover4-s.jpg')",
       },
       boxShadow: {
         "sd": '5px 5px black',

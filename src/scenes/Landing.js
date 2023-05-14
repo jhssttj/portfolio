@@ -6,14 +6,16 @@ const Landing = () => {
 
   return (
     <section id="home" className="md:h-screen sm:h-screen xs:h-screen
-      md:bg-cover sm:bg-fill sm:bg-right-top
-      py-14 bg-cover4 flex flex-col justify-center
+      md:bg-cover sm:bg-cover
+      md:bg-cover4 sm:bg-cover4s 
+      flex flex-col py-56 sm:py-14 sm:justify-center items-center sm:items-start
       ">
 
 
           {/*Headings */}
           <motion.div
-            className="relative top-[-100px] sm:ml-[10%] border-2 border-black text-center"
+            className="relative top-[-100px] sm:ml-[10%] flex flex-col 
+            items-center text-center sm:items-start sm:text-start"
             initial="hidden"
             whileInView="visible"
             viewport={{once:true, amount:0.33}}
@@ -26,7 +28,7 @@ const Landing = () => {
             <p className="font-poppins xs:text-6xl font-semibold">
               Hello there!
             </p>
-            <p className="font-poppins text-2xl mt-4">
+            <p className="font-poppins text-xl mt-4 w-1/2">
               Thank you for visting my website. It would mean a lot if you could take the time to get to know me...
             </p>
           </motion.div>
