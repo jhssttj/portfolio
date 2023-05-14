@@ -1,13 +1,14 @@
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Link} from "react-scroll"
+import { List, X } from 'react-bootstrap-icons';
 
 const LinkRender = ({ isAboveSmallScreens,page}) => {
   const upperCasePage = page.toUpperCase();
   const activeClass = (isAboveSmallScreens? "active":"activeMenu");
   const activeClassName = (isAboveSmallScreens 
-      ? "hover:text-blue hover:border-b-4 hover:border-blue active:bg-blue active:text-black flex justify-center items-center w-full h-full text-center "
-      :"hover:text-purple hover:border-b-2 hover:border-purple active:text-white active:border-white border-b-2 border-black")
+      ? "text-gray-400 hover:text-white hover:border-b-2 hover:border-white active:bg-white active:text-black flex justify-center items-center w-full h-full text-center "
+      :"hover:text-white hover:border-b-2 hover:border-white active:text-black active:bg-white border-b-2 border-gray-400 text-gray-400")
   return (
     <Link
         className={`${activeClassName}`}
@@ -25,12 +26,12 @@ const Navbar = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
   return (
-    <nav className={`bg-black z-40 w-full h-[50px] fixed top-0`}>
+    <nav className={`bg-black border-y-8 border-black z-40 w-full h-[50px] fixed top-0`}>
       <div className={`${navBarIconClass} flex items-center mx-auto w-full h-full`}>
-        {/*Desktop Nav*/}
+        {/*Large Screen NavBar*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-poppins text-sm font-semibold text-white w-3/4 h-full">
+          (<div className="flex justify-between font-poppins text-base text-white w-3/4 h-full">
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="home"
@@ -54,24 +55,22 @@ const Navbar = () => {
           </div>)
         : 
           (<button
-            className="rounded-full bg-blue p-2 mr-[5%] active:bg-purple hover:bg-purple"
+            className="rounded-full p-2 mr-[5%] mt-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <img alt="menu-icon" src="../assets/menu-icon.svg" />
-          </button>)
+            <List className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-black active:bg-white"/>
+          </button>) 
         }
-        {/* Menu Popup */}
+        {/* Small Screen Menu */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed right-0 top-0 h-full bg-blue w-[300px] h-[400px]">
-            {/*close icon */}
+          <div className="fixed right-0 top-0 h-full bg-black w-[300px] h-[500px]">
             <div className="flex justify-end p-6">
               <button
                 onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <img alt="close-icon" src="../assets/close-icon.svg"/>           
+                <X className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-600 hover:fill-white active:fill-black active:bg-white"/>          
               </button>
             </div>
-            {/*menu items*/}
-            <div className="flex flex-col gap-8 ml-[33%] text-2xl text-black font-bold font-poppins">
+            <div className="flex flex-col gap-8 ml-[33%] text-2xl font-poppins">
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
                 page="home"

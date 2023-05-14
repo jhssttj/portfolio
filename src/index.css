@@ -15,11 +15,11 @@ body,
   font-family: 'Noto Sans', sans-serif;
 }
 .active {
-  color:#65FADE;
-  border-bottom: solid 4px #65FADE;
+  color:white;
+  border-bottom: solid 2px white;
 }
 
 .activeMenu {
-  color:#A30B9E;
-  border-bottom: solid 2px #A30B9E;
+  color:white;
+  border-bottom: solid 2px white;
 }
