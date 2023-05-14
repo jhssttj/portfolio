@@ -30,6 +30,8 @@ module.exports = {
         cover4: "url('./assets/cover/cover4.jpg')",
         cover4s: "url('./assets/cover/cover4-s.jpg')",
         cover4xs: "url('./assets/cover/cover4-xs.jpg')",
+        cover4xxs: "url('./assets/cover/cover4-xxs.jpg')",
+        cover4xxxs: "url('./assets/cover/cover4-xxxs.jpg')",
       },
       boxShadow: {
         "sd": '5px 5px black',

@@ -5,9 +5,8 @@ import { BoxArrowDownRight } from 'react-bootstrap-icons';
 const Landing = () => {
 
   return (
-    <section id="home" className="h-screen
-      md:bg-cover sm:bg-cover xxs:bg-cover
-      md:bg-cover4 sm:bg-cover4s bg-cover4xs 
+    <section id="home" className="h-screen bg-cover 
+      md:bg-cover4 sm:bg-cover4s xs:bg-cover4xs xxs:bg-cover4xxs bg-cover4xxxs
       flex flex-col py-56 sm:py-14 sm:justify-center items-center sm:items-start
       ">
 
@@ -25,10 +24,10 @@ const Landing = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
-            <p className="font-poppins xs:text-6xl font-semibold">
+            <p className="font-poppins xs:text-6xl xxs:text-5xl text-3xl font-semibold">
               Hello there!
             </p>
-            <p className="font-poppins text-xl mt-4 w-1/2">
+            <p className="font-poppins xs:text-xl xxs:text-lg text-sm mt-4 w-3/4 sm:w-1/2">
               Thank you for visting my website. It would mean a lot if you could take the time to get to know me...
             </p>
           </motion.div>
@@ -48,10 +47,10 @@ const Landing = () => {
               hover:fill-white hover:fill-current animate-none hover:animate-bounce"
               href="#contact"
             >
-              <p className="font-poppins text-2xl font-semibold">
+              <p className="font-poppins xs:text-2xl xxs:text-xl text-base font-semibold">
                 About Me
               </p>
-              <BoxArrowDownRight className="w-[32px] h-[32px]" />
+              <BoxArrowDownRight className="xs:w-[32px] xs:h-[32px] xxs:w-[24px] xxs:h-[24px] w-[16px] h-[16px]" />
             
             </AnchorLink>
           </motion.div>
