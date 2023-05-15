@@ -43,7 +43,7 @@ const Landing = () => {
             <AnchorLink
               className="gap-2 flex border-2 border-black p-2 mt-4
               hover:fill-white hover:fill-current animate-none hover:animate-bounce rounded-lg"
-              href="#contact"
+              href="#about"
             >
               <p className="font-poppins xs:text-2xl xxs:text-xl text-base font-semibold">
                 About Me

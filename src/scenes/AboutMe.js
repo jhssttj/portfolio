@@ -4,13 +4,16 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const AboutMe = () => {
 
+
+  
+
   return (
-    <section id="about" className="md:flex md:justify-between md:items-center gap-16 md:h-full py-14">
+    <section id="about" className="md:flex md:justify-center gap-16 md:h-full py-14 border-2 border-red">
       {/*Image Section */}
       <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32 relative md:-top-[100px]"
+            className=" border-2 border-black md:order-2 z-10 mt-4 md:mt-4"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -23,10 +26,10 @@ const AboutMe = () => {
             className="hover:filter hover:saturate-200 transition duration-1000 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full"
             src="assets/profile-image.jpg"
             />
-          </motion.div>
+      </motion.div>
 
         {/*Main Section */}
-        <div className="z-30 basis-2/5 mt-16 md:mt-32">
+      <div className="z-30 basis-2/5 mt-4 md:mt-4 border-2 border-purple">
           {/*Headings */}
           <motion.div
             initial="hidden"
@@ -39,28 +42,31 @@ const AboutMe = () => {
             }}
           >
             <p className="text-6xl font-poppins font-semibold z-10 text-center md:text-start">
-              <span className="relative z-20 before:content-brush before:absolute before:-top-[100px] before:z-[-1] 
-              before:md:-right-[175px] before:sm:-right-[140px] before:-right-[130px]">
-                 Kevin
-                 <br></br>
-                 <span>
-                  Lee
-                 </span>
-              </span>
+                 Kevin Lee  
             </p>
 
-            {/* <p className="font-poppins mt-10 mb-7 text-lg text-center md:text-start">
-            Thank you for visiting my website! I am a former civil engineering graduate from University of Calgary who have taken interest in web development.
+            <p className="font-poppins mt-10 mb-7 text-base text-center md:text-start">
+            On March 9th, 2003, our family left South Korea and immigrated to Canada, in hopes for new experiences, opportunities and a better future.
+            At first, arriving in Canada presented us with a series of unique challenges. The adjustment to a new language, culture and social customs required lot of resilience.
+            Overtime however, we approached each obstacle with diligence and gradually found ourself adjusting to Canada while never losing sight of our Korean heritage. 
             <br/>
             <br/>
-            Recently, I graduated from Lighthouse Labs Web Development Bootcamp where I learned how to utilize various programs and frameworks such as JavaScript, React, Ruby, etc. to create web based applications. With coding, I feel very rewarded for solving challenging problems using both creativity and logic. I also enjoy that there is always endless amount of content and skills to learn in this industry. 
-            Through this learning, I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
+            In 2020, I graduated from University of Calgary with a Bachelor's in Civil Engineering and landed a job relevant to the field.
+            However, I quickly realised that this was not something I wanted to do for the rest of my life. 
+            I had a desire to discover what I was truly passionate for. After some research and thoughts, I decided 
+            to enroll in the Lighthouse Web Development bootcamp to see if web development was my true calling.
+            <br/>
+            <br/>
+            From September 2022 to December 2022, the bootcamp taught me how to utilize various programs and frameworks such as JavaScript, React, 
+            Ruby, and much more. With every challenge, I found myself using both creativity and logic to solve them. It was rewarding when I overcame the problems
+            since I came up with the approach to the solution. Through this learning, 
+            I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
             <br/>
             <br/>
             Currently, I am seeking any web/software developing job opportunities as I look to integrate into the tech industry. 
             Please feel free to reach out to me for any potential openings or if you are interested in talking about coding and projects in general. 
             I would love to learn from other passionate developers!
-            </p> */}
+            </p> 
 
           </motion.div>
 
