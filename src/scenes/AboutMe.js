@@ -2,18 +2,19 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+
 const AboutMe = () => {
 
 
   
 
   return (
-    <section id="about" className="md:flex md:justify-center gap-16 md:h-full py-14 border-2 border-red">
+    <section id="about" className="md:flex md:justify-center gap-16 md:h-full py-14">
       {/*Image Section */}
       <motion.div
             initial="hidden"
             whileInView="visible"
-            className=" border-2 border-black md:order-2 z-10 mt-4 md:mt-4"
+            className="md:order-2 z-10 mt-4 md:mt-4"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -29,7 +30,7 @@ const AboutMe = () => {
       </motion.div>
 
         {/*Main Section */}
-      <div className="z-30 basis-2/5 mt-4 md:mt-4 border-2 border-purple">
+      <div className="z-30 basis-2/5 mt-4 md:mt-4">
           {/*Headings */}
           <motion.div
             initial="hidden"
@@ -45,28 +46,40 @@ const AboutMe = () => {
                  Kevin Lee  
             </p>
 
-            <p className="font-poppins mt-10 mb-7 text-base text-center md:text-start">
-            On March 9th, 2003, our family left South Korea and immigrated to Canada, in hopes for new experiences, opportunities and a better future.
-            At first, arriving in Canada presented us with a series of unique challenges. The adjustment to a new language, culture and social customs required lot of resilience.
-            Overtime however, we approached each obstacle with diligence and gradually found ourself adjusting to Canada while never losing sight of our Korean heritage. 
-            <br/>
-            <br/>
-            In 2020, I graduated from University of Calgary with a Bachelor's in Civil Engineering and landed a job relevant to the field.
-            However, I quickly realised that this was not something I wanted to do for the rest of my life. 
-            I had a desire to discover what I was truly passionate for. After some research and thoughts, I decided 
-            to enroll in the Lighthouse Web Development bootcamp to see if web development was my true calling.
-            <br/>
-            <br/>
-            From September 2022 to December 2022, the bootcamp taught me how to utilize various programs and frameworks such as JavaScript, React, 
-            Ruby, and much more. With every challenge, I found myself using both creativity and logic to solve them. It was rewarding when I overcame the problems
-            since I came up with the approach to the solution. Through this learning, 
-            I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
-            <br/>
-            <br/>
-            Currently, I am seeking any web/software developing job opportunities as I look to integrate into the tech industry. 
-            Please feel free to reach out to me for any potential openings or if you are interested in talking about coding and projects in general. 
-            I would love to learn from other passionate developers!
-            </p> 
+            <span>
+              <p className="text-2xl font-semibold">Canada</p>
+              <p className="text-lg text-gray-400">March 2003</p>
+              <p className="text-base">
+                Our family left South Korea and immigrated to Canada in hopes for new opportunities and a better future.
+                We decided to settle in Calgary, Alberta and have been living here for the past 20 years.
+              </p>
+            </span>
+            <span>
+              <p className="text-2xl font-semibold">University of Calgary</p>
+              <p className="text-lg text-gray-400">September 2014 - April 2020</p>
+              <p className="text-base">
+                I graduated from University of Calgary with a Bachelor's in Civil Engineering, specializing transportation engineering and project management.
+                Throughout my academic years, I also participated in student clubs, volunteer programs and internship at various companies.
+              </p>
+            </span>
+            <span>
+              <p className="text-2xl font-semibold">Post-Graduate</p>
+              <p className="text-lg text-gray-400">June 2020 - August 2022</p>
+              <p className="text-base">
+                After graduation, I landed a job in the engineering field. Overtime however, I realised that this was not something I wanted to do for
+                the rest of my life. I wanted to find my true calling. After some thoughts and research, I decided to go back to learning. 
+              </p>
+            </span>
+            <span>
+              <p className="text-2xl font-semibold">Lighthouse Bootcamp</p>
+              <p className="text-lg text-gray-400">September 2022 - December 2022</p>
+              <p className="text-base">
+                I decided to enroll in the Lighthouse Web Development Bootcamp to see if coding was something I was passionate for (And it was!). I learned to utilize various 
+                programs and frameworks to create web applications of my choice. After 4 month, I successfully graduated from the bootcamp with a Diploma.
+              </p>
+            </span>
+
+            
 
           </motion.div>
 

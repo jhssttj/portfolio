@@ -12,7 +12,7 @@ body,
   height: 100%;
   background-color: white;
   @apply text-black;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .active {
   color:white;
