@@ -9,12 +9,12 @@ const AboutMe = () => {
   
 
   return (
-    <section id="about" className="gap-16 md:h-full py-14">
+    <section id="about" className="md:h-full py-[34px]">
       {/*Image Section */}
-      {/* <motion.div
+      <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:order-2 z-10 mt-4 md:mt-4 border-2 border-black"
+            className="min-h-[150px] z-10 mt-4 md:mt-4 text-center flex flex-col justify-center bg-cover2 bg-cover"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -22,20 +22,21 @@ const AboutMe = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
-            <img
-            alt="profile"
-            className="hover:filter hover:saturate-200 transition duration-1000 z-10 w-full max-w-[300px] rounded-full"
-            src="assets/profile-image.jpg"
-            />
-      </motion.div> */}
+              <p className="text-6xl font-semibold text-black">
+                Kevin Lee
+              </p>
+              <p className="text-xl">
+                Full Stack Web Developer
+              </p>
+      </motion.div>
 
         {/*Main Section */}
-      <div className="z-30 basis-2/5 mt-4 md:mt-4">
+      <div className="z-30">
   
           <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:flex md:justify-center"
+            className="md:flex md:justify-center bg-grey"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -45,42 +46,39 @@ const AboutMe = () => {
           >
             <img
             alt="profile"
-            className="saturate-200 z-10 w-full max-w-[300px] md:max-w-[600px]"
+            className="saturate-200 z-10 w-full max-w-[300px] md:max-w-[600px] object-contain pl-4 rounded-lg"
             src="assets/profile-image.jpg"
             />
 
-          <div className=" bg-gray-200">
-            <p className="text-6xl font-semibold m-2 md:text-start text-center">
-              Kevin Lee
-            </p>
+          <div className="px-4 ">
             <div className="m-2">
               <p className="text-2xl font-semibold">Canada</p>
-              <p className="text-lg text-gray-400">March 2003</p>
-              <p className="text-base">
+              <p className="text-lg ">March 2003</p>
+              <p className="text-base text-gray-500 font-not">
                 Our family left South Korea and immigrated to Canada in hopes for new opportunities and a better future.
                 We decided to settle in Calgary, Alberta and have been living here for the past 20 years.
               </p>
             </div>
             <div className="m-2">
               <p className="text-2xl font-semibold">University of Calgary</p>
-              <p className="text-lg text-gray-400">September 2014 - April 2020</p>
-              <p className="text-base">
+              <p className="text-lg ">September 2014 - April 2020</p>
+              <p className="text-base text-gray-500 font-not">
                 I graduated from University of Calgary with a Bachelor's in Civil Engineering, specializing transportation engineering and project management.
                 Throughout my academic years, I also participated in student clubs, volunteer programs and internship at various companies.
               </p>
             </div>
             <div className="m-2">
               <p className="text-2xl font-semibold">Post-Graduate</p>
-              <p className="text-lg text-gray-400">June 2020 - August 2022</p>
-              <p className="text-base">
+              <p className="text-lg ">June 2020 - August 2022</p>
+              <p className="text-base text-gray-500 font-not">
                 After graduation, I landed a job in the engineering field. Overtime however, I realised that this was not something I wanted to do for
                 the rest of my life. I wanted to find my true calling. After some thoughts and research, I decided to go back to learning. 
               </p>
             </div>
             <div className="m-2">
               <p className="text-2xl font-semibold">Lighthouse Bootcamp</p>
-              <p className="text-lg text-gray-400">September 2022 - December 2022</p>
-              <p className="text-base">
+              <p className="text-lg ">September 2022 - December 2022</p>
+              <p className="text-base text-gray-500 font-not">
                 I decided to enroll in the Lighthouse Web Development Bootcamp to see if coding was something I was passionate for (And it was!). I learned to utilize various 
                 programs and frameworks to create web applications of my choice. After 4 month, I successfully graduated from the bootcamp with a Diploma.
               </p>

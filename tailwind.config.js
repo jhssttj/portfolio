@@ -10,7 +10,7 @@ module.exports = {
         yellow: "#EFD81D",
         purple: "#A30B9E",
         green:"#72BF6A",
-        grey: "#EDEDED",
+        grey: "#E6E6E6",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -29,6 +29,7 @@ module.exports = {
         cover1xs: "url('./assets/cover/cover1-xs.jpg')",
         cover1xxs: "url('./assets/cover/cover1-xxs.jpg')",
         cover1xxxs: "url('./assets/cover/cover1-xxxs.jpg')",
+        cover2: "url('./assets/cover/cover2.jpg')",
       },
       boxShadow: {
         "sd": '5px 5px black',
