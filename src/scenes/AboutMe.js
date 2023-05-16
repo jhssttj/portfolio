@@ -9,12 +9,12 @@ const AboutMe = () => {
   
 
   return (
-    <section id="about" className="flex flex-col gap-16 md:h-full py-14">
+    <section id="about" className="gap-16 md:h-full py-14">
       {/*Image Section */}
-      <motion.div
+      {/* <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:flex md:justify-center z-10 mt-4 md:mt-4"
+            className="md:order-2 z-10 mt-4 md:mt-4 border-2 border-black"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -22,15 +22,12 @@ const AboutMe = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
-            <p className="text-6xl font-semibold m-2 text-center">
-              Kevin Lee
-            </p>
             <img
             alt="profile"
             className="hover:filter hover:saturate-200 transition duration-1000 z-10 w-full max-w-[300px] rounded-full"
             src="assets/profile-image.jpg"
             />
-      </motion.div>
+      </motion.div> */}
 
         {/*Main Section */}
       <div className="z-30 basis-2/5 mt-4 md:mt-4">
@@ -38,6 +35,7 @@ const AboutMe = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
+            className="md:flex md:justify-center"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -45,6 +43,16 @@ const AboutMe = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
+            <img
+            alt="profile"
+            className="saturate-200 z-10 w-full max-w-[300px] md:max-w-[600px]"
+            src="assets/profile-image.jpg"
+            />
+
+          <div className=" bg-gray-200">
+            <p className="text-6xl font-semibold m-2 md:text-start text-center">
+              Kevin Lee
+            </p>
             <div className="m-2">
               <p className="text-2xl font-semibold">Canada</p>
               <p className="text-lg text-gray-400">March 2003</p>
@@ -77,6 +85,7 @@ const AboutMe = () => {
                 programs and frameworks to create web applications of my choice. After 4 month, I successfully graduated from the bootcamp with a Diploma.
               </p>
             </div>
+          </div>
 
             
 
