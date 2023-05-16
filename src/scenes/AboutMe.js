@@ -9,12 +9,12 @@ const AboutMe = () => {
   
 
   return (
-    <section id="about" className="md:h-full py-[34px]">
+    <section id="about" className="py-24 flex flex-col items-center">
       {/*Image Section */}
       <motion.div
             initial="hidden"
             whileInView="visible"
-            className="min-h-[150px] z-10 mt-4 md:mt-4 text-center flex flex-col justify-center bg-cover2 bg-cover"
+            className="min-h-[150px] w-full z-10 mt-4 md:mt-4 text-center flex flex-col justify-center bg-cover2 bg-cover"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
@@ -31,12 +31,12 @@ const AboutMe = () => {
       </motion.div>
 
         {/*Main Section */}
-      <div className="z-30">
+      <div className="w-5/6">
   
           <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:flex md:justify-center bg-grey"
+            className="md:flex md:justify-center bg-grey pt-4"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
