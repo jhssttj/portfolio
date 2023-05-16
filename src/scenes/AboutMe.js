@@ -36,7 +36,7 @@ const AboutMe = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            className="md:flex md:justify-center bg-grey pt-4"
+            className="md:flex md:justify-center bg-grey pt-4 mt-12"
             viewport={{once:true, amount:0.33}}
             transition={{duration:1}}
             variants={{
