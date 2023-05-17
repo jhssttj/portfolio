@@ -34,9 +34,17 @@ const AboutMe = () => {
               Kevin
               <br></br>
               Lee
+              <br></br>
+              <span className="text-xl text-black font-normal">
+              (이정훈 - Lee Jung Hoon)
+              </span>
+              <br></br>
+              <span className="text-xl text-gray-500 font-normal">
+                He/Him
+              </span>
           
             </p>
-            <div className="border-b-4 border-blue w-[150px]"></div>
+            <div className="border-b-4 border-gray-500 w-[150px]"></div>
             <p className="text-xl text-gray-500">
               Full Stack Web Developer
             </p>
@@ -48,17 +56,42 @@ const AboutMe = () => {
 
        {/* Right Side  */}
         <div
-        className="md:flex md:justify-center bg-white w-[50%]"
+        className="bg-white w-[50%] p-4"
         >
-        <p className="text-gray-500 p-4">
+        <h className="text-4xl font-semibold">
+          About Me
+        </h>
+        <p className="text-gray-500">
           In 2020, I graduated from University of Calgary with a Bachelor's in Civil Engineering and started working as a cost consultant.
           I realised that this was not something I wanted to do for the rest of my life and started seeking for my true calling.
           <br></br>
           <br></br>
-          Recently, I graduated from Lighthouse Labs Web Development Bootcamp where I learned how to utilize various programs and frameworks to create 
+          Recently, I graduated from Lighthouse Labs Web Development Bootcamp where I learned how to utilize various programs and frameworks such as JavaScript, React, Ruby, etc. to create 
           web based applications. From this, I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
-
         </p>
+        <div>
+          <AnchorLink
+            className="bg-blue text-white rounded-lg
+              hover:bg-blue hover:text-white transition duration-500"
+            href="#skills"
+          >
+            My Skills
+          </AnchorLink>
+          <AnchorLink
+            className="bg-blue text-white rounded-lg
+              hover:bg-blue hover:text-white transition duration-500"
+            href="#projects"
+          >
+            My Projects
+          </AnchorLink>
+          <AnchorLink
+            className="bg-blue text-white rounded-lg
+              hover:bg-blue hover:text-white transition duration-500"
+            href="#resume"
+          >
+            My Resume
+          </AnchorLink>
+        </div>
 
       
 
