@@ -8,36 +8,48 @@ const AboutMe = () => {
     <section id="about" className="py-24 flex flex-col items-center ">
 
         {/*Main Section */}
-      <div className="w-1/2 flex border-2 border-black">
-
-          <motion.div
-                initial="hidden"
-                whileInView="visible"
-                className="min-h-[150px] w-full z-10 text-center flex flex-col justify-center bg-grey2 border-2 border-black"
-                viewport={{once:true, amount:0.33}}
-                transition={{duration:1}}
-                variants={{
-                  hidden: {opacity: 0, x: -50},
-                  visible: {opacity: 1, x: 0}
-                }}
-              >
+      <motion.div 
+        className="w-1/2 flex border-2 border-black"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{once:true, amount:0.33}}
+        transition={{duration:1}}
+        variants={{
+        hidden: {opacity: 0, x: -50},
+        visible: {opacity: 1, x: 0}
+       }}
+      >
+        {/* Left Side */}
+        <div
+        className="w-[50%]  bg-grey2 border-2 border-black flex flex-col justify-between items-center
+        font-poppins text-center"
+        >
+          <div className="w-full h-[90%] flex flex-col justify-evenly items-center border-2 border-black">
             <img
-              alt="profile"
-              className="saturate-200 z-10 w-full max-w-[300px] md:max-w-[600px] object-contain pl-4 rounded-full"
-              src="assets/profile-image.jpg"
-              />
-          </motion.div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            className="md:flex md:justify-center bg-grey pt-4 mt-12"
-            viewport={{once:true, amount:0.33}}
-            transition={{duration:1}}
-            variants={{
-              hidden: {opacity: 0, x: -50},
-              visible: {opacity: 1, x: 0}
-            }}
-          >
+            alt="profile"
+            className="saturate-200 w-full max-w-[250px] rounded-full"
+            src="assets/profile-image.jpg"
+            />
+            <p className="text-5xl font-semibold">
+              Kevin
+              <br></br>
+              Lee
+          
+            </p>
+            <div className="border-b-4 border-blue w-[150px]"></div>
+            <p className="text-xl text-gray-500">
+              Full Stack Web Developer
+            </p>
+          </div>
+          <div className="w-full h-[10%] bg-white flex justify-center items-center">
+            <SocialMediaIcons/>
+          </div>
+        </div>
+
+       {/* Right Side  */}
+        <div
+        className="md:flex md:justify-center bg-grey pt-4 mt-12 w-[50%]"
+        >
           <div className="px-4 ">
             <div className="m-2">
               <p className="text-2xl font-semibold">Canada</p>
@@ -75,7 +87,7 @@ const AboutMe = () => {
 
             
 
-          </motion.div>
+          </div>
 {/* 
           <motion.div
           className="flex mt-5 justify-center md:justify-start"
@@ -110,7 +122,7 @@ const AboutMe = () => {
           >
             <SocialMediaIcons/>
           </motion.div> */}
-        </div>
+        </motion.div>
     </section>
   )
 }
