@@ -23,3 +23,7 @@ body,
   color:white;
   border-bottom: solid 2px white;
 }
+
+#about {
+  background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#f6f6f6 40%,#f6f6f6 100%);
+}

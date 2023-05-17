@@ -4,35 +4,29 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 const AboutMe = () => {
-
-
-  
-
   return (
-    <section id="about" className="py-24 flex flex-col items-center">
-      {/*Image Section */}
-      <motion.div
-            initial="hidden"
-            whileInView="visible"
-            className="min-h-[150px] w-full z-10 mt-4 md:mt-4 text-center flex flex-col justify-center bg-cover2 bg-cover"
-            viewport={{once:true, amount:0.33}}
-            transition={{duration:1}}
-            variants={{
-              hidden: {opacity: 0, x: -50},
-              visible: {opacity: 1, x: 0}
-            }}
-          >
-              <p className="text-6xl font-semibold text-black">
-                Kevin Lee
-              </p>
-              <p className="text-xl">
-                Full Stack Web Developer
-              </p>
-      </motion.div>
+    <section id="about" className="py-24 flex flex-col items-center ">
 
         {/*Main Section */}
-      <div className="w-5/6">
-  
+      <div className="w-1/2 flex border-2 border-black">
+
+          <motion.div
+                initial="hidden"
+                whileInView="visible"
+                className="min-h-[150px] w-full z-10 text-center flex flex-col justify-center bg-grey2 border-2 border-black"
+                viewport={{once:true, amount:0.33}}
+                transition={{duration:1}}
+                variants={{
+                  hidden: {opacity: 0, x: -50},
+                  visible: {opacity: 1, x: 0}
+                }}
+              >
+            <img
+              alt="profile"
+              className="saturate-200 z-10 w-full max-w-[300px] md:max-w-[600px] object-contain pl-4 rounded-full"
+              src="assets/profile-image.jpg"
+              />
+          </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -44,12 +38,6 @@ const AboutMe = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
-            <img
-            alt="profile"
-            className="saturate-200 z-10 w-full max-w-[300px] md:max-w-[600px] object-contain pl-4 rounded-lg"
-            src="assets/profile-image.jpg"
-            />
-
           <div className="px-4 ">
             <div className="m-2">
               <p className="text-2xl font-semibold">Canada</p>
@@ -88,8 +76,7 @@ const AboutMe = () => {
             
 
           </motion.div>
-
-          {/*Call to Action */}
+{/* 
           <motion.div
           className="flex mt-5 justify-center md:justify-start"
            initial="hidden"
@@ -122,7 +109,7 @@ const AboutMe = () => {
            }}
           >
             <SocialMediaIcons/>
-          </motion.div>
+          </motion.div> */}
         </div>
     </section>
   )
