@@ -4,12 +4,15 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 const AboutMe = () => {
+  
+  const buttonClass = " bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl"
+
   return (
-    <section id="about" className="py-24 flex flex-col items-center justify-center h-screen">
+    <section id="about" className="py-24 flex flex-col items-center justify-center min-h-screen h-auto">
 
         {/*Main Section */}
       <motion.div 
-        className="w-1/2 flex h-[85%] shadow-2xl"
+        className="md:min-w-[1000px] w-[50%] flex h-[85%] shadow-2xl"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.33}}
@@ -44,7 +47,7 @@ const AboutMe = () => {
               </span>
           
             </p>
-            <div className="border-b-4 border-gray-500 w-[150px]"></div>
+            <div className="border-b-4 border-blue w-[150px]"></div>
             <p className="text-xl text-gray-500">
               Full Stack Web Developer
             </p>
@@ -56,7 +59,7 @@ const AboutMe = () => {
 
        {/* Right Side  */}
         <div
-        className="bg-white w-[50%] p-4 flex flex-col justify-start"
+        className="bg-white w-[50%] p-4 flex flex-col justify-start "
         >
         <h className="text-4xl font-semibold p-2 m-2">
           About Me
@@ -69,30 +72,34 @@ const AboutMe = () => {
           Recently, I graduated from Lighthouse Labs Web Development Bootcamp where I learned how to utilize various programs and frameworks such as JavaScript, React, Ruby, etc. to create 
           web based applications. From this, I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
         </p>
-        <div className="p-2 m-2 flex justify-start gap-4">
-          <AnchorLink
-            className="bg-blue text-white rounded-lg p-2
-              hover:bg-white hover:text-blue transition duration-500"
-            href="#skills"
-          >
-            Skills
-          </AnchorLink>
-          <AnchorLink
-            className="bg-blue text-white rounded-lg
-              hover:bg-blue hover:text-white transition duration-500"
-            href="#projects"
-          >
-            Projects
-          </AnchorLink>
+        {/* Anchor Links for Different Scenes */}
+        <div className="w-full p-2 m-2 flex justify-start gap-4">
           <a
-            className="bg-blue text-white rounded-lg
-              hover:bg-blue hover:text-white transition duration-500"
+            className={buttonClass}
             href="https://resume.creddle.io/resume/11rq6q14mw6"
             target="_blank"
             rel="noreferrer"
           >
             Resume
           </a>
+          <AnchorLink
+            className={buttonClass}
+            href="#skills"
+          >
+            Skills
+          </AnchorLink>
+          <AnchorLink
+            className={buttonClass}
+            href="#projects"
+          >
+            Projects
+          </AnchorLink>
+          <AnchorLink
+            className={buttonClass}
+            href="#experiences"
+          >
+            Experiences
+          </AnchorLink>
         </div>
 
       
