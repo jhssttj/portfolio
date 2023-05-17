@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const AboutMe = () => {
   
-  const buttonClass = "bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl border-2 border-white"
+  const buttonClass = "bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl"
 
   return (
     <section id="about" className="flex items-center justify-center min-h-screen">
@@ -60,11 +60,11 @@ const AboutMe = () => {
 
        {/* Right Side  */}
         <div
-        className="bg-white w-[100%] p-4 flex flex-col md:text-start text-center"
+        className="bg-white w-[100%] h-[100%] p-4 flex flex-col md:text-start text-center"
         >
-          <h className="text-4xl font-semibold p-2 m-2">
+          <p className="text-4xl font-semibold p-2 m-2">
             About Me
-          </h>
+          </p>
           <p className="text-gray-500 p-2 m-2">
             In 2020, I graduated from University of Calgary with a Bachelor's in Civil Engineering and started working as a cost consultant.
             I realised that this was not something I wanted to do for the rest of my life and started seeking for my true calling.
@@ -101,12 +101,9 @@ const AboutMe = () => {
             >
               Experiences
             </AnchorLink>
+          </div>
         </div>
-
-      
-
-        </div>
-        </motion.div>
+      </motion.div>
     </section>
   )
 }
