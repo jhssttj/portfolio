@@ -56,12 +56,12 @@ const AboutMe = () => {
 
        {/* Right Side  */}
         <div
-        className="bg-white w-[50%] p-4"
+        className="bg-white w-[50%] p-4 flex flex-col justify-start"
         >
-        <h className="text-4xl font-semibold">
+        <h className="text-4xl font-semibold p-2 m-2">
           About Me
         </h>
-        <p className="text-gray-500">
+        <p className="text-gray-500 p-2 m-2">
           In 2020, I graduated from University of Calgary with a Bachelor's in Civil Engineering and started working as a cost consultant.
           I realised that this was not something I wanted to do for the rest of my life and started seeking for my true calling.
           <br></br>
@@ -69,28 +69,30 @@ const AboutMe = () => {
           Recently, I graduated from Lighthouse Labs Web Development Bootcamp where I learned how to utilize various programs and frameworks such as JavaScript, React, Ruby, etc. to create 
           web based applications. From this, I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
         </p>
-        <div>
+        <div className="p-2 m-2 flex justify-start gap-4">
           <AnchorLink
-            className="bg-blue text-white rounded-lg
-              hover:bg-blue hover:text-white transition duration-500"
+            className="bg-blue text-white rounded-lg p-2
+              hover:bg-white hover:text-blue transition duration-500"
             href="#skills"
           >
-            My Skills
+            Skills
           </AnchorLink>
           <AnchorLink
             className="bg-blue text-white rounded-lg
               hover:bg-blue hover:text-white transition duration-500"
             href="#projects"
           >
-            My Projects
+            Projects
           </AnchorLink>
-          <AnchorLink
+          <a
             className="bg-blue text-white rounded-lg
               hover:bg-blue hover:text-white transition duration-500"
-            href="#resume"
+            href="https://resume.creddle.io/resume/11rq6q14mw6"
+            target="_blank"
+            rel="noreferrer"
           >
-            My Resume
-          </AnchorLink>
+            Resume
+          </a>
         </div>
 
       
