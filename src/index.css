@@ -20,10 +20,10 @@ body,
 }
 
 .activeMenu {
-  color:white;
-  border-bottom: solid 2px white;
+  color:black;
+  border-bottom: solid 2px black;
 }
 
 #about {
-  background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#ffffff 40%,#ffffff 100%);
+  background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#f7f7f7 40%,#f7f7f7 100%);
 }

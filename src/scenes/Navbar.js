@@ -8,7 +8,7 @@ const LinkRender = ({ isAboveSmallScreens,page}) => {
   const activeClass = (isAboveSmallScreens? "active":"activeMenu");
   const activeClassName = (isAboveSmallScreens 
       ? "text-gray-400 hover:text-white hover:border-b-2 hover:border-white active:bg-white active:text-black flex justify-center items-center w-full h-full text-center "
-      :"hover:text-white hover:border-b-2 hover:border-white active:text-black active:bg-white border-b-2 border-gray-400 text-gray-400")
+      :"hover:text-black hover:border-b-2 hover:border-black active:text-gray-400 active:border-gray-400 border-b-2 border-gray-400 text-gray-400")
   return (
     <Link
         className={`${activeClassName}`}
@@ -59,7 +59,7 @@ const Navbar = () => {
           </div>)
         : 
           (<button
-            className="rounded-full p-2 mr-[5%] mt-2"
+            className="rounded-full p-2 mr-[5%] my-2 flex"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <List className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-black active:bg-white"/>
@@ -67,11 +67,11 @@ const Navbar = () => {
         }
         {/* Small Screen Menu */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed right-0 top-0 h-full bg-black w-[300px] h-[500px]">
+          <div className="fixed right-0 top-0 h-full bg-beige w-[300px] h-[500px]">
             <div className="flex justify-end p-6">
               <button
                 onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <X className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-600 hover:fill-white active:fill-black active:bg-white"/>          
+                <X className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-gray-400 active:bg-beige"/>          
               </button>
             </div>
             <div className="flex flex-col gap-8 ml-[33%] text-2xl font-poppins">

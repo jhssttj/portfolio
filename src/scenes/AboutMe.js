@@ -8,12 +8,12 @@ const AboutMe = () => {
   const buttonClass = "bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl"
 
   return (
-    <section id="about" className="flex items-center justify-center min-h-screen">
+    <section id="about" className="flex items-center justify-center min-h-screen md:h-screen">
 
         {/*Main Section */}
       <motion.div 
         className="md:min-w-[1000px] md:w-[50%] 
-        h-1/2 md:flex-row flex flex-col items-center md:items-start shadow-2xl"
+        h-3/4 md:flex-row flex flex-col items-center md:items-start shadow-2xl"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.33}}
@@ -25,7 +25,7 @@ const AboutMe = () => {
       >
         {/* Left Side */}
         <div
-        className="w-[100%] bg-grey2 flex flex-col justify-between items-center
+        className="w-[100%] h-full bg-grey2 flex flex-col justify-between items-center
         font-poppins text-center"
         >
           <div className="w-full h-[90%] flex flex-col justify-evenly items-center pt-8">
@@ -53,14 +53,14 @@ const AboutMe = () => {
               Full Stack Web Developer
             </p>
           </div>
-          <div className="w-full p-2 bg-white flex justify-center items-center">
+          <div className="w-full p-2 bg-grey2 md:bg-white flex justify-center items-center">
             <SocialMediaIcons/>
           </div>
         </div>
 
        {/* Right Side  */}
         <div
-        className="bg-white w-[100%] h-[100%] p-4 flex flex-col md:text-start text-center"
+        className="bg-white w-[100%] p-4 flex flex-col justify-center md:items-start items-center md:text-start text-center h-full"
         >
           <p className="text-4xl font-semibold p-2 m-2">
             About Me
@@ -74,7 +74,7 @@ const AboutMe = () => {
             web based applications. From this, I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
           </p>
           {/* Anchor Links for Different Scenes */}
-          <div className="w-full p-2 m-2 flex md:justify-start justify-center gap-4 xxs:grid-cols-2 grid text-center ">
+          <div className="w-full p-2 m-2 flex md:justify-start justify-center gap-4 xxs:grid-cols-2 grid text-center">
             <a
               className={buttonClass}
               href="https://resume.creddle.io/resume/11rq6q14mw6"
