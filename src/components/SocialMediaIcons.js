@@ -2,7 +2,7 @@
 
 const SocialMediaIcons = () => {
 
-  const iconClassName = "hover:opacity-50 transition duration-500"
+  const iconClassName = "hover:opacity-50 transition duration-500 w-[48px] h-[48px]"
   return (
     <div className="flex justify-center md:justify-start gap-7">
       <a
