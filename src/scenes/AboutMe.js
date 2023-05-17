@@ -5,14 +5,14 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const AboutMe = () => {
   
-  const buttonClass = " bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl"
+  const buttonClass = "bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl"
 
   return (
-    <section id="about" className="py-24 flex flex-col items-center justify-center min-h-screen h-auto">
+    <section id="about" className="flex items-center justify-center min-h-screen">
 
         {/*Main Section */}
       <motion.div 
-        className="md:min-w-[1000px] w-[50%] flex h-[85%] shadow-2xl"
+        className="md:min-w-[1000px] md:w-[50%] h-1/2 md:flex shadow-2xl"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.33}}
@@ -27,13 +27,13 @@ const AboutMe = () => {
         className="w-[50%] bg-grey2 flex flex-col justify-between items-center
         font-poppins text-center"
         >
-          <div className="w-full h-[90%] flex flex-col justify-evenly items-center">
+          <div className="w-full h-[90%] flex flex-col justify-evenly items-center pt-8">
             <img
             alt="profile"
             className="saturate-200 w-full max-w-[250px] rounded-full"
             src="assets/profile-image.jpg"
             />
-            <p className="text-4xl font-semibold">
+            <p className="text-4xl font-semibold p-8">
               Kevin
               <br></br>
               Lee
@@ -47,8 +47,8 @@ const AboutMe = () => {
               </span>
           
             </p>
-            <div className="border-b-4 border-blue w-[150px]"></div>
-            <p className="text-xl text-gray-500">
+            <div className="border-b-4 border-blue w-[150px] mb-8"></div>
+            <p className="text-xl text-gray-500 mb-8">
               Full Stack Web Developer
             </p>
           </div>
@@ -59,7 +59,7 @@ const AboutMe = () => {
 
        {/* Right Side  */}
         <div
-        className="bg-white w-[50%] p-4 flex flex-col justify-start "
+        className="bg-white w-[50%] p-4 flex flex-col justify-start"
         >
         <h className="text-4xl font-semibold p-2 m-2">
           About Me
