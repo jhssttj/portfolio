@@ -1,26 +1,21 @@
 import skillData from '../datas/skillData';
 import {motion} from "framer-motion";
-import { LayoutTextWindow, Cpu, Folder } from 'react-bootstrap-icons';
+import { LayoutTextWindow, Book, Folder } from 'react-bootstrap-icons';
 
 const MySkills = () => {
 
-  const skillsDiv = "w-1/3 h-full m-4 flex flex-col justify-start items-center"
-  const skillsIcon = "bg-blue h-[75px] w-[75px] flex items-center justify-center rounded-full m-2"
-  const skillsTitle = "text-xl text-gray-500 text-center my-2 h-[10%]"
-  const skillDiv = "bg-gray-200 shadow-2xl grid grid-cols-3 h-[75%]"
+  const skillsDiv = "md:w-1/3 w-5/6 m-4 flex flex-col justify-start items-center"
+  const skillsIcon = "bg-blue min-h-[75px] min-w-[75px] flex items-center justify-center rounded-full m-2"
+  const skillsTitle = "text-xl text-gray-500 text-center my-2"
+  const skillDiv = "grid md:grid-cols-3 xxs:grid-cols-5  grid-cols-3"
 
   const renderSkills = (skillSet) => {
     const skills = Object.values(skillData[skillSet]);
     const render = skills.map((skill) => {
       return (
-        <div key={skill.name} className="max-h-[100px] max-w-[100px] relative flex flex-col justify-start items-center rounded-lg">
-            <div className={`absolute max-h-[75px] max-w-[75px] h-full w-full bg-blue z-20 opacity-0 hover:opacity-100 transition duration-300 
-              flex justify-center rounded-lg shadow-2xl`}>
-              <p className="font-poppins text-white text-sm text-center m-auto">
-                {skill.name}
-              </p>
-            </div>
-            <img key={skill.name} className="max-h-[75px] max-w-[75px] h-full w-full p-2"src={`../assets/skills/${skill.image}.png`} alt={skill.name} />
+        <div key={skill.name} className="flex justify-start items-center w-[40px] h-[40px] m-2">
+            <img key={skill.name}
+            src={`../assets/skills/${skill.image}.png`} alt={skill.name} title={skill.name} />
         </div>
       )
       })
@@ -29,11 +24,11 @@ const MySkills = () => {
 
 
   return(
-    <section id="skills" className="flex justify-center items-center min-h-screen md:h-screen">
+    <section id="skills" className="flex justify-center items-center min-h-screen">
       {/*Content Section */}
       <motion.div
-          className="md:min-w-[1000px] md:w-[50%] 
-          h-3/4 shadow-xl flex flex-col bg-white"
+          className="md:min-w-[1000px] md:w-[50%] h-[100%] 
+          h-3/4 shadow-xl flex flex-col bg-white md:m-24 mt-24"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -55,7 +50,7 @@ const MySkills = () => {
             </p>
         </div>
         {/* Skills Section */}
-        <div className="bg-white flex justify-center">
+        <div className="bg-white flex md:flex-row flex-col md:items-none md:items-start items-center justify-center">
           {/* Skill Set 1 */}
           <div className ={skillsDiv}>
             <div className={skillsIcon}>
@@ -71,7 +66,7 @@ const MySkills = () => {
           {/* Skill Set 2 */}
           <div className ={skillsDiv}>
             <div className={skillsIcon}>
-              <Cpu className="p-2 h-[60px] w-[60px] fill-white"/>
+              <Book className="p-2 h-[60px] w-[60px] fill-white"/>
             </div>
             <p className={skillsTitle}>
               Framework, Libraries, Environments
