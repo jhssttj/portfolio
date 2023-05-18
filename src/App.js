@@ -24,7 +24,7 @@ function App() {
         <div className="w-full mx-auto">
           <AboutMe/>
         </div>
-        <div className="w-5/6 mx-auto">
+        <div className="w-full mx-auto">
           <MySkills/>
         </div>
         <div className="w-5/6 mx-auto">
