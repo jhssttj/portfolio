@@ -62,7 +62,7 @@ const Navbar = () => {
             className="rounded-full p-2 mr-[5%] my-2 flex"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <List className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-black active:bg-white"/>
+            <List className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-gray-400 active:bg-black"/>
           </button>) 
         }
         {/* Small Screen Menu */}
