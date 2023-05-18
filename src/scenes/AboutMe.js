@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const AboutMe = () => {
   
-  const buttonClass = "bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-xl"
+  const buttonClass = "bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-2xl"
 
   return (
     <section id="about" className="flex items-center justify-center min-h-screen md:h-screen">
