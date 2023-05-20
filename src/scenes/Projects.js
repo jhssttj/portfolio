@@ -3,6 +3,18 @@ import projectData from '../datas/projectData';
 import SmartSlider from "react-smart-slider";
 
 
+const slidesArray = []
+
+projectData.forEach((project) => {
+  slidesArray.push({
+    a:1,
+    b:2
+  })
+})
+
+console.log("test",slidesArray)
+
+
 
 
 
