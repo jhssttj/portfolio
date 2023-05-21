@@ -25,25 +25,36 @@ const ProjectSlideShow = () => {
   }
 
   return (
-    <div className="h-full w-full border-2 border-blue">
-      {/* Text Section */}
-      {/* <div className="flex flex-col text-center bg-grey2">
-        <p className="text-2xl">
-          {projectData[index].title}
-        </p>
-        <p>
-          {projectData[index].description}
-        </p>
-      </div> */}
+    <div className="h-full w-full flex">
+
+      {/* Main Section */}
       {isAboveSmallScreens?(
         <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
-          className="h-full bg-cover bg-center duration-500 border-2 border-black">
-          <p className="text-2xl">
-            {projectData[index].title}
-          </p>
-          <p>
-            {projectData[index].description}
-          </p>
+          className="h-full w-full bg-cover bg-center duration-500">
+          <div className="relative w-[40%] m-2 p-4">
+            <p className="text-3xl m-2">
+              {projectData[index].title}
+            </p>
+            <p className="m-2">
+              {projectData[index].description}
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+              className="hover:opacity-50 transition duration-500"
+              href={projectData[index].git}
+              target="_blank"
+              rel="noreferrer"
+              >
+              <img alt="projectgitlink" src="../assets/icons/github.png"/>
+              </a>
+              <a 
+              href={projectData[index].link} 
+              className="bg-blue text-white p-2 rounded-lg hover:bg-blueH shadow-2xl"
+              rel="noopener noreferrer" target="_blank">
+                Project Demo
+              </a>
+            </div>
+          </div>
         </div>
       )
       :(
