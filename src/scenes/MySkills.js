@@ -27,7 +27,7 @@ const MySkills = () => {
     <section id="skills" className="flex justify-center items-center min-h-screen">
       {/*Content Section */}
       <motion.div
-          className="md:min-w-[1000px] md:w-[50%] h-[100%] 
+          className="md:min-w-[1000px] md:w-[50%]
           h-3/4 shadow-xl flex flex-col bg-white md:m-24"
           initial="hidden"
           whileInView="visible"

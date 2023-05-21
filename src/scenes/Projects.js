@@ -10,48 +10,31 @@ import 'react-slideshow-image/dist/styles.css';
 
 const slidesArray = [];
 
-const ProjectDiv = ({ title, description, link, git }) => (
-  <div style={{
-    position: 'absolute',
-    right: 100,
-    top: 250,
-    fontSize: 38,
-    padding: 55,
-    border: 'solid 1px',
-  }}>
-    {title}
-    {description}
-  </div>
-)
 
 projectData.forEach((project) => {
   slidesArray.push(`../assets/projects/${project.title}.png`,)
 })
 
-
-
-const test = slidesArray.map((image)=>{
+const renderSlides = projectData.map((data)=>{
   return (
-    <div className="each-side-effect bg-black">
-
-      <img src={image} alt="test"/>
-      <span>Slide 1</span>
-
+    <div key={data.title} className="">
+      <div className="flex flex-col justify-center items-center bg-grey2">
+        <p className="text-2xl text-gray-500">{data.title}</p>
+        <p className="text-gray-500">{data.description}</p>
+      </div>
+      <img className="p-1 "src={`../assets/projects/${data.title}.png`} alt={data.title} />
   </div>
   )
 
 })
 
-
-
 const Projects = () => {
-
   return(
-    <section id="projects" className="flex justify-center items-center min-h-screen">
+    <section id="projects" className="flex justify-center items-start min-h-screen md:h-screen">
       {/*Content Section */}
       <motion.div
-          className="md:min-w-[1000px] md:w-[50%] h-[100%] 
-          h-3/4 shadow-xl flex flex-col bg-white md:m-24"
+          className="md:min-w-[1000px] md:w-[50%] h-[75%] 
+          shadow-xl flex flex-col bg-white md:m-24 border-2 border-purple"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -66,16 +49,12 @@ const Projects = () => {
             <p className="text-4xl font-semibold p-2 md:m-2 mt-8">
               Projects
             </p>
-            <div className="border-b-4 border-blue w-[150px]"></div>
-            <p className="text-gray-500 p-2 m-2">
-              Check out some of my projects (More to come)!
-            </p>
+            <div className="border-b-4 border-blue w-[150px] mb-2"></div>
         </div>
-        <div className="border-2 border-black w-full h-[500px]">
-          <Slide className='w-full h-full border-4 border-blue'>
-            {test}
+        <div className="border-2 border-blue h-full">
+          <Slide>
+            {renderSlides}
           </Slide>
-
         </div>
       </motion.div>
     </section>
