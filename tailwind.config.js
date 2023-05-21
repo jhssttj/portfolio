@@ -32,10 +32,6 @@ module.exports = {
         cover1xs: "url('./assets/cover/cover1-xs.jpg')",
         cover1xxs: "url('./assets/cover/cover1-xxs.jpg')",
         cover1xxxs: "url('./assets/cover/cover1-xxxs.jpg')",
-        // Projects
-        omok: "url('./assets/projects/Omok.png')",
-        onlyfriends: "url('./assets/projects/OnlyFriends.png')",
-        wikimap: "url('./assets/projects/WikiMap.png')",
       },
       boxShadow: {
         "sd": '5px 5px black',
