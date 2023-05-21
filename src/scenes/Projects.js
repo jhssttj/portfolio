@@ -3,12 +3,21 @@ import projectData from '../datas/projectData';
 import SmartSlider from "react-smart-slider";
 
 
-const slidesArray = []
+const slidesArray = [];
+
+const ProjectDiv = ({title, description, link, git} ) => {
+  <div className="">
+    {title}
+    {description}
+    {link}
+    {git}
+  </div>
+}
 
 projectData.forEach((project) => {
   slidesArray.push({
-    a:1,
-    b:2
+    url:`../assets/projects/${project.title}.png`,
+    childrenElem: <ProjectDiv title={project.title} decription={project.description} link={project.link} git={project.git}/>
   })
 })
 
@@ -43,6 +52,12 @@ const Projects = () => {
             <p className="text-gray-500 p-2 m-2">
               Check out some of my projects (More to come)!
             </p>
+        </div>
+        <div>
+          <SmartSlider
+            slides={slidesArray}
+            buttonShape ="round"
+          />
         </div>
       </motion.div>
     </section>
