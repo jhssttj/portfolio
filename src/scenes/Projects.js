@@ -17,12 +17,31 @@ projectData.forEach((project) => {
 
 const renderSlides = projectData.map((data)=>{
   return (
-    <div key={data.title} className="">
-      <div className="flex flex-col justify-center items-center bg-grey2">
+    <div key={data.title} className="flex flex-col justify-evenly">
+      {/* <div className="flex flex-col justify-center items-center bg-grey2">
         <p className="text-2xl text-gray-500">{data.title}</p>
         <p className="text-gray-500">{data.description}</p>
       </div>
-      <img className="p-1 "src={`../assets/projects/${data.title}.png`} alt={data.title} />
+      <div className="w-[500px] h-[500px]"> 
+        <img className="p-1 "src={`../assets/projects/${data.title}.png`} alt={data.title} />
+      </div>
+
+      <div className="flex justify-center items-center bg-grey2">
+          <a 
+          href={data.link} 
+          className="bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-2xl"
+          rel="noopener noreferrer" target="_blank">
+            Project Demo
+          </a>
+          <a
+          className="hover:opacity-50 transition duration-500"
+          href={data.git}
+          target="_blank"
+          rel="noreferrer"
+          >
+          <img alt="projectgitlink" src="../assets/icons/github.png"/>
+          </a>
+      </div> */}
   </div>
   )
 
