@@ -1,33 +1,51 @@
 import {motion} from "framer-motion";
 import projectData from '../datas/projectData';
-import SmartSlider from "react-smart-slider";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+
+
+
+
 
 
 const slidesArray = [];
 
-const ProjectDiv = ({title, description, link, git} ) => {
-  <div className="">
+const ProjectDiv = ({ title, description, link, git }) => (
+  <div style={{
+    position: 'absolute',
+    right: 100,
+    top: 250,
+    fontSize: 38,
+    padding: 55,
+    border: 'solid 1px',
+  }}>
     {title}
     {description}
-    {link}
-    {git}
   </div>
-}
+)
 
 projectData.forEach((project) => {
-  slidesArray.push({
-    url:`../assets/projects/${project.title}.png`,
-    childrenElem: <ProjectDiv title={project.title} decription={project.description} link={project.link} git={project.git}/>
-  })
+  slidesArray.push(`../assets/projects/${project.title}.png`,)
 })
 
-console.log("test",slidesArray)
 
 
+const test = slidesArray.map((image)=>{
+  return (
+    <div className="each-side-effect bg-black">
+
+      <img src={image} alt="test"/>
+      <span>Slide 1</span>
+
+  </div>
+  )
+
+})
 
 
 
 const Projects = () => {
+
   return(
     <section id="projects" className="flex justify-center items-center min-h-screen">
       {/*Content Section */}
@@ -53,11 +71,11 @@ const Projects = () => {
               Check out some of my projects (More to come)!
             </p>
         </div>
-        <div>
-          <SmartSlider
-            slides={slidesArray}
-            buttonShape ="round"
-          />
+        <div className="border-2 border-black w-full h-[500px]">
+          <Slide className='w-full h-full border-4 border-blue'>
+            {test}
+          </Slide>
+
         </div>
       </motion.div>
     </section>
