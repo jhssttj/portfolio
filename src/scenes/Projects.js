@@ -25,9 +25,10 @@ const Projects = () => {
             <div className="border-b-4 border-blue w-[150px] mb-4"></div>
         </div>
         {/* Slideshow Section */}
-        <div className="h-full">
+        <div className="w-full h-full">
           <ProjectSlideShow/>
         </div>
+
       </motion.div>
     </section>
   )
