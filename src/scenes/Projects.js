@@ -1,55 +1,13 @@
 import {motion} from "framer-motion";
-import projectData from '../datas/projectData';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
-
-const slidesArray = [];
-
-
-projectData.forEach((project) => {
-  slidesArray.push(`../assets/projects/${project.title}.png`,)
-})
-
-const renderSlides = projectData.map((data)=>{
-  return (
-    <div key={data.title} className={`border-2 border-black`}>
-      <img className="max-w-full  h-[250px]"src={`../assets/projects/${data.title}.png`} alt={data.title} />
-      {/* <div className="flex flex-col justify-center items-center bg-grey2">
-        <p className="text-2xl text-gray-500">{data.title}</p>
-        <p className="text-gray-500">{data.description}</p>
-      </div>
-      <div className="w-[500px] h-[500px]"> 
-        <img className="p-1 "src={`../assets/projects/${data.title}.png`} alt={data.title} />
-      </div>
-
-      <div className="flex justify-center items-center bg-grey2">
-          <a 
-          href={data.link} 
-          className="bg-blue text-white rounded-lg p-2 hover:bg-blueH shadow-2xl"
-          rel="noopener noreferrer" target="_blank">
-            Project Demo
-          </a>
-          <a
-          className="hover:opacity-50 transition duration-500"
-          href={data.git}
-          target="_blank"
-          rel="noreferrer"
-          >
-          <img alt="projectgitlink" src="../assets/icons/github.png"/>
-          </a>
-      </div> */}
-  </div>
-  )
-
-})
+import ProjectSlideShow from "../components/ProjectSlideShow";
 
 const Projects = () => {
   return(
     <section id="projects" className="flex justify-center items-start min-h-screen md:h-screen">
       {/*Content Section */}
       <motion.div
-          className="md:min-w-[1000px] md:w-[50%] h-3/4
-          shadow-xl flex flex-col bg-white md:m-24 border-2 border-purple"
+          className="md:min-w-[1000px] md:w-[50%] h-[85%]
+          shadow-xl flex flex-col bg-white md:m-24"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -64,15 +22,12 @@ const Projects = () => {
             <p className="text-4xl font-semibold p-2 md:m-2 mt-8">
               Projects
             </p>
-            <div className="border-b-4 border-blue w-[150px]"></div>
+            <div className="border-b-4 border-blue w-[150px] mb-4"></div>
         </div>
-        {/* <div className="h-full"> */}
-        <div test="test">
-          <Slide cssClass="test">
-            {renderSlides}
-          </Slide>
+        {/* Slideshow Section */}
+        <div className="h-full">
+          <ProjectSlideShow/>
         </div>
-        {/* </div> */}
       </motion.div>
     </section>
   )
