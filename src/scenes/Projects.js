@@ -3,11 +3,6 @@ import projectData from '../datas/projectData';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
-
-
-
-
-
 const slidesArray = [];
 
 
@@ -17,7 +12,8 @@ projectData.forEach((project) => {
 
 const renderSlides = projectData.map((data)=>{
   return (
-    <div key={data.title} className="flex flex-col justify-evenly">
+    <div key={data.title} className={`border-2 border-black`}>
+      <img className="max-w-full  h-[250px]"src={`../assets/projects/${data.title}.png`} alt={data.title} />
       {/* <div className="flex flex-col justify-center items-center bg-grey2">
         <p className="text-2xl text-gray-500">{data.title}</p>
         <p className="text-gray-500">{data.description}</p>
@@ -52,7 +48,7 @@ const Projects = () => {
     <section id="projects" className="flex justify-center items-start min-h-screen md:h-screen">
       {/*Content Section */}
       <motion.div
-          className="md:min-w-[1000px] md:w-[50%] h-[75%] 
+          className="md:min-w-[1000px] md:w-[50%] h-3/4
           shadow-xl flex flex-col bg-white md:m-24 border-2 border-purple"
           initial="hidden"
           whileInView="visible"
@@ -64,17 +60,19 @@ const Projects = () => {
           }}
         >
         {/* Title Section */}
-        <div className="flex flex-col justify-start items-center bg-grey2 text-center h-auto">
+        <div className="flex flex-col justify-start items-center bg-grey2 text-center">
             <p className="text-4xl font-semibold p-2 md:m-2 mt-8">
               Projects
             </p>
-            <div className="border-b-4 border-blue w-[150px] mb-2"></div>
+            <div className="border-b-4 border-blue w-[150px]"></div>
         </div>
-        <div className="border-2 border-blue h-full">
-          <Slide>
+        {/* <div className="h-full"> */}
+        <div test="test">
+          <Slide cssClass="test">
             {renderSlides}
           </Slide>
         </div>
+        {/* </div> */}
       </motion.div>
     </section>
   )

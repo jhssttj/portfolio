@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap');
+@import 'react-slideshow-image/dist/styles.css';
 
 @tailwind base;
 @tailwind components;
@@ -27,5 +28,3 @@ body,
 #about,#skills,#projects {
   background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#f7f7f7 40%,#f7f7f7 100%);
 }
-
-
