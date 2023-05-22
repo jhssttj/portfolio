@@ -1,7 +1,7 @@
 import { useState } from "react";
 import projectData from '../datas/projectData';
 import useMediaQuery from "../hooks/useMediaQuery";
-import { ArrowLeftCircle, ArrowRightCircle } from 'react-bootstrap-icons';
+import { ChevronRight, ChevronLeft } from 'react-bootstrap-icons';
 
 const ProjectSlideShow = () => {
 
@@ -25,16 +25,17 @@ const ProjectSlideShow = () => {
   }
 
   return (
-    <div className="relative h-full w-full flex border-2 border-black">
-      <div className="absolute z-20 w-full h-full border-2 border-black flex items-center p-2">
-        <ArrowLeftCircle className="w-[50px] h-[50px] hover:" onClick={prevIndex} />
+    <div className="relative h-full w-full flex">
+      <div className="absolute z-20 top-[50%] p-2">
+        <ChevronLeft className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
+        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300" onClick={prevIndex} />
       </div>
 
       {/* Main Section */}
       {isAboveSmallScreens?(
         <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
           className="h-full w-full bg-cover bg-center duration-500">
-          <div className="flex flex-col justify-center relative w-[35%] m-2 p-4 bg-gray-200 bg-opacity-75">
+          <div className="z-30 flex flex-col justify-center relative w-[35%] m-2 p-4 bg-gray-200 bg-opacity-75">
             <p className="text-3xl m-2">
               {projectData[index].title}
             </p>
@@ -71,12 +72,13 @@ const ProjectSlideShow = () => {
           </p>
           </div>
           <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
-          className="h-full bg-cover bg-center duration-500 border-2 border-black">
+          className="h-full bg-cover bg-center duration-500">
           </div>
         </div>
       )}
-        <div className="absolute z-20 w-full h-full border-2 border-black justify-end flex items-center p-2">
-          <ArrowRightCircle className="w-[50px] h-[50px] hover:" onClick={nextIndex}/>
+        <div className="absolute z-20 top-[50%] right-0 p-2">
+          <ChevronRight className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
+        hover:cursor-pointer hover:bg-gray-200" onClick={nextIndex}/>
         </div>
     </div>
   )
