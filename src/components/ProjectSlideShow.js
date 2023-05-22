@@ -25,13 +25,16 @@ const ProjectSlideShow = () => {
   }
 
   return (
-    <div className="h-full w-full flex">
+    <div className="relative h-full w-full flex border-2 border-black">
+      <div className="absolute z-20 w-full h-full border-2 border-black flex items-center p-2">
+        <ArrowLeftCircle className="w-[50px] h-[50px] hover:" onClick={prevIndex} />
+      </div>
 
       {/* Main Section */}
       {isAboveSmallScreens?(
         <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
           className="h-full w-full bg-cover bg-center duration-500">
-          <div className="relative w-[40%] m-2 p-4">
+          <div className="flex flex-col justify-center relative w-[35%] m-2 p-4 bg-gray-200 bg-opacity-75">
             <p className="text-3xl m-2">
               {projectData[index].title}
             </p>
@@ -72,10 +75,9 @@ const ProjectSlideShow = () => {
           </div>
         </div>
       )}
-        {/* <div className="relative top-[50%] -translate-x-0 translate-y-[-50%] text-2xl flex justify-between">
-          <ArrowLeftCircle className="w-[50px] h-[50px] hover:" onClick={prevIndex} />
+        <div className="absolute z-20 w-full h-full border-2 border-black justify-end flex items-center p-2">
           <ArrowRightCircle className="w-[50px] h-[50px] hover:" onClick={nextIndex}/>
-        </div> */}
+        </div>
     </div>
   )
 }
