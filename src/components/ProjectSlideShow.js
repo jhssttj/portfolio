@@ -35,13 +35,13 @@ const ProjectSlideShow = () => {
   return (
     <div className="relative h-full w-full flex">
       {/* Arrow Section */}
-      <div className="absolute z-20 top-[50%] p-2">
+      <div className="absolute z-20 sm:top-[50%] top-[60%] p-2">
         <ChevronLeft className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
-        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300" onClick={prevIndex} />
+        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300 xs:opacity-100 opacity-0" onClick={prevIndex} />
       </div>
-      <div className="absolute z-20 top-[50%] right-0 p-2">
+      <div className="absolute z-20 sm:top-[50%] top-[60%] right-0 p-2">
           <ChevronRight className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
-        hover:cursor-pointer hover:bg-gray-200" onClick={nextIndex}/>
+        hover:cursor-pointer hover:bg-gray-200 xs:opacity-100 opacity-0" onClick={nextIndex}/>
         </div>
 
         {/* Dot Section */}
@@ -82,13 +82,13 @@ const ProjectSlideShow = () => {
         </div>
       )
       :(
-        <div className="h-screen max-h-[625px] sm:max-h-none w-full flex flex-col items-center bg-gray-200 border-2 border-black">
+        <div className="h-screen max-h-[400px] xxs:max-h-[500px] xs:max-h-[625px] sm:max-h-none w-full flex flex-col items-center bg-gray-200">
           {/* Text Section */}
-          <div className="z-30 flex flex-col justify-center text-center p-4 w-full bg-grey2">
-            <p className="text-2xl">
+          <div className="z-30 flex flex-col justify-center text-center p-1 w-full xxs:h-auto h-full min-h-[152px] bg-grey2">
+            <p className="xxs:text-2xl text-xl">
               {projectData[index].title}
             </p>
-            <p>
+            <p className="xxs:text-base text-sm">
               {projectData[index].description}
             </p>
             <div className="flex justify-center items-center gap-4 mt-2">
@@ -110,7 +110,7 @@ const ProjectSlideShow = () => {
           </div>
           {/* Picture Section */}
           <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
-            className="border-2 border-black w-full h-full bg-cover bg-center duration-500">
+            className="w-full h-full bg-cover bg-center duration-500">
           </div>
         </div>
       )}

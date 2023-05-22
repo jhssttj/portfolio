@@ -3,7 +3,7 @@ import ProjectSlideShow from "../components/ProjectSlideShow";
 
 const Projects = () => {
   return(
-    <section id="projects" className="flex justify-center items-start sm:h-screen sm:min-h-screen border-2 border-red">
+    <section id="projects" className="flex justify-center items-start sm:h-screen sm:min-h-screen">
       {/*Content Section */}
       <motion.div
           className="md:min-w-[1000px] md:w-[50%] w-full md:h-[85%] h-[100%]
