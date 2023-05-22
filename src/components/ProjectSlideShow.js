@@ -1,7 +1,8 @@
 import { useState } from "react";
 import projectData from '../datas/projectData';
 import useMediaQuery from "../hooks/useMediaQuery";
-import { ChevronRight, ChevronLeft } from 'react-bootstrap-icons';
+import { ChevronRight, ChevronLeft, CircleFill } from 'react-bootstrap-icons';
+import {Link} from "react-scroll"
 
 const ProjectSlideShow = () => {
 
@@ -24,12 +25,32 @@ const ProjectSlideShow = () => {
     }
   }
 
+  const renderDot = projectData.map((data, index) => {
+    return (<div key={index} className="p-1">
+      <CircleFill 
+        onClick={()=>setIndex(index)}
+        className={`w-[10px] h-[10px] hover:cursor-pointer fill-gray-600 hover:fill-white`}/>
+    </div>)
+  })
+
   return (
     <div className="relative h-full w-full flex">
+      {/* Arrow Section */}
       <div className="absolute z-20 top-[50%] p-2">
         <ChevronLeft className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
         hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300" onClick={prevIndex} />
       </div>
+      <div className="absolute z-20 top-[50%] right-0 p-2">
+          <ChevronRight className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
+        hover:cursor-pointer hover:bg-gray-200" onClick={nextIndex}/>
+        </div>
+
+        {/* Dot Section */}
+        <div className="absolute flex z-40 bottom-0 flex justify-center w-full">
+          <div className="flex bg-gray-200 bg-opacity-75 rounded-lg p-1 mb-1">
+            {renderDot}
+          </div>
+        </div>
 
       {/* Main Section */}
       {isAboveSmallScreens?(
@@ -76,10 +97,6 @@ const ProjectSlideShow = () => {
           </div>
         </div>
       )}
-        <div className="absolute z-20 top-[50%] right-0 p-2">
-          <ChevronRight className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
-        hover:cursor-pointer hover:bg-gray-200" onClick={nextIndex}/>
-        </div>
     </div>
   )
 }
