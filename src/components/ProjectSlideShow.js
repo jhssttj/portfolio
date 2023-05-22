@@ -25,11 +25,11 @@ const ProjectSlideShow = () => {
     }
   }
 
-  const renderDot = projectData.map((data, index) => {
-    return (<div key={index} className="p-1">
+  const renderDot = projectData.map((data, dataIndex) => {
+    return (<div key={dataIndex} className="p-1">
       <CircleFill 
-        onClick={()=>setIndex(index)}
-        className={`w-[10px] h-[10px] hover:cursor-pointer fill-gray-600 hover:fill-white`}/>
+        onClick={()=>setIndex(dataIndex)}
+        className={`w-[10px] h-[10px] hover:cursor-pointer hover:fill-gray-600 ${index===dataIndex?("fill-gray-600"):("fill-gray-400")}`}/>
     </div>)
   })
 
