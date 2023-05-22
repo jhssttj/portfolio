@@ -40,7 +40,7 @@ const MySkills = () => {
         >
         {/* Title Section */}
         <div className="flex flex-col justify-start items-center bg-grey2 text-center h-auto">
-            <p className="text-4xl font-semibold p-2 md:m-2 mt-8">
+            <p className="text-4xl font-semibold p-2 md:m-2 md:mt-8 mt-16">
               Skills
             </p>
             <div className="border-b-4 border-blue w-[150px]"></div>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import projectData from '../datas/projectData';
 import useMediaQuery from "../hooks/useMediaQuery";
 import { ChevronRight, ChevronLeft, CircleFill } from 'react-bootstrap-icons';
-import {Link} from "react-scroll"
 
 const ProjectSlideShow = () => {
 
@@ -83,17 +82,35 @@ const ProjectSlideShow = () => {
         </div>
       )
       :(
-        <div>
-          <div>
-          <p className="text-2xl">
-            {projectData[index].title}
-          </p>
-          <p>
-            {projectData[index].description}
-          </p>
+        <div className="h-screen max-h-[625px] sm:max-h-none w-full flex flex-col items-center bg-gray-200 border-2 border-black">
+          {/* Text Section */}
+          <div className="z-30 flex flex-col justify-center text-center p-4 w-full bg-grey2">
+            <p className="text-2xl">
+              {projectData[index].title}
+            </p>
+            <p>
+              {projectData[index].description}
+            </p>
+            <div className="flex justify-center items-center gap-4 mt-2">
+              <a
+              className="hover:opacity-50 transition duration-500"
+              href={projectData[index].git}
+              target="_blank"
+              rel="noreferrer"
+              >
+              <img alt="projectgitlink" src="../assets/icons/github.png"/>
+              </a>
+              <a 
+              href={projectData[index].link} 
+              className="bg-blue text-white p-2 rounded-lg hover:bg-blueH shadow-2xl"
+              rel="noopener noreferrer" target="_blank">
+                Project Demo
+              </a>
+            </div>
           </div>
+          {/* Picture Section */}
           <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
-          className="h-full bg-cover bg-center duration-500">
+            className="border-2 border-black w-full h-full bg-cover bg-center duration-500">
           </div>
         </div>
       )}
