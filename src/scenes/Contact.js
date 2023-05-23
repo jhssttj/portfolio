@@ -1,7 +1,9 @@
 import {useForm} from 'react-hook-form';
 import {motion} from 'framer-motion';
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Contact = () => {
+  const isAboveSmallScreens = useMediaQuery("(min-width: 720px");
 
   const {
     register,
@@ -44,10 +46,10 @@ const Contact = () => {
             </p>
         </div>
         {/* Contact Section */}
-        <div className="m-4 justify-center">
+        <div className="flex flex-col m-4 items-center justify-center gap-4">
           {/* Form Section */}
           <form
-            className="w-1/2 p-2 bg-gray-200 rounded-lg shadow-xl"
+            className="sm:w-3/4 w-full p-2 bg-gray-200 rounded-lg shadow-xl"
             target="_blank"
             onSubmit={onSubmit}
             action = {`https://formsubmit.co/470b7198e34f535e1ee66acd2f28e9f2`}
@@ -108,8 +110,12 @@ const Contact = () => {
             </button>
           </form>
           {/* Pic Section */}
-          <div className="w-1/2 h-1/2">
-            <img className="w-full h-full p-2 " src='../assets/contact-image-md.png' alt='contactPage'/>
+          <div className="max-w-full max-h-full flex justify-center">
+            {isAboveSmallScreens?(
+              <img className="sm:w-3/4 sm:h-3/4 shadow-xl" src='../assets/contact-image-md.png' alt='contactPage'/>
+            ):(
+              <img className="shadow-xl" src='../assets/contact-image-sm.png' alt='contactPage'/>
+            )}
           </div>
         </div>
       </motion.div>
