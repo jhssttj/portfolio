@@ -26,7 +26,7 @@ const Navbar = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
   return (
-    <nav className={`bg-black border-y-8 border-black z-40 w-full h-[50px] fixed top-0`}>
+    <nav className={`bg-black border-y-8 border-black z-40 w-full h-[50px] fixed top-0 z-50`}>
       <div className={`${navBarIconClass} flex items-center mx-auto w-full h-full`}>
         {/*Large Screen NavBar*/}
         {isAboveSmallScreens 

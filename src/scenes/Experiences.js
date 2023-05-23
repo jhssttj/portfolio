@@ -1,14 +1,16 @@
 import {motion} from "framer-motion";
 import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import experienceData from "../datas/experienceData";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Experiences = () => {
+  const isAboveSmallScreens = useMediaQuery("(min-width: 480px");
 
   const renderExperience = experienceData.map((data,index) => {
     return(
@@ -41,22 +43,57 @@ const Experiences = () => {
       <TimelineContent 
         sx={{m:'auto 0',}} 
         variant="body2"
-        className={`${data.style===1?("bg-gray-200"):("bg-blue")} shadow-xl`}
+        className={`${data.style===1?("bg-gray-200"):("bg-blue")} shadow-xl rounded-lg`}
       >
-        <p className={`text-xl font-poppins ${data.style===1?(""):("text-white")}`}>
+        <p className={`xs:text-xl xxs:text-base text-sm font-poppins ${data.style===1?(""):("text-white")}`}>
           {data.name}
         </p>
-        <p className={`font-poppins ${data.style===1?(""):("text-white")}`}>{data.role}</p>
+        <p className={`xxs:text-sm text-xs font-poppins ${data.style===1?(""):("text-white")}`}>{data.role}</p>
       </TimelineContent>
     </TimelineItem>
     )
   })
 
+  const renderExperienceSm = experienceData.map((data,index) => {
+    return(
+    <TimelineItem key={index}>
+      <TimelineSeparator className="mx-4">
+        <TimelineConnector className="h-[25px]"/>
+        <TimelineDot
+          sx={{background:"#E5E7EB"}}
+        >
+          <div className="w-[50px] h-[50px] flex justify-center items-center">
+            <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="w-[50px] h-[50px] rounded-full shadow-xl" alt={data.name} src={data.image}/>
+              </a>
+          </div>
+        </TimelineDot>
+      </TimelineSeparator>
+      <TimelineContent 
+        sx={{m:'auto 0',}} 
+        variant="body2"
+        className={`${data.style===1?("bg-gray-200"):("bg-blue")} shadow-xl rounded-lg`}
+      >
+        <p className={`xs:text-xl xxs:text-base text-sm font-poppins ${data.style===1?(""):("text-white")}`}>
+          {data.name}
+        </p>
+        <p className={`xxs:text-sm text-xs font-poppins ${data.style===1?(""):("text-white")}`}>{data.role}</p>
+        <p className={`xxs:text-sm text-xs font-poppins ${data.style===1?(""):("text-white")}`}>{data.date}</p>
+      </TimelineContent>
+    </TimelineItem>
+    )
+  })
+
+
   return(
-    <section id="experiences" className="flex justify-center items-start sm:h-screen sm:min-h-screen">
+    <section id="experiences" className="flex justify-center items-start md:h-screen md:min-h-screen">
       {/*Content Section */}
       <motion.div
-          className="md:min-w-[1000px] md:w-[50%]
+          className="md:min-w-[1000px] md:w-[50%] w-full
           md:h-[75%] h-[100%] shadow-xl flex flex-col bg-white md:m-24"
           initial="hidden"
           whileInView="visible"
@@ -76,12 +113,26 @@ const Experiences = () => {
         </div>
 
         {/* Timeline Exp Section */}
-        <div className="bg-white h-full flex flex-col items-center justify-center">
-          <div className="">
-            <Timeline position="alternate">
-              {renderExperience}
-            </Timeline>
-          </div>
+        <div className="bg-white md:h-full flex flex-col items-center xs:justify-center justify-start">
+              {isAboveSmallScreens
+              ?(
+                <div>
+                  <Timeline position="alternate">
+                    {renderExperience}
+                  </Timeline>
+                </div>
+                )
+                :(
+                  <div>
+                  <Timeline sx={{
+                    [`& .${timelineItemClasses.root}:before`]: {
+                      flex: 0,
+                      padding: 0,
+                    },
+                  }}>
+                    {renderExperienceSm}
+                  </Timeline>
+                </div>)}
         </div>
       </motion.div>
     </section>
