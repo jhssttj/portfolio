@@ -10,12 +10,11 @@ import experienceData from "../datas/experienceData";
 
 const Experiences = () => {
 
-  const renderExperience = experienceData.map((data) => {
+  const renderExperience = experienceData.map((data,index) => {
     return(
-    <TimelineItem>
+    <TimelineItem key={index}>
       <TimelineOppositeContent
         sx={{m: 'auto 0'}}
-        align="right"
         variant="body2"
         color="text.secondary"
       >
@@ -41,14 +40,13 @@ const Experiences = () => {
       </TimelineSeparator>
       <TimelineContent 
         sx={{m:'auto 0',}} 
-        align=""
         variant="body2"
-        className="bg-gray-200 shadow-xl"
+        className={`${data.style===1?("bg-gray-200"):("bg-blue")} shadow-xl`}
       >
-        <p className="text-xl font-poppins">
+        <p className={`text-xl font-poppins ${data.style===1?(""):("text-white")}`}>
           {data.name}
         </p>
-        <p className="text-gray-500 font-poppins">{data.role}</p>
+        <p className={`font-poppins ${data.style===1?(""):("text-white")}`}>{data.role}</p>
       </TimelineContent>
     </TimelineItem>
     )
