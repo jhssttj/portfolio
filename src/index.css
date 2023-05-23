@@ -10,9 +10,9 @@ body,
 #root,
 .app {
   height: 100%;
-  background-color: white;
   @apply text-black;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#f7f7f7 40%,#f7f7f7 100%);
 }
 .active {
   color:white;
@@ -22,8 +22,4 @@ body,
 .activeMenu {
   color:black;
   border-bottom: solid 2px black;
-}
-
-#about,#skills,#projects {
-  background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#f7f7f7 40%,#f7f7f7 100%);
 }
