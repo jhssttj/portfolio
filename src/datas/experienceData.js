@@ -16,7 +16,7 @@ const experienceData = [
   {
     name: "University of Calgary",
     role: "Civil Engineering",
-    date: "Aug 2020",
+    date: "Sep 2014 - Aug 2020",
     image: "../assets/experiences/UniversityOfCalgary.png",
     link: "https://www.ucalgary.ca/"
   },

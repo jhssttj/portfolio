@@ -1,6 +1,4 @@
-
 import {motion} from "framer-motion";
-
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -8,7 +6,6 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
 import experienceData from "../datas/experienceData";
 
 const Experiences = () => {
@@ -22,27 +19,36 @@ const Experiences = () => {
         variant="body2"
         color="text.secondary"
       >
-        {data.date}
+        <p className="font-poppins text-gray-500 text-sm">
+          {data.date}
+        </p>
       </TimelineOppositeContent>
-      <TimelineSeparator className="">
+      <TimelineSeparator className="mx-4">
         <TimelineConnector className="h-[25px]"/>
-        <TimelineDot>
+        <TimelineDot
+          sx={{background:"#E5E7EB"}}
+        >
           <div className="w-[50px] h-[50px] flex justify-center items-center">
             <a
                 href={data.link}
                 target="_blank"
                 rel="noreferrer"
               >
-                <img className="w-[50px] h-[50px] rounded-full" alt={data.name} src={data.image}/>
+                <img className="w-[50px] h-[50px] rounded-full shadow-xl" alt={data.name} src={data.image}/>
               </a>
           </div>
         </TimelineDot>
       </TimelineSeparator>
-      <TimelineContent sx={{py: '12px', px:2}} className="">
-        <Typography variant="h6" component="span">
+      <TimelineContent 
+        sx={{m:'auto 0',}} 
+        align=""
+        variant="body2"
+        className="bg-gray-200 shadow-xl"
+      >
+        <p className="text-xl font-poppins">
           {data.name}
-        </Typography>
-        <Typography>{data.role}</Typography>
+        </p>
+        <p className="text-gray-500 font-poppins">{data.role}</p>
       </TimelineContent>
     </TimelineItem>
     )
@@ -53,7 +59,7 @@ const Experiences = () => {
       {/*Content Section */}
       <motion.div
           className="md:min-w-[1000px] md:w-[50%]
-          md:h-[85%] h-[100%] shadow-xl flex flex-col bg-white md:m-24"
+          md:h-[75%] h-[100%] shadow-xl flex flex-col bg-white md:m-24"
           initial="hidden"
           whileInView="visible"
           viewport={{once:true, amount:0.5}}
@@ -73,7 +79,7 @@ const Experiences = () => {
 
         {/* Timeline Exp Section */}
         <div className="bg-white h-full flex flex-col items-center justify-center">
-          <div className="bg-grey2">
+          <div className="">
             <Timeline position="alternate">
               {renderExperience}
             </Timeline>
