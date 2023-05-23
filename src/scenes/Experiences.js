@@ -9,8 +9,44 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
+import experienceData from "../datas/experienceData";
 
-const MySkills = () => {
+const Experiences = () => {
+
+  const renderExperience = experienceData.map((data) => {
+    return(
+    <TimelineItem>
+      <TimelineOppositeContent
+        sx={{m: 'auto 0'}}
+        align="right"
+        variant="body2"
+        color="text.secondary"
+      >
+        {data.date}
+      </TimelineOppositeContent>
+      <TimelineSeparator className="">
+        <TimelineConnector className="h-[25px]"/>
+        <TimelineDot>
+          <div className="w-[50px] h-[50px] flex justify-center items-center">
+            <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="w-[50px] h-[50px] rounded-full" alt={data.name} src={data.image}/>
+              </a>
+          </div>
+        </TimelineDot>
+      </TimelineSeparator>
+      <TimelineContent sx={{py: '12px', px:2}} className="">
+        <Typography variant="h6" component="span">
+          {data.name}
+        </Typography>
+        <Typography>{data.role}</Typography>
+      </TimelineContent>
+    </TimelineItem>
+    )
+  })
 
   return(
     <section id="experiences" className="flex justify-center items-start sm:h-screen sm:min-h-screen">
@@ -35,66 +71,17 @@ const MySkills = () => {
             <div className="border-b-4 border-blue w-[150px] mb-4"></div>
         </div>
 
-        {/* Skills Section */}
-        <div className="bg-white flex flex-col items-center justify-start">
-          <Timeline position="alternate">
-            {/* Timeline 1 */}
-            <TimelineItem>
-              <TimelineOppositeContent
-                sx={{m: 'auto 0'}}
-                align="right"
-                variant="body2"
-                color="text.secondary"
-              >
-                Date
-              </TimelineOppositeContent>
-              <TimelineSeparator className="border-2 border-black">
-                <TimelineConnector className="h-[25px]"/>
-                <TimelineDot>
-                  <div className="w-[50px] h-[50px] flex justify-center items-center">
-                    <img className="w-[50px] h-[50px] rounded-full" alt="AltusGroup" src="../assets/experiences/AltusGroup.png"/>
-                  </div>
-                </TimelineDot>
-              </TimelineSeparator>
-              <TimelineContent sx={{py: '12px', px:2}} className="border-2 border-black">
-                <Typography variant="h6" component="span">
-                  Hi
-                </Typography>
-                <Typography>Small words go here</Typography>
-              </TimelineContent>
-            </TimelineItem>
-
-            {/* Timeline 2 */}
-            <TimelineItem>
-              <TimelineOppositeContent
-                sx={{m: 'auto 0'}}
-                align="right"
-                variant="body2"
-                color="text.secondary"
-              >
-                Date
-              </TimelineOppositeContent>
-              <TimelineSeparator className="border-2 border-black">
-                <TimelineConnector className="h-[25px]"/>
-                <TimelineDot>
-                  <div className="w-[50px] h-[50px] flex justify-center items-center">
-                    <img className="w-[50px] h-[50px] rounded-full" alt="AltusGroup" src="../assets/experiences/AltusGroup.png"/>
-                  </div>
-                </TimelineDot>
-              </TimelineSeparator>
-              <TimelineContent sx={{py: '12px', px:2}} className="border-2 border-black">
-                <Typography variant="h6" component="span">
-                  Hi
-                </Typography>
-                <Typography>Small words go here</Typography>
-              </TimelineContent>
-            </TimelineItem>
-
-          </Timeline>
+        {/* Timeline Exp Section */}
+        <div className="bg-white h-full flex flex-col items-center justify-center">
+          <div className="bg-grey2">
+            <Timeline position="alternate">
+              {renderExperience}
+            </Timeline>
+          </div>
         </div>
       </motion.div>
     </section>
   )
 }
 
-export default MySkills;
+export default Experiences;
