@@ -1,27 +1,16 @@
-import skillData from '../datas/skillData';
+
 import {motion} from "framer-motion";
-import { Pencil, Briefcase } from 'react-bootstrap-icons';
+
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Typography from '@mui/material/Typography';
 
 const MySkills = () => {
-
-  const skillsDiv = "md:w-1/3 w-5/6 m-4 flex flex-col justify-start items-center"
-  const skillsIcon = "bg-blue min-h-[75px] min-w-[75px] flex items-center justify-center rounded-full m-2"
-  const skillsTitle = "text-xl text-gray-500 text-center my-2"
-  const skillDiv = "grid md:grid-cols-3 xxs:grid-cols-5  grid-cols-3"
-
-  const renderExp = (skillSet) => {
-    const skills = Object.values(skillData[skillSet]);
-    const render = skills.map((skill) => {
-      return (
-        <div key={skill.name} className="flex justify-start items-center w-[40px] h-[40px] m-2">
-            <img key={skill.name}
-            src={`../assets/skills/${skill.image}.png`} alt={skill.name} title={skill.name} />
-        </div>
-      )
-      })
-    return render;
-  }
-
 
   return(
     <section id="experiences" className="flex justify-center items-start sm:h-screen sm:min-h-screen">
@@ -45,32 +34,63 @@ const MySkills = () => {
             </p>
             <div className="border-b-4 border-blue w-[150px] mb-4"></div>
         </div>
+
         {/* Skills Section */}
         <div className="bg-white flex flex-col items-center justify-start">
-          {/* Skill Set 1 */}
-          <div className ={skillsDiv}>
-            <div className={skillsIcon}>
-              <Pencil className="p-2 h-[60px] w-[60px] fill-white"/>
-            </div>
-            <p className={skillsTitle}>
-              Education
-            </p>
-            <div className={skillDiv}>
-              {renderExp("s1")}
-            </div>
-          </div>
-          {/* Skill Set 2 */}
-          <div className ={skillsDiv}>
-            <div className={skillsIcon}>
-              <Briefcase className="p-2 h-[60px] w-[60px] fill-white"/>
-            </div>
-            <p className={skillsTitle}>
-              Career
-            </p>
-            <div className={skillDiv}>
-              {renderExp("s2")}
-            </div>
-          </div>
+          <Timeline position="alternate">
+            {/* Timeline 1 */}
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{m: 'auto 0'}}
+                align="right"
+                variant="body2"
+                color="text.secondary"
+              >
+                Date
+              </TimelineOppositeContent>
+              <TimelineSeparator className="border-2 border-black">
+                <TimelineConnector className="h-[25px]"/>
+                <TimelineDot>
+                  <div className="w-[50px] h-[50px] flex justify-center items-center">
+                    <img className="w-[50px] h-[50px] rounded-full" alt="AltusGroup" src="../assets/experiences/AltusGroup.png"/>
+                  </div>
+                </TimelineDot>
+              </TimelineSeparator>
+              <TimelineContent sx={{py: '12px', px:2}} className="border-2 border-black">
+                <Typography variant="h6" component="span">
+                  Hi
+                </Typography>
+                <Typography>Small words go here</Typography>
+              </TimelineContent>
+            </TimelineItem>
+
+            {/* Timeline 2 */}
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{m: 'auto 0'}}
+                align="right"
+                variant="body2"
+                color="text.secondary"
+              >
+                Date
+              </TimelineOppositeContent>
+              <TimelineSeparator className="border-2 border-black">
+                <TimelineConnector className="h-[25px]"/>
+                <TimelineDot>
+                  <div className="w-[50px] h-[50px] flex justify-center items-center">
+                    <img className="w-[50px] h-[50px] rounded-full" alt="AltusGroup" src="../assets/experiences/AltusGroup.png"/>
+                  </div>
+                </TimelineDot>
+              </TimelineSeparator>
+              <TimelineContent sx={{py: '12px', px:2}} className="border-2 border-black">
+                <Typography variant="h6" component="span">
+                  Hi
+                </Typography>
+                <Typography>Small words go here</Typography>
+              </TimelineContent>
+            </TimelineItem>
+
+          </Timeline>
         </div>
       </motion.div>
     </section>
