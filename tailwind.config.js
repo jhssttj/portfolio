@@ -19,13 +19,6 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         noto: ["Noto Sans", 'sans-serif'],
       },
-      content: {
-        brush: "url('./assets/brush/brush.png')",
-        brush2: "url('./assets/brush/brush2.jpg')",
-        brush3: "url('./assets/brush/brush3.png')",
-        brush4: "url('./assets/brush/brush4.png')",
-        brush5: "url('./assets/brush/brush5.png')",
-      },
       backgroundImage: {
         cover1: "url('./assets/cover/cover1.jpg')",
         cover1s: "url('./assets/cover/cover1-s.jpg')",

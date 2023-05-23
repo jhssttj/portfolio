@@ -33,7 +33,7 @@ function App() {
         <div className="w-full mx-auto">
           <Experiences/>
         </div>
-        <div className="w-5/6 mx-auto">
+        <div className="w-full mx-auto">
           <Contact/>
         </div>
       </div>
