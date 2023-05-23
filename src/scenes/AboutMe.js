@@ -65,6 +65,7 @@ const AboutMe = () => {
           <p className="text-4xl font-semibold p-2 m-2">
             About Me
           </p>
+          <div className="border-b-4 border-blue w-[150px] mx-8"></div>
           <p className="text-gray-500 p-2 m-2">
             In 2020, I graduated from University of Calgary with a Bachelor's in Civil Engineering and started working as a cost consultant.
             I realised that this was not something I wanted to do for the rest of my life and started seeking for my true calling.
