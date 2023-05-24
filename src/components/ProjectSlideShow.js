@@ -41,7 +41,7 @@ const ProjectSlideShow = () => {
       </div>
       <div className="absolute z-20 sm:top-[50%] top-[60%] right-0 p-2">
           <ChevronRight className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
-        hover:cursor-pointer hover:bg-gray-200 xs:opacity-100 opacity-0" onClick={nextIndex}/>
+        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300 xs:opacity-100 opacity-0" onClick={nextIndex}/>
         </div>
 
         {/* Dot Section */}
@@ -55,7 +55,7 @@ const ProjectSlideShow = () => {
       {isAboveSmallScreens?(
         <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
           className="h-full w-full bg-cover bg-center duration-500">
-          <div className="z-30 flex flex-col justify-center relative w-[35%] m-2 p-4 bg-gray-200 bg-opacity-75">
+          <div className="z-30 flex flex-col justify-center relative w-[35%] m-2 p-4">
             <p className="text-3xl m-2">
               {projectData[index].title}
             </p>
@@ -110,7 +110,7 @@ const ProjectSlideShow = () => {
           </div>
           {/* Picture Section */}
           <div style={{backgroundImage: `url(../assets/projects/${projectData[index].title}.png)`}} 
-            className="w-full h-full bg-cover bg-center duration-500">
+            className="w-full h-full bg-cover bg-right duration-500">
           </div>
         </div>
       )}
