@@ -1,17 +1,17 @@
 
 
-const SocialMediaIconsW = () => {
+const SocialMediaIcons = () => {
 
-  const iconClassName = "hover:opacity-50 transition duration-500 xxs:w-[48px] xxs:h-[48px] w-[48px] h-[48px]"
+  const iconClassName = "hover:opacity-50 transition duration-500 w-[48px] h-[48px]"
   return (
-    <div className="flex justify-center md:justify-start my-10 gap-7 items-center">
+    <div className="flex justify-center md:justify-start gap-7">
       <a
         className={iconClassName}
         href="https://github.com/jhssttj"
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="githublink" src="../assets/icons/githubW.png"/>
+        <img alt="githublink" src="../assets/icons/github-gray.png"/>
       </a>
       <a
         className={iconClassName}
@@ -19,7 +19,7 @@ const SocialMediaIconsW = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="linkedinlink" src="../assets/icons/linkedinW.png"/>
+        <img alt="linkedinlink" src="../assets/icons/linkedin-gray.png"/>
       </a>
       <a
         className={iconClassName}
@@ -27,10 +27,10 @@ const SocialMediaIconsW = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="instagram-link" src="../assets/icons/instagramW.png"/>
+        <img alt="instagram-link" src="../assets/icons/instagram-gray.png"/>
       </a>
     </div>
   )
 }
 
-export default SocialMediaIconsW;
+export default SocialMediaIcons;

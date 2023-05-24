@@ -32,7 +32,7 @@ const AboutMe = () => {
             <img
             alt="profile"
             className="saturate-200 w-full max-w-[250px] rounded-full md:mt-4 mt-12"
-            src="assets/profile-image.jpg"
+            src="assets/general/profile-image.jpg"
             />
             <p className="text-4xl font-semibold p-8">
               Kevin

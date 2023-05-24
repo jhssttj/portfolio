@@ -112,9 +112,9 @@ const Contact = () => {
           {/* Pic Section */}
           <div className="max-w-full max-h-full flex justify-center">
             {isAboveSmallScreens?(
-              <img className="sm:w-3/4 sm:h-3/4 shadow-xl" src='../assets/contact-image-md.png' alt='contactPage'/>
+              <img className="sm:w-3/4 sm:h-3/4 shadow-xl" src='../assets/general/contact-image-md.png' alt='contactPage'/>
             ):(
-              <img className="shadow-xl" src='../assets/contact-image-sm.png' alt='contactPage'/>
+              <img className="shadow-xl" src='../assets/general/contact-image-sm.png' alt='contactPage'/>
             )}
           </div>
         </div>
