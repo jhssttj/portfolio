@@ -26,7 +26,7 @@ const AboutMe = () => {
         {/* Left Side */}
         <div
         className="w-[100%] h-full bg-grey flex flex-col justify-between items-centertext-center">
-          <div className="w-full h-[90%] flex flex-col justify-evenly items-center pt-8">
+          <div className="w-full h-[90%] flex flex-col justify-evenly items-center text-center pt-8">
             <img
             alt="profile"
             className="saturate-200 w-full max-w-[250px] rounded-full md:mt-4 mt-12"
