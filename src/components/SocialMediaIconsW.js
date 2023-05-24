@@ -11,7 +11,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="githublink" src="../assets/icons/github-gray.png"/>
+        <img alt="githublink" src="../assets/icons/github-white.png"/>
       </a>
       <a
         className={iconClassName}
@@ -19,7 +19,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="linkedinlink" src="../assets/icons/linkedin-gray.png"/>
+        <img alt="linkedinlink" src="../assets/icons/linkedin-white.png"/>
       </a>
       <a
         className={iconClassName}
@@ -27,7 +27,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="instagram-link" src="../assets/icons/instagram-gray.png"/>
+        <img alt="instagram-link" src="../assets/icons/instagram-white.png"/>
       </a>
     </div>
   )

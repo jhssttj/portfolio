@@ -13,12 +13,3 @@ body,
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right,  #E6DACE 0%,#E6DACE 40%,#f7f7f7 40%,#f7f7f7 100%);
 }
-.active {
-  color:white;
-  border-bottom: solid 2px white;
-}
-
-.activeMenu {
-  color:black;
-  border-bottom: solid 2px black;
-}

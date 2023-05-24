@@ -5,14 +5,12 @@ import { List, X } from 'react-bootstrap-icons';
 
 const LinkRender = ({ isAboveSmallScreens,page}) => {
   const upperCasePage = page.toUpperCase();
-  const activeClass = (isAboveSmallScreens? "active":"activeMenu");
   const activeClassName = (isAboveSmallScreens 
-      ? "text-gray-400 hover:text-white hover:border-b-2 hover:border-white active:bg-white active:text-black flex justify-center items-center w-full h-full text-center "
-      :"hover:text-black hover:border-b-2 hover:border-black active:text-gray-400 active:border-gray-400 border-b-2 border-gray-400 text-gray-400")
+      ? "text-white hover:text-white hover:border-b-2 hover:border-white active:text-black flex justify-center items-center w-full h-full text-center "
+      :"hover:border-b-2 hover:text-gray-400 hover:border-gray-400 active:text-black active:border-black border-b-2 border-black")
   return (
     <Link
         className={`${activeClassName}`}
-        activeClass={`${activeClass}`}
         href={`#${page}`}
         smooth spy to= {`${page}`}
     >
@@ -64,7 +62,7 @@ const Navbar = () => {
             className="rounded-full p-2 mr-[5%] my-2 flex"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <List className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-gray-400 active:bg-black"/>
+            <List className="w-[36px] h-[36px] fill-white rounded-full hover:bg-gray-400 active:fill-gray-400 active:bg-black"/>
           </button>) 
         }
         {/* Small Screen Menu */}
@@ -73,7 +71,7 @@ const Navbar = () => {
             <div className="flex justify-end p-6">
               <button
                 onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <X className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-gray-400 active:bg-beige"/>          
+                <X className="w-[36px] h-[36px] fill-black rounded-full hover:bg-gray-400 hover:fill-white active:fill-black active:bg-beige"/>          
               </button>
             </div>
             <div className="flex flex-col gap-8 ml-[33%] text-2xl">
