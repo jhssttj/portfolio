@@ -97,7 +97,7 @@ const Experiences = () => {
           md:h-[75%] h-[100%] shadow-xl flex flex-col bg-white md:m-24"
           initial="hidden"
           whileInView="visible"
-          viewport={{once:true, amount:0.5}}
+          viewport={{once:true, amount:0.33}}
           transition={{duration:0.5}}
           variants={{
             hidden: {opacity: 0, x: -50},
