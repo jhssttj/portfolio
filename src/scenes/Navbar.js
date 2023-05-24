@@ -27,11 +27,13 @@ const Navbar = () => {
   const navBarIconClass = (isAboveSmallScreens? "justify-center":"justify-end")
   return (
     <nav className={`bg-black border-y-8 border-black z-40 w-full h-[50px] fixed top-0 z-50`}>
+      <p className="absolute text-2xl text-white mx-4">KL</p>
       <div className={`${navBarIconClass} flex items-center mx-auto w-full h-full`}>
         {/*Large Screen NavBar*/}
         {isAboveSmallScreens 
         ? 
           (<div className="flex justify-between text-base text-white md:w-3/4 w-[90%] h-full">
+            
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="home"
