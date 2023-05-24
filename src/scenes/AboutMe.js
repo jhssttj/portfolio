@@ -70,7 +70,7 @@ const AboutMe = () => {
             <br></br>
             <br></br>
             Recently, I graduated from Lighthouse Labs Web Development Bootcamp where I learned how to utilize various programs and frameworks such as JavaScript, React, Ruby, etc. to create 
-            web based applications. From this, I discovered passion for coding and knew that this is what I wanted to do for the rest of my life. 
+            web based applications. From this, I discovered passion for coding and knew that this is what I wanted to do moving forward. 
           </p>
           {/* Anchor Links for Different Scenes */}
           <div className="w-full p-2 m-2 flex md:justify-start justify-center gap-4 xxs:grid-cols-2 grid text-center">

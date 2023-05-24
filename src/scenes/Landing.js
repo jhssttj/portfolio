@@ -1,6 +1,5 @@
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { ArrowDown } from 'react-bootstrap-icons';
 
 const Landing = () => {
   return (
@@ -48,7 +47,6 @@ const Landing = () => {
               <p className="xs:text-2xl xxs:text-xl text-base font-semibold">
                 About Me
               </p>
-              <ArrowDown className="xs:w-[32px] xs:h-[32px] xxs:w-[24px] xxs:h-[24px] w-[16px] h-[16px]" />
             </AnchorLink>
           </motion.div>
 
