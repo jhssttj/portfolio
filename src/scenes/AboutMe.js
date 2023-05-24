@@ -25,9 +25,7 @@ const AboutMe = () => {
       >
         {/* Left Side */}
         <div
-        className="w-[100%] h-full bg-grey2 flex flex-col justify-between items-center
-        font-poppins text-center"
-        >
+        className="w-[100%] h-full bg-grey flex flex-col justify-between items-centertext-center">
           <div className="w-full h-[90%] flex flex-col justify-evenly items-center pt-8">
             <img
             alt="profile"
@@ -53,7 +51,7 @@ const AboutMe = () => {
               Full Stack Web Developer
             </p>
           </div>
-          <div className="w-full p-2 bg-grey2 md:bg-white flex justify-center items-center">
+          <div className="w-full p-2 bg-grey md:bg-white flex justify-center items-center">
             <SocialMediaIcons/>
           </div>
         </div>

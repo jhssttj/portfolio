@@ -84,7 +84,7 @@ const ProjectSlideShow = () => {
       :(
         <div className="h-screen max-h-[400px] xxs:max-h-[500px] xs:max-h-[625px] sm:max-h-none w-full flex flex-col items-center bg-gray-200">
           {/* Text Section */}
-          <div className="z-30 flex flex-col justify-center text-center p-1 w-full xxs:h-auto h-full min-h-[152px] bg-grey2">
+          <div className="z-30 flex flex-col justify-center text-center p-1 w-full xxs:h-auto h-full min-h-[152px] bg-grey">
             <p className="xxs:text-2xl text-xl">
               {projectData[index].title}
             </p>

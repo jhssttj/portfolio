@@ -34,7 +34,7 @@ const Contact = () => {
           }}
         >
         {/* Title Section */}
-        <div className="flex flex-col justify-start items-center bg-grey2 text-center h-auto">
+        <div className="flex flex-col justify-start items-center bg-grey text-center h-auto">
             <p className="text-4xl font-semibold p-2 md:m-2 md:mt-8 mt-16">
               Contact
             </p>
@@ -64,7 +64,7 @@ const Contact = () => {
                 maxLength: 100
               })}/>
             {errors.name && (
-              <p className="font-semibold text-red mt-1">
+              <p className="font-semibold text-red-500 mt-1">
                 {errors.name.type === 'required' && 'Cannot submit blank name.'}
                 {errors.name.type === 'maxLength' && 'Max Length of 100 exceeded.'}
               </p>
@@ -79,7 +79,7 @@ const Contact = () => {
                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
               })}/>
             {errors.email && (
-              <p className="font-semibold text-red mt-1">
+              <p className="font-semibold text-red-500 mt-1">
                 {errors.email.type === 'required' && 'Cannot submit blank email.'}
                 {errors.email.type === 'pattern' && 'Improper email format.'}
               </p>
@@ -96,7 +96,7 @@ const Contact = () => {
                 maxLength:2000
               })}/>
             {errors.message && (
-              <p className="font-semibold text-red mt-1">
+              <p className="font-semibold text-red-500 mt-1">
                 {errors.message.type === 'required' && 'Cannot submit blank message.'}
                 {errors.message.type === 'maxLength' && 'Max Length of 2000 exceeded.'}
               </p>

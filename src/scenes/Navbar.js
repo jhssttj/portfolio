@@ -31,7 +31,7 @@ const Navbar = () => {
         {/*Large Screen NavBar*/}
         {isAboveSmallScreens 
         ? 
-          (<div className="flex justify-between font-poppins text-base text-white md:w-3/4 w-[90%] h-full">
+          (<div className="flex justify-between text-base text-white md:w-3/4 w-[90%] h-full">
             <LinkRender
               isAboveSmallScreens={isAboveSmallScreens}
               page="home"
@@ -74,7 +74,7 @@ const Navbar = () => {
                 <X className="w-[36px] h-[36px] fill-gray-400 rounded-full hover:bg-gray-400 hover:fill-white active:fill-gray-400 active:bg-beige"/>          
               </button>
             </div>
-            <div className="flex flex-col gap-8 ml-[33%] text-2xl font-poppins">
+            <div className="flex flex-col gap-8 ml-[33%] text-2xl">
               <LinkRender
                 isAboveSmallScreens={isAboveSmallScreens}
                 page="home"

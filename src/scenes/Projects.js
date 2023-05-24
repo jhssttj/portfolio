@@ -18,7 +18,7 @@ const Projects = () => {
           }}
         >
         {/* Title Section */}
-        <div className="flex flex-col justify-start items-center bg-grey2 text-center">
+        <div className="flex flex-col justify-start items-center bg-grey text-center">
             <p className="text-4xl font-semibold p-2 md:m-2 md:mt-8 mt-16">
               Projects
             </p>

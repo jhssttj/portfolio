@@ -21,10 +21,10 @@ const Landing = () => {
               visible: {opacity: 1, x: 0}
             }}
           >
-            <p className="font-poppins xs:text-6xl xxs:text-5xl text-3xl font-semibold">
+            <p className="xs:text-6xl xxs:text-5xl text-3xl font-semibold">
               Hello there!
             </p>
-            <p className="font-poppins xs:text-xl xxs:text-lg text-sm mt-4 w-3/4 sm:w-1/2">
+            <p className="xs:text-xl xxs:text-lg text-sm mt-4 w-3/4 sm:w-1/2">
               Thank you for visting my website. It would mean a lot if you could take the time to get to know me...
             </p>
           </motion.div>
@@ -45,7 +45,7 @@ const Landing = () => {
               hover:fill-white hover:fill-current animate-none hover:animate-bounce rounded-lg"
               href="#about"
             >
-              <p className="font-poppins xs:text-2xl xxs:text-xl text-base font-semibold">
+              <p className="xs:text-2xl xxs:text-xl text-base font-semibold">
                 About Me
               </p>
               <BoxArrowDownRight className="xs:w-[32px] xs:h-[32px] xxs:w-[24px] xxs:h-[24px] w-[16px] h-[16px]" />
