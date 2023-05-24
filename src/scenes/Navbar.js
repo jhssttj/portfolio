@@ -24,7 +24,7 @@ const Navbar = () => {
       </Link>
     )
   }
-  
+
   return (
     <nav className={`bg-black border-y-8 border-black z-40 w-full h-[50px] fixed top-0 z-50`}>
       <p className="absolute text-2xl text-white mx-4">KL</p>
@@ -68,7 +68,7 @@ const Navbar = () => {
           </button>
           )}
         {/* Small Screen Menu */}
-          <div className={`fixed right-0 top-0 h-full bg-beige w-[300px] h-[500px] ease-in-out duration-300 ${isMenuToggled?("translate-x-100"):("translate-x-full")}`}>
+          <div className={`fixed right-0 top-0 h-full bg-beige w-[300px] h-[500px] ease-in-out duration-300 ${isMenuToggled?("translate-x-0"):("translate-x-full")}`}>
             <div className="flex justify-end p-6">
               <button
                 onClick={() => setIsMenuToggled(!isMenuToggled)}>
