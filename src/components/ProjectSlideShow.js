@@ -35,13 +35,13 @@ const ProjectSlideShow = () => {
   return (
     <div className="relative h-full w-full flex">
       {/* Arrow Section */}
-      <div className="absolute z-20 sm:top-[50%] top-[60%] p-2">
-        <ChevronLeft className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
-        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300 xs:opacity-100 opacity-0" onClick={prevIndex} />
+      <div className="absolute z-20 sm:top-[50%] xxs:top-[60%] top-[85%] p-2">
+        <ChevronLeft className="sm:w-[50px] sm:h-[50px] w-[40px] h-[40px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
+        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300" onClick={prevIndex} />
       </div>
-      <div className="absolute z-20 sm:top-[50%] top-[60%] right-0 p-2">
-          <ChevronRight className="w-[50px] h-[50px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
-        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300 xs:opacity-100 opacity-0" onClick={nextIndex}/>
+      <div className="absolute z-20 sm:top-[50%] xxs:top-[60%] top-[85%] right-0 p-2">
+          <ChevronRight className="sm:w-[50px] sm:h-[50px] w-[40px] h-[40px] bg-gray-200 bg-opacity-75 fill-gray-600 rounded-full p-2 flex justify-center items-center  
+        hover:cursor-pointer hover:fill-gray-800 hover:bg-gray-300" onClick={nextIndex}/>
         </div>
 
         {/* Dot Section */}
