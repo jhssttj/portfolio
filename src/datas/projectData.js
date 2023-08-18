@@ -14,6 +14,13 @@ const projectData = [
   },
 
   {
+    title: "Wordle",
+    description: "Wordle clone with features to customize the number of guesses and word length.",
+    link: "https://wordlecustom.netlify.app/?fbclid=IwAR0Nk0XmDOQfdcE3r2eTTXIqXrQT7aeXlMrPyOe4dLCoHGRdLcsK3vsKPmw",
+    git: "https://github.com/jhssttj/wordle",
+  },
+
+  {
     title: "Omok",
     description: "2 Player board game similar to Tic-tac-toe.",
     link: "https://msomok.netlify.app/",
